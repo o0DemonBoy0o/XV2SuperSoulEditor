@@ -2961,11 +2961,63 @@ namespace XV2SSEdit
 
         private void setCurrentBurstIDsToNULLToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            txtLBAura.Text = "-1";
+            txtLBDesc.Text = "0";
             txtLBSoulID1.Text = "65535";
             txtLBSoulID2.Text = "65535";
             txtLBSoulID3.Text = "65535";
+            cbLBColor.SelectedIndex = 0;
         }
 
+        private void setCurrentBurstToATKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtLBAura.Text = "250";
+            txtLBDesc.Text = "0";
+            txtLBSoulID1.Text = "500";
+            txtLBSoulID2.Text = "501";
+            txtLBSoulID3.Text = "502";
+            cbLBColor.SelectedIndex = 1;
+        }
+
+        private void setCurrentBurstToDEFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtLBAura.Text = "251";
+            txtLBDesc.Text = "1";
+            txtLBSoulID1.Text = "520";
+            txtLBSoulID2.Text = "521";
+            txtLBSoulID3.Text = "522";
+            cbLBColor.SelectedIndex = 2;
+        }
+
+        private void setCurrentBurstToRECToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtLBAura.Text = "252";
+            txtLBDesc.Text = "2";
+            txtLBSoulID1.Text = "540";
+            txtLBSoulID2.Text = "541";
+            txtLBSoulID3.Text = "542";
+            cbLBColor.SelectedIndex = 3;
+        }
+
+        private void setCurrentBurstToGRDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtLBAura.Text = "253";
+            txtLBDesc.Text = "3";
+            txtLBSoulID1.Text = "560";
+            txtLBSoulID2.Text = "561";
+            txtLBSoulID3.Text = "562";
+            cbLBColor.SelectedIndex = 4;
+        }
+
+        private void setCurrentBurstToREVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtLBAura.Text = "253";
+            txtLBDesc.Text = "4";
+            txtLBSoulID1.Text = "580";
+            txtLBSoulID2.Text = "581";
+            txtLBSoulID3.Text = "582";
+            cbLBColor.SelectedIndex = 4;
+        }
         private void removeCurrentSuperSoulFromShopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtRace.Text = "0";

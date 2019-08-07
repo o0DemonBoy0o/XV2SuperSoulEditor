@@ -65,8 +65,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.cbKiType = new System.Windows.Forms.ComboBox();
-            this.srchBox = new System.Windows.Forms.TextBox();
-            this.srchBtn = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label49 = new System.Windows.Forms.Label();
             this.cbLBColor = new System.Windows.Forms.ComboBox();
@@ -261,6 +259,8 @@
             this.label46 = new System.Windows.Forms.Label();
             this.cbEffect2 = new System.Windows.Forms.ComboBox();
             this.label47 = new System.Windows.Forms.Label();
+            this.srchBox = new System.Windows.Forms.TextBox();
+            this.srchBtn = new System.Windows.Forms.Button();
             this.chkMsgDesc = new System.Windows.Forms.CheckBox();
             this.chkMsgBurst = new System.Windows.Forms.CheckBox();
             this.chkMsgName = new System.Windows.Forms.CheckBox();
@@ -280,6 +280,12 @@
             this.limitBurstOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setCurrentBurstIDsToNULLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeCurrentSuperSoulFromShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setLimitBurstToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setCurrentBurstToATKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setCurrentBurstToDEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setCurrentBurstToRECToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setCurrentBurstToGRDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setCurrentBurstToREVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -707,23 +713,6 @@
             this.cbKiType.TabIndex = 31;
             this.cbKiType.SelectedIndexChanged += new System.EventHandler(this.cbKiType_SelectedIndexChanged);
             // 
-            // srchBox
-            // 
-            this.srchBox.Location = new System.Drawing.Point(468, 28);
-            this.srchBox.Name = "srchBox";
-            this.srchBox.Size = new System.Drawing.Size(200, 20);
-            this.srchBox.TabIndex = 32;
-            // 
-            // srchBtn
-            // 
-            this.srchBtn.Location = new System.Drawing.Point(530, 50);
-            this.srchBtn.Name = "srchBtn";
-            this.srchBtn.Size = new System.Drawing.Size(75, 20);
-            this.srchBtn.TabIndex = 5;
-            this.srchBtn.Text = "Search";
-            this.srchBtn.UseVisualStyleBackColor = true;
-            this.srchBtn.Click += new System.EventHandler(this.srchBtn_Click);
-            // 
             // groupBox12
             // 
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -853,7 +842,6 @@
             // 
             this.txtLBDesc.Location = new System.Drawing.Point(200, 49);
             this.txtLBDesc.Name = "txtLBDesc";
-            this.txtLBDesc.ReadOnly = true;
             this.txtLBDesc.Size = new System.Drawing.Size(80, 20);
             this.txtLBDesc.TabIndex = 36;
             this.txtLBDesc.TextChanged += new System.EventHandler(this.txtLBDesc_TextChanged);
@@ -2607,6 +2595,23 @@
             this.label47.TabIndex = 51;
             this.label47.Text = "Effect to Use";
             // 
+            // srchBox
+            // 
+            this.srchBox.Location = new System.Drawing.Point(468, 28);
+            this.srchBox.Name = "srchBox";
+            this.srchBox.Size = new System.Drawing.Size(200, 20);
+            this.srchBox.TabIndex = 32;
+            // 
+            // srchBtn
+            // 
+            this.srchBtn.Location = new System.Drawing.Point(530, 50);
+            this.srchBtn.Name = "srchBtn";
+            this.srchBtn.Size = new System.Drawing.Size(75, 20);
+            this.srchBtn.TabIndex = 5;
+            this.srchBtn.Text = "Search";
+            this.srchBtn.UseVisualStyleBackColor = true;
+            this.srchBtn.Click += new System.EventHandler(this.srchBtn_Click);
+            // 
             // chkMsgDesc
             // 
             this.chkMsgDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -2775,7 +2780,8 @@
             // 
             this.limitBurstOptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setCurrentBurstIDsToNULLToolStripMenuItem,
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem});
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem,
+            this.setLimitBurstToToolStripMenuItem});
             this.limitBurstOptionsToolStripMenuItem.Name = "limitBurstOptionsToolStripMenuItem";
             this.limitBurstOptionsToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
             this.limitBurstOptionsToolStripMenuItem.Text = "Limit Burst Options";
@@ -2793,6 +2799,53 @@
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Text = "Remove Current Super Soul From Shop";
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Click += new System.EventHandler(this.removeCurrentSuperSoulFromShopToolStripMenuItem_Click);
+            // 
+            // setLimitBurstToToolStripMenuItem
+            // 
+            this.setLimitBurstToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setCurrentBurstToATKToolStripMenuItem,
+            this.setCurrentBurstToDEFToolStripMenuItem,
+            this.setCurrentBurstToRECToolStripMenuItem,
+            this.setCurrentBurstToGRDToolStripMenuItem,
+            this.setCurrentBurstToREVToolStripMenuItem});
+            this.setLimitBurstToToolStripMenuItem.Name = "setLimitBurstToToolStripMenuItem";
+            this.setLimitBurstToToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.setLimitBurstToToolStripMenuItem.Text = "Set Limit Burst to...";
+            // 
+            // setCurrentBurstToATKToolStripMenuItem
+            // 
+            this.setCurrentBurstToATKToolStripMenuItem.Name = "setCurrentBurstToATKToolStripMenuItem";
+            this.setCurrentBurstToATKToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.setCurrentBurstToATKToolStripMenuItem.Text = "ATK Up";
+            this.setCurrentBurstToATKToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToATKToolStripMenuItem_Click);
+            // 
+            // setCurrentBurstToDEFToolStripMenuItem
+            // 
+            this.setCurrentBurstToDEFToolStripMenuItem.Name = "setCurrentBurstToDEFToolStripMenuItem";
+            this.setCurrentBurstToDEFToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.setCurrentBurstToDEFToolStripMenuItem.Text = "DEF Up";
+            this.setCurrentBurstToDEFToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToDEFToolStripMenuItem_Click);
+            // 
+            // setCurrentBurstToRECToolStripMenuItem
+            // 
+            this.setCurrentBurstToRECToolStripMenuItem.Name = "setCurrentBurstToRECToolStripMenuItem";
+            this.setCurrentBurstToRECToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.setCurrentBurstToRECToolStripMenuItem.Text = "HP Rec";
+            this.setCurrentBurstToRECToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToRECToolStripMenuItem_Click);
+            // 
+            // setCurrentBurstToGRDToolStripMenuItem
+            // 
+            this.setCurrentBurstToGRDToolStripMenuItem.Name = "setCurrentBurstToGRDToolStripMenuItem";
+            this.setCurrentBurstToGRDToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.setCurrentBurstToGRDToolStripMenuItem.Text = "Just-Guard";
+            this.setCurrentBurstToGRDToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToGRDToolStripMenuItem_Click);
+            // 
+            // setCurrentBurstToREVToolStripMenuItem
+            // 
+            this.setCurrentBurstToREVToolStripMenuItem.Name = "setCurrentBurstToREVToolStripMenuItem";
+            this.setCurrentBurstToREVToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.setCurrentBurstToREVToolStripMenuItem.Text = "Auto-Revive";
+            this.setCurrentBurstToREVToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToREVToolStripMenuItem_Click);
             // 
             // msgToolStripMenuItem
             // 
@@ -3249,5 +3302,11 @@
         private System.Windows.Forms.TextBox txtUnkf202;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.ToolStripMenuItem setLimitBurstToToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToATKToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToDEFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToRECToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToGRDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToREVToolStripMenuItem;
     }
 }
