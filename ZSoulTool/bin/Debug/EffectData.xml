@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EffectData>
+	<Effects>
+		<Item id="-1" hex="FFFFFFFF">No Effect</Item>
+		<Item id="00" hex="00">Stats Based</Item>
+		<Item id="01" hex="01">Nullifies Damage (?)</Item>
+		<Item id="02" hex="02">Restores/Drains Health</Item>
+		<Item id="03" hex="03">Activates Ki Auto-recovery</Item>
+		<Item id="04" hex="04">Restores/Drains Ki</Item>
+		<Item id="05" hex="05">Activates Stamina Auto-recovery</Item>
+		<Item id="06" hex="06">Restores/Drains Stamina</Item>
+		<Item id="07" hex="07">???</Item>
+		<Item id="08" hex="08">???</Item>
+		<Item id="09" hex="09">Revive all down teamates to full (?)</Item>
+		<Item id="10" hex="0A">Revive after KO (?)</Item>
+		<Item id="11" hex="0B">Revive after KO with a X% of HP (Amount)(?)</Item>
+		<Item id="12" hex="0C">Zeni earned multiplier</Item>
+		<Item id="13" hex="0D">Score earned multiplier</Item>
+		<Item id="14" hex="0E">Capsule recovery speed multiplier</Item>
+		<Item id="15" hex="0F">Seal Guard</Item>
+		<Item id="16" hex="10">Activates Auto-Guard</Item>
+		<Item id="17" hex="11">Activates Just-Guard</Item>
+		<Item id="18" hex="12">Super Armor (Basic)</Item>
+		<Item id="19" hex="13">Activates Villainous mode (?) </Item>
+		<Item id="20" hex="14">Super Armor (stamina breakable)</Item>
+		<Item id="21" hex="15">Seal Super Skills</Item>
+		<Item id="22" hex="16">Seal Ultimate Skills</Item>
+		<Item id="23" hex="17">Seal Evasive Skills</Item>
+		<Item id="24" hex="18">Seal all Skills</Item>
+		<Item id="25" hex="19">No Ki depletion</Item>
+		<Item id="26" hex="1A">???</Item>
+		<Item id="27" hex="1B">No Stamina depletion</Item>	
+		<Item id="28" hex="1C">No Ki or Stamina depletion</Item>
+		<Item id="29" hex="1D">???</Item>
+		<Item id="30" hex="1E">???</Item>
+		<Item id="31" hex="1F">Nullifies Super skill damage (except grabs)</Item>		
+		<Item id="32" hex="20">Nullifies Ultimate skill damage (except grabs)</Item>	
+		<Item id="33" hex="21">Nullifies Evasive skill damage (except grabs)</Item>	
+		<Item id="34" hex="22">Nullifies poison/movement reduction</Item>
+		<Item id="35" hex="23">Activates Candy Status Ailment</Item>	
+		<Item id="36" hex="24">???</Item>
+		<Item id="37" hex="25">Nullifies Candy Status Ailment</Item>
+		<Item id="38" hex="26">???</Item>
+		<Item id="39" hex="27">???</Item>
+		<Item id="40" hex="28">Nullifies Heavy Break stun</Item>
+		<Item id="41" hex="29">Activates Poison Status Ailment</Item>
+		<Item id="42" hex="2A">???</Item>
+		<Item id="43" hex="2B">Nullifies Poison Status Ailment</Item>
+		<Item id="44" hex="2C">Activates Slow Status Ailment</Item>
+		<Item id="45" hex="2D">???</Item>
+		<Item id="46" hex="2E">Nullifies Slow Status Ailment</Item>
+		<Item id="47" hex="2F">Activates Lock-On Status Ailment</Item>
+		<Item id="48" hex="30">???</Item>
+		<Item id="49" hex="31">Nullifies Lock-On Status Ailment</Item>
+		<Item id="50" hex="32">???</Item>
+		<Item id="51" hex="33">Nullifies Blind Status Ailment</Item>	
+		<Item id="52" hex="34">???</Item>
+		<Item id="53" hex="35">Nullifies Paralyze Status Ailment</Item>
+		<Item id="54" hex="36">Activates Sleep Status Ailment</Item>
+		<Item id="55" hex="37">Nullifies Sleep Status Ailment</Item>
+		<Item id="56" hex="38">Activates Paralyze Status Ailment (XV1 Only)</Item>
+		<Item id="57" hex="39">Nullifies Burn Status Ailment</Item>
+		<Item id="58" hex="3A">Activates Freeze Status Ailment</Item>
+		<Item id="59" hex="3B">Nullifies Petrify Status Ailment</Item>
+		<Item id="60" hex="3C">Nullifies All Status Ailments</Item>
+		<Item id="61" hex="3D">Change damage done with Super Skills (Value)</Item>
+		<Item id="62" hex="3E">Change damage done with Ultimate Skills (Value)</Item>
+		<Item id="63" hex="3F">Change damage done with Evasive Skills (Value)</Item>
+		<Item id="64" hex="40">Super skills damage recieved multiplier (Value)</Item>
+		<Item id="65" hex="41">Ultimate skills damage recieved multiplier (Value)</Item>
+		<Item id="66" hex="42">Evasive skills damage recieved multiplier (Value)</Item>
+		<Item id="67" hex="43">Super Armor (auto-reactivates)</Item>
+		<Item id="68" hex="44">Ki &amp; Stam regen multiplier</Item>
+		<Item id="69" hex="45">Restores/Drains Ki &amp; Stamina</Item>
+		<Item id="70" hex="46">Activates Auto-Dodge 1 (Boss)</Item>
+		<Item id="71" hex="47">Charged Ki Blasts damage dealt multiplier</Item>	
+		<Item id="72" hex="48">Charged Ki Blasts damage recieved multiplier</Item>
+		<Item id="73" hex="49">???</Item>
+		<Item id="74" hex="4A">Change damage of Kamehameha Type Skills (Amount)</Item>
+		<Item id="75" hex="4B">Attack VS females Damage Multiplier (Amount)</Item>
+		<Item id="76" hex="4C">Attack VS males Damage Multiplier (Amount)</Item>
+		<Item id="77" hex="4D">Seal Awoken Skills</Item>
+		<Item id="78" hex="4E">Super Armor (Damage Linked) ?</Item>
+		<Item id="79" hex="4F">Guard Break recovery time multiplier (Amount)</Item>
+		<Item id="80" hex="50">???</Item>
+		<Item id="81" hex="51">Charged Ki Blast Paralysis length multiplier</Item>
+		<Item id="82" hex="52">Boosts abilities based on number of allies of same race</Item>
+		<Item id="83" hex="53">Activates Poison &amp; Slow Status Ailments</Item>
+		<Item id="84" hex="54">Basic Ki Blast damage multiplier (Amnt/Time)</Item>
+		<Item id="85" hex="55">Z-Vanish Cost multiplier (Amount)</Item>
+		<Item id="86" hex="56">Super Armor (Decaying)(?)</Item>
+		<Item id="87" hex="57">Activates automatic revival gauge recovery</Item>
+		<Item id="88" hex="58">Unknown</Item>	
+		<Item id="89" hex="59">Unknown</Item>
+		<Item id="90" hex="5A">Activates Auto-Dodge 2 (Data Input)</Item>
+		<Item id="91" hex="5B">Activates Super Armor 1 (Crystal Raid)</Item>
+		<Item id="92" hex="5C">Activates Super Armor 2 (Crystal Raid)</Item>
+		<Item id="93" hex="5D">Activates Auto-Dodge 3 (NPC)</Item>
+		<Item id="94" hex="5E">Unknown</Item>
+		<Item id="95" hex="5F">???(Probably nothing)</Item>
+		<Item id="96" hex="60">???(Probably nothing)</Item>
+		<Item id="97" hex="61">???(Probably nothing)</Item>
+		<Item id="98" hex="62">???(Probably nothing)</Item>
+		<Item id="99" hex="63">???(Probably nothing)</Item>
+	</Effects>
+	<Activations>
+		<Item id="-1" hex="FFFFFFFF">No Activation</Item>
+		<Item id="00" hex="00">Always</Item>
+		<Item id="01" hex="01">Always (Outside Activation)</Item>
+		<Item id="02" hex="02">User KO</Item>
+		<Item id="03" hex="03">Ally KO</Item>
+		<Item id="04" hex="04">???</Item>
+		<Item id="05" hex="05">Enemy KO</Item>
+		<Item id="06" hex="06">Health is Less Than X%</Item>
+		<Item id="07" hex="07">Super Skill activated</Item>
+		<Item id="08" hex="08">Ultimate Skill activated</Item>
+		<Item id="09" hex="09">Evasive Skill activated</Item>	
+		<Item id="10" hex="0A">User hit by/blocks Super Skill</Item>
+		<Item id="11" hex="0B">User hit by/blocks Ultimate Skill</Item>
+		<Item id="12" hex="0C">User hit by/blocks Evasive Skill</Item>
+		<Item id="13" hex="0D">Reinforcement Skill Activated</Item>
+		<Item id="14" hex="0E">Awoken Skill Activated</Item>
+		<Item id="15" hex="0F">User Revived by Ally</Item>
+		<Item id="16" hex="10">User Revives Ally</Item>
+		<Item id="17" hex="11">Enemy Revived</Item>
+		<Item id="18" hex="12">Hitting Enemy</Item>
+		<Item id="19" hex="13">Health damage Taken is at Least X%</Item>
+		<Item id="20" hex="14">Time passed after battle start</Item>
+		<Item id="21" hex="15">Health is Greater than X% (Re-activates)</Item>
+		<Item id="22" hex="16">KI is Greater Than X%</Item>
+		<Item id="23" hex="17">Stamina is Greater Than X%</Item>
+		<Item id="24" hex="18">Health is Less Than X% Alt</Item>
+		<Item id="25" hex="19">???</Item>
+		<Item id="26" hex="1A">???</Item>
+		<Item id="27" hex="1B">After User is Revived</Item>
+		<Item id="28" hex="1C">Awoken Skill Activated Alt.</Item>
+		<Item id="29" hex="1D">During User Revival</Item>
+		<Item id="30" hex="1E">Charging Basic KI blast</Item>
+		<Item id="31" hex="1F">???</Item>
+		<Item id="32" hex="20">While Reviving</Item>
+		<Item id="33" hex="21">User Just-Guards</Item>
+		<Item id="34" hex="22">???</Item>
+		<Item id="35" hex="23">Awoken and Reinforcement Skill Activated</Item>
+		<Item id="36" hex="24">???</Item>
+		<Item id="37" hex="25">???</Item>
+		<Item id="38" hex="26">Super skill hits/blocked by Enemy</Item>	
+		<Item id="39" hex="27">Ultimate skill hits/blocked by Enemy</Item>
+		<Item id="40" hex="28">Evasive Skill hits/blocked by Enemy</Item>
+		<Item id="41" hex="29">Charged KI blast Hits</Item>
+		<Item id="42" hex="2A">User Guard Break Hits</Item>
+		<Item id="43" hex="2B">???</Item>
+		<Item id="44" hex="2C">User Charged Attack Hits</Item>
+		<Item id="45" hex="2D">???</Item>
+		<Item id="46" hex="2E">User Guard is Broken</Item>
+		<Item id="47" hex="2F">Counter/Afterimage skill Activated</Item>
+		<Item id="48" hex="30">During of Super Skill</Item>
+		<Item id="49" hex="31">During of Ultimate Skill</Item>
+		<Item id="50" hex="32">During of Evasive Skill</Item>
+		<Item id="51" hex="33">???</Item>
+		<Item id="52" hex="34">Specific Awoken stage is activated</Item>
+		<Item id="53" hex="35">KO'ed with teamates(?)</Item>
+		<Item id="54" hex="36">???</Item>
+		<Item id="55" hex="37">???</Item>
+		<Item id="56" hex="38">???</Item>
+		<Item id="57" hex="39">Never Activate</Item>
+		<Item id="58" hex="3A">User hit by Super Skill</Item>
+		<Item id="59" hex="3B">User hit by Ultimate Skill</Item>
+		<Item id="60" hex="3C">User hit by Evasive Skill</Item>
+		<Item id="61" hex="3D">Ally KO (Temporary)?</Item>
+		<Item id="62" hex="3E">Duration of Pose Skill effect</Item>
+		<Item id="63" hex="3F">???</Item>
+		<Item id="64" hex="40">User Grabs Enemy</Item>
+		<Item id="65" hex="41">Super Skill activated Alt.</Item>
+		<Item id="66" hex="42">Ultimate Skill activated Alt.</Item>
+		<Item id="67" hex="43">Evasive Skill activated Alt.</Item>	
+		<Item id="68" hex="44">???</Item>
+		<Item id="69" hex="45">???</Item>
+		<Item id="70" hex="46">???</Item>
+		<Item id="71" hex="47">Specific Awoken Skill is activated</Item>
+		<Item id="72" hex="48">???(Probably nothing)</Item>
+		<Item id="73" hex="49">???(Probably nothing)</Item>
+		<Item id="74" hex="4A">???(Probably nothing)</Item>
+		<Item id="75" hex="4B">???(Probably nothing)</Item>
+	</Activations>
+	<Targets>
+		<Item id="-1" hex="FFFFFFFF">Nothing</Item>	
+		<Item id="00" hex="00">Self</Item>
+		<Item id="01" hex="01">Allies</Item>
+		<Item id="02" hex="02">All Enemies</Item>
+		<Item id="03" hex="03">Everyone but Self</Item>
+		<Item id="04" hex="04">Everyone</Item>
+		<Item id="05" hex="05">Targeted Enemy</Item>
+		<Item id="06" hex="06">Unused / Nothing</Item>
+		<Item id="07" hex="07">Unused / Nothing</Item>
+		<Item id="08" hex="08">Unused / Nothing</Item>
+		<Item id="09" hex="09">Unused / Nothing</Item>
+		<Item id="10" hex="0A">Unused / Nothing</Item>
+	</Targets>
+	<Colors>
+		<Item id="-1" hex="FFFF">Nothing</Item>	
+		<Item id="00" hex="00">Red</Item>
+		<Item id="01" hex="01">Blue</Item>
+		<Item id="02" hex="02">Green</Item>
+		<Item id="03" hex="03">Purple</Item>
+	</Colors>
+	<Kitypes>
+		<Item id="00" hex="00">Power (Default)</Item>
+		<Item id="01" hex="01">Power</Item>
+		<Item id="02" hex="02">Rush</Item>
+		<Item id="03" hex="03">Bomb</Item>
+		<Item id="04" hex="04">Homing</Item>
+		<Item id="05" hex="05">Paralyze</Item>
+		<Item id="06" hex="06">Golden Form Beam</Item>
+		<Item id="07" hex="07">Purification Shoe</Item>
+		<Item id="08" hex="08">Rush (Hearts)</Item>
+		<Item id="09" hex="09">Unused (ID 1088)</Item>
+		<Item id="10" hex="0A">Unused (ID 1089)</Item>	
+	</Kitypes>
+	<Checkboxs>
+		<Item id="-1" hex="FFFFFFFF">Unknown</Item>	
+		<Item id="00" hex="00">False</Item>
+		<Item id="01" hex="01">True</Item>
+	</Checkboxs>
+</EffectData>
