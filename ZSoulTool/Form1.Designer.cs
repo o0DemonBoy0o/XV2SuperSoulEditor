@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.store_defaultBtn = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label97 = new System.Windows.Forms.Label();
             this.txtMsgLBDescBTL = new System.Windows.Forms.TextBox();
@@ -276,10 +277,11 @@
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCurrentSuperSoulToShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.replaceImportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limitBurstOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setCurrentBurstIDsToNULLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setLimitBurstToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setCurrentBurstToATKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setCurrentBurstToDEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -342,6 +344,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.store_defaultBtn);
             this.tabPage1.Controls.Add(this.groupBox13);
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Controls.Add(this.groupBox11);
@@ -353,6 +356,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Super Soul Details";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // store_defaultBtn
+            // 
+            this.store_defaultBtn.Location = new System.Drawing.Point(556, 35);
+            this.store_defaultBtn.Name = "store_defaultBtn";
+            this.store_defaultBtn.Size = new System.Drawing.Size(75, 20);
+            this.store_defaultBtn.TabIndex = 41;
+            this.store_defaultBtn.Text = "store";
+            this.store_defaultBtn.UseVisualStyleBackColor = true;
+            this.store_defaultBtn.Visible = false;
+            this.store_defaultBtn.Click += new System.EventHandler(this.store_defaultBtn_Click);
             // 
             // groupBox13
             // 
@@ -701,7 +715,6 @@
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(70, 20);
             this.txtID.TabIndex = 16;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // cbKiType
             // 
@@ -842,6 +855,7 @@
             // 
             this.txtLBDesc.Location = new System.Drawing.Point(200, 49);
             this.txtLBDesc.Name = "txtLBDesc";
+            this.txtLBDesc.ReadOnly = true;
             this.txtLBDesc.Size = new System.Drawing.Size(80, 20);
             this.txtLBDesc.TabIndex = 36;
             this.txtLBDesc.TextChanged += new System.EventHandler(this.txtLBDesc_TextChanged);
@@ -913,6 +927,7 @@
             this.txtUnkf36b.Name = "txtUnkf36b";
             this.txtUnkf36b.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf36b.TabIndex = 89;
+            this.txtUnkf36b.TextChanged += new System.EventHandler(this.txtUnkf36b_TextChanged);
             // 
             // label70
             // 
@@ -947,6 +962,7 @@
             this.txtUnki88b.Name = "txtUnki88b";
             this.txtUnki88b.Size = new System.Drawing.Size(55, 20);
             this.txtUnki88b.TabIndex = 87;
+            this.txtUnki88b.TextChanged += new System.EventHandler(this.txtUnki88b_TextChanged);
             // 
             // label76
             // 
@@ -963,6 +979,7 @@
             this.txtUnkf32b.Name = "txtUnkf32b";
             this.txtUnkf32b.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf32b.TabIndex = 86;
+            this.txtUnkf32b.TextChanged += new System.EventHandler(this.txtUnkf32b_TextChanged);
             // 
             // label77
             // 
@@ -1006,6 +1023,7 @@
             this.txtUnkf68b.Name = "txtUnkf68b";
             this.txtUnkf68b.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf68b.TabIndex = 82;
+            this.txtUnkf68b.TextChanged += new System.EventHandler(this.txtUnkf68b_TextChanged);
             // 
             // txtUnkf64b
             // 
@@ -1013,6 +1031,7 @@
             this.txtUnkf64b.Name = "txtUnkf64b";
             this.txtUnkf64b.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf64b.TabIndex = 81;
+            this.txtUnkf64b.TextChanged += new System.EventHandler(this.txtUnkf64b_TextChanged);
             // 
             // txtUnki44b
             // 
@@ -1020,6 +1039,7 @@
             this.txtUnki44b.Name = "txtUnki44b";
             this.txtUnki44b.Size = new System.Drawing.Size(55, 20);
             this.txtUnki44b.TabIndex = 80;
+            this.txtUnki44b.TextChanged += new System.EventHandler(this.txtUnki44b_TextChanged);
             // 
             // txtUnkf28b
             // 
@@ -1027,6 +1047,7 @@
             this.txtUnkf28b.Name = "txtUnkf28b";
             this.txtUnkf28b.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf28b.TabIndex = 79;
+            this.txtUnkf28b.TextChanged += new System.EventHandler(this.txtUnkf28b_TextChanged);
             // 
             // txtUnkf24b
             // 
@@ -1034,6 +1055,7 @@
             this.txtUnkf24b.Name = "txtUnkf24b";
             this.txtUnkf24b.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf24b.TabIndex = 78;
+            this.txtUnkf24b.TextChanged += new System.EventHandler(this.txtUnkf24b_TextChanged);
             // 
             // txtUnkf20b
             // 
@@ -1041,6 +1063,7 @@
             this.txtUnkf20b.Name = "txtUnkf20b";
             this.txtUnkf20b.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf20b.TabIndex = 77;
+            this.txtUnkf20b.TextChanged += new System.EventHandler(this.txtUnkf20b_TextChanged);
             // 
             // groupBox16
             // 
@@ -1505,6 +1528,7 @@
             this.txtEUnknownB1.Name = "txtEUnknownB1";
             this.txtEUnknownB1.Size = new System.Drawing.Size(52, 20);
             this.txtEUnknownB1.TabIndex = 70;
+            this.txtEUnknownB1.TextChanged += new System.EventHandler(this.txtEUnknownB1_TextChanged);
             // 
             // txtEUnknownA1
             // 
@@ -1512,6 +1536,7 @@
             this.txtEUnknownA1.Name = "txtEUnknownA1";
             this.txtEUnknownA1.Size = new System.Drawing.Size(52, 20);
             this.txtEUnknownA1.TabIndex = 69;
+            this.txtEUnknownA1.TextChanged += new System.EventHandler(this.txtEUnknownA1_TextChanged);
             // 
             // label79
             // 
@@ -1528,6 +1553,7 @@
             this.txtUnki881.Name = "txtUnki881";
             this.txtUnki881.Size = new System.Drawing.Size(55, 20);
             this.txtUnki881.TabIndex = 67;
+            this.txtUnki881.TextChanged += new System.EventHandler(this.txtUnki881_TextChanged);
             // 
             // label81
             // 
@@ -1562,6 +1588,7 @@
             this.txtUnkf681.Name = "txtUnkf681";
             this.txtUnkf681.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf681.TabIndex = 63;
+            this.txtUnkf681.TextChanged += new System.EventHandler(this.txtUnkf681_TextChanged);
             // 
             // txtUnkf641
             // 
@@ -1569,6 +1596,7 @@
             this.txtUnkf641.Name = "txtUnkf641";
             this.txtUnkf641.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf641.TabIndex = 62;
+            this.txtUnkf641.TextChanged += new System.EventHandler(this.txtUnkf641_TextChanged);
             // 
             // txtUnki441
             // 
@@ -1576,6 +1604,7 @@
             this.txtUnki441.Name = "txtUnki441";
             this.txtUnki441.Size = new System.Drawing.Size(55, 20);
             this.txtUnki441.TabIndex = 61;
+            this.txtUnki441.TextChanged += new System.EventHandler(this.txtUnki441_TextChanged);
             // 
             // label78
             // 
@@ -1592,6 +1621,7 @@
             this.txtUnkf361.Name = "txtUnkf361";
             this.txtUnkf361.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf361.TabIndex = 59;
+            this.txtUnkf361.TextChanged += new System.EventHandler(this.txtUnkf361_TextChanged);
             // 
             // label80
             // 
@@ -1608,6 +1638,7 @@
             this.txtUnkf321.Name = "txtUnkf321";
             this.txtUnkf321.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf321.TabIndex = 57;
+            this.txtUnkf321.TextChanged += new System.EventHandler(this.txtUnkf321_TextChanged);
             // 
             // label84
             // 
@@ -1642,6 +1673,7 @@
             this.txtUnkf281.Name = "txtUnkf281";
             this.txtUnkf281.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf281.TabIndex = 53;
+            this.txtUnkf281.TextChanged += new System.EventHandler(this.txtUnkf281_TextChanged);
             // 
             // txtUnkf241
             // 
@@ -1649,6 +1681,7 @@
             this.txtUnkf241.Name = "txtUnkf241";
             this.txtUnkf241.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf241.TabIndex = 52;
+            this.txtUnkf241.TextChanged += new System.EventHandler(this.txtUnkf241_TextChanged);
             // 
             // txtUnkf201
             // 
@@ -1656,6 +1689,7 @@
             this.txtUnkf201.Name = "txtUnkf201";
             this.txtUnkf201.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf201.TabIndex = 51;
+            this.txtUnkf201.TextChanged += new System.EventHandler(this.txtUnkf201_TextChanged);
             // 
             // groupBox4
             // 
@@ -2066,7 +2100,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Effect 2 Details";
             this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // label87
             // 
@@ -2083,6 +2116,7 @@
             this.txtUnkf362.Name = "txtUnkf362";
             this.txtUnkf362.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf362.TabIndex = 87;
+            this.txtUnkf362.TextChanged += new System.EventHandler(this.txtUnkf362_TextChanged);
             // 
             // label89
             // 
@@ -2117,6 +2151,7 @@
             this.txtUnki882.Name = "txtUnki882";
             this.txtUnki882.Size = new System.Drawing.Size(55, 20);
             this.txtUnki882.TabIndex = 85;
+            this.txtUnki882.TextChanged += new System.EventHandler(this.txtUnki882_TextChanged);
             // 
             // label94
             // 
@@ -2133,6 +2168,7 @@
             this.txtUnkf322.Name = "txtUnkf322";
             this.txtUnkf322.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf322.TabIndex = 84;
+            this.txtUnkf322.TextChanged += new System.EventHandler(this.txtUnkf322_TextChanged);
             // 
             // label95
             // 
@@ -2176,6 +2212,7 @@
             this.txtUnkf682.Name = "txtUnkf682";
             this.txtUnkf682.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf682.TabIndex = 80;
+            this.txtUnkf682.TextChanged += new System.EventHandler(this.txtUnkf682_TextChanged);
             // 
             // txtUnkf642
             // 
@@ -2183,6 +2220,7 @@
             this.txtUnkf642.Name = "txtUnkf642";
             this.txtUnkf642.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf642.TabIndex = 79;
+            this.txtUnkf642.TextChanged += new System.EventHandler(this.txtUnkf642_TextChanged);
             // 
             // txtUnki442
             // 
@@ -2190,6 +2228,7 @@
             this.txtUnki442.Name = "txtUnki442";
             this.txtUnki442.Size = new System.Drawing.Size(55, 20);
             this.txtUnki442.TabIndex = 78;
+            this.txtUnki442.TextChanged += new System.EventHandler(this.txtUnki442_TextChanged);
             // 
             // txtUnkf282
             // 
@@ -2197,6 +2236,7 @@
             this.txtUnkf282.Name = "txtUnkf282";
             this.txtUnkf282.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf282.TabIndex = 77;
+            this.txtUnkf282.TextChanged += new System.EventHandler(this.txtUnkf282_TextChanged);
             // 
             // txtUnkf242
             // 
@@ -2204,6 +2244,7 @@
             this.txtUnkf242.Name = "txtUnkf242";
             this.txtUnkf242.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf242.TabIndex = 76;
+            this.txtUnkf242.TextChanged += new System.EventHandler(this.txtUnkf242_TextChanged);
             // 
             // txtUnkf202
             // 
@@ -2211,6 +2252,7 @@
             this.txtUnkf202.Name = "txtUnkf202";
             this.txtUnkf202.Size = new System.Drawing.Size(52, 20);
             this.txtUnkf202.TabIndex = 75;
+            this.txtUnkf202.TextChanged += new System.EventHandler(this.txtUnkf202_TextChanged);
             // 
             // label35
             // 
@@ -2734,6 +2776,8 @@
             this.removeToolStripMenuItem,
             this.addToolStripMenuItem,
             this.exportToolStripMenuItem1,
+            this.addCurrentSuperSoulToShopToolStripMenuItem,
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem,
             this.replaceImportToolStripMenuItem});
             this.addNewXV2SSEditStripMenuItem.Enabled = false;
             this.addNewXV2SSEditStripMenuItem.Name = "addNewXV2SSEditStripMenuItem";
@@ -2768,6 +2812,20 @@
             this.exportToolStripMenuItem1.Text = "Export to Super Soul Package File (*.ssp)";
             this.exportToolStripMenuItem1.Click += new System.EventHandler(this.exportToolStripMenuItem1_Click);
             // 
+            // addCurrentSuperSoulToShopToolStripMenuItem
+            // 
+            this.addCurrentSuperSoulToShopToolStripMenuItem.Name = "addCurrentSuperSoulToShopToolStripMenuItem";
+            this.addCurrentSuperSoulToShopToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.addCurrentSuperSoulToShopToolStripMenuItem.Text = "Add Current Super Soul to Shop";
+            this.addCurrentSuperSoulToShopToolStripMenuItem.Click += new System.EventHandler(this.store_defaultBtn_Click);
+            // 
+            // removeCurrentSuperSoulFromShopToolStripMenuItem
+            // 
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Name = "removeCurrentSuperSoulFromShopToolStripMenuItem";
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Text = "Remove Current Super Soul From Shop";
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Click += new System.EventHandler(this.removeCurrentSuperSoulFromShopToolStripMenuItem_Click);
+            // 
             // replaceImportToolStripMenuItem
             // 
             this.replaceImportToolStripMenuItem.Name = "replaceImportToolStripMenuItem";
@@ -2780,7 +2838,6 @@
             // 
             this.limitBurstOptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setCurrentBurstIDsToNULLToolStripMenuItem,
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem,
             this.setLimitBurstToToolStripMenuItem});
             this.limitBurstOptionsToolStripMenuItem.Name = "limitBurstOptionsToolStripMenuItem";
             this.limitBurstOptionsToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
@@ -2789,16 +2846,9 @@
             // setCurrentBurstIDsToNULLToolStripMenuItem
             // 
             this.setCurrentBurstIDsToNULLToolStripMenuItem.Name = "setCurrentBurstIDsToNULLToolStripMenuItem";
-            this.setCurrentBurstIDsToNULLToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.setCurrentBurstIDsToNULLToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.setCurrentBurstIDsToNULLToolStripMenuItem.Text = "Set Current Burst IDs to NULL";
             this.setCurrentBurstIDsToNULLToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstIDsToNULLToolStripMenuItem_Click);
-            // 
-            // removeCurrentSuperSoulFromShopToolStripMenuItem
-            // 
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Name = "removeCurrentSuperSoulFromShopToolStripMenuItem";
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Text = "Remove Current Super Soul From Shop";
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Click += new System.EventHandler(this.removeCurrentSuperSoulFromShopToolStripMenuItem_Click);
             // 
             // setLimitBurstToToolStripMenuItem
             // 
@@ -2809,42 +2859,42 @@
             this.setCurrentBurstToGRDToolStripMenuItem,
             this.setCurrentBurstToREVToolStripMenuItem});
             this.setLimitBurstToToolStripMenuItem.Name = "setLimitBurstToToolStripMenuItem";
-            this.setLimitBurstToToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
-            this.setLimitBurstToToolStripMenuItem.Text = "Set Limit Burst to...";
+            this.setLimitBurstToToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.setLimitBurstToToolStripMenuItem.Text = "Set Current Limit Burst to...";
             // 
             // setCurrentBurstToATKToolStripMenuItem
             // 
             this.setCurrentBurstToATKToolStripMenuItem.Name = "setCurrentBurstToATKToolStripMenuItem";
-            this.setCurrentBurstToATKToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.setCurrentBurstToATKToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.setCurrentBurstToATKToolStripMenuItem.Text = "ATK Up";
             this.setCurrentBurstToATKToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToATKToolStripMenuItem_Click);
             // 
             // setCurrentBurstToDEFToolStripMenuItem
             // 
             this.setCurrentBurstToDEFToolStripMenuItem.Name = "setCurrentBurstToDEFToolStripMenuItem";
-            this.setCurrentBurstToDEFToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.setCurrentBurstToDEFToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.setCurrentBurstToDEFToolStripMenuItem.Text = "DEF Up";
             this.setCurrentBurstToDEFToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToDEFToolStripMenuItem_Click);
             // 
             // setCurrentBurstToRECToolStripMenuItem
             // 
             this.setCurrentBurstToRECToolStripMenuItem.Name = "setCurrentBurstToRECToolStripMenuItem";
-            this.setCurrentBurstToRECToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.setCurrentBurstToRECToolStripMenuItem.Text = "HP Rec";
+            this.setCurrentBurstToRECToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.setCurrentBurstToRECToolStripMenuItem.Text = "HP Recovery";
             this.setCurrentBurstToRECToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToRECToolStripMenuItem_Click);
             // 
             // setCurrentBurstToGRDToolStripMenuItem
             // 
             this.setCurrentBurstToGRDToolStripMenuItem.Name = "setCurrentBurstToGRDToolStripMenuItem";
-            this.setCurrentBurstToGRDToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.setCurrentBurstToGRDToolStripMenuItem.Text = "Just-Guard";
+            this.setCurrentBurstToGRDToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.setCurrentBurstToGRDToolStripMenuItem.Text = "Auto Just-Guard";
             this.setCurrentBurstToGRDToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToGRDToolStripMenuItem_Click);
             // 
             // setCurrentBurstToREVToolStripMenuItem
             // 
             this.setCurrentBurstToREVToolStripMenuItem.Name = "setCurrentBurstToREVToolStripMenuItem";
-            this.setCurrentBurstToREVToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.setCurrentBurstToREVToolStripMenuItem.Text = "Auto-Revive";
+            this.setCurrentBurstToREVToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.setCurrentBurstToREVToolStripMenuItem.Text = "Auto Revive";
             this.setCurrentBurstToREVToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToREVToolStripMenuItem_Click);
             // 
             // msgToolStripMenuItem
@@ -2863,9 +2913,8 @@
             this.nameToolStripMenuItem,
             this.descriptionToolStripMenuItem});
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addNewToolStripMenuItem.Text = "Name";
-            this.addNewToolStripMenuItem.Click += new System.EventHandler(this.addNewToolStripMenuItem_Click);
             // 
             // nameToolStripMenuItem
             // 
@@ -2888,7 +2937,7 @@
             this.nameToolStripMenuItem1,
             this.descriptionToolStripMenuItem1});
             this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.removeToolStripMenuItem1.Text = "Description";
             // 
             // nameToolStripMenuItem1
@@ -2961,7 +3010,6 @@
             this.label53.Size = new System.Drawing.Size(94, 15);
             this.label53.TabIndex = 5;
             this.label53.Text = "XV2 Ver. 1.13.00";
-            this.label53.Click += new System.EventHandler(this.label53_Click);
             // 
             // toolTip1
             // 
@@ -3237,7 +3285,6 @@
         private System.Windows.Forms.ToolStripMenuItem setAsDefaultProgramForSSFPToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem limitBurstOptionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setCurrentBurstIDsToNULLToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeCurrentSuperSoulFromShopToolStripMenuItem;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtEUnknownB1;
@@ -3308,5 +3355,8 @@
         private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToRECToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToGRDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToREVToolStripMenuItem;
+        private System.Windows.Forms.Button store_defaultBtn;
+        private System.Windows.Forms.ToolStripMenuItem addCurrentSuperSoulToShopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeCurrentSuperSoulFromShopToolStripMenuItem;
     }
 }

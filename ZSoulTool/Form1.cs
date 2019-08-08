@@ -670,22 +670,6 @@ namespace XV2SSEdit
             }
         }
 
-     // private void txtLBDescID_TextChanged(object sender, EventArgs e)
-     // {
-     //     if (!lockMod)
-     //     {
-     //         short ID;
-     //         if (short.TryParse(txtLBDescID.Text, out ID))
-     //             Array.Copy(BitConverter.GetBytes(ID), 0, Items[itemList.SelectedIndex].Data, 40, 2);
-     //
-     //         if (DescsLoaded)
-     //         {
-     //             Items[itemList.SelectedIndex].msgIndexBurst = FindmsgIndex(ref Burst, BitConverter.ToInt16(Items[itemList.SelectedIndex].Data, 40));
-     //             txtMsgLBDesc.Text = Burst.data[Items[itemList.SelectedIndex].msgIndexBurst].Lines[0];
-     //         }
-     //     }
-     // }
-
         private void txtShopTest_TextChanged(object sender, EventArgs e)
         {
             if (!lockMod)
@@ -1923,7 +1907,7 @@ namespace XV2SSEdit
             if (!lockMod)
             {
                 int ID;
-                if (int.TryParse(txtAura1.Text, out ID))
+                if (int.TryParse(txtAura2.Text, out ID))
                 {
                     byte[] pass;
                     if (ID == -1)
@@ -2180,6 +2164,7 @@ namespace XV2SSEdit
             }
 
         }
+
         private bool importSSP(string sspPath)
         {
 
@@ -2232,6 +2217,7 @@ namespace XV2SSEdit
             return true;
 
         }
+
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //add/import Z -soul
@@ -2292,8 +2278,7 @@ namespace XV2SSEdit
 
                 //UNLEASHED: return to first item
                 itemList.SelectedIndex = 0;
-            }
-        
+            }        
 
         private void nameToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2358,55 +2343,53 @@ namespace XV2SSEdit
             }
         }
 
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
+        //Demon: Old .zss export code. unused so commented out.
+        // private void exportToolStripMenuItem_Click(object sender, EventArgs e)
+        // {
+        //
+        //     SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+        //     saveFileDialog1.Filter = "Super Soul Share File | *.zss";
+        //     saveFileDialog1.Title = "Save a Super Soul File";
+        //     saveFileDialog1.ShowDialog();
+        //
+        //     if (saveFileDialog1.FileName != "")
+        //     {
+        //
+        //         //export ZSS
+        //         List<byte> zssfile = new List<byte>();
+        //         zssfile.AddRange(new byte[] { 0x23, 0x5A, 0x53, 0x53 });
+        //         if (NamesLoaded)
+        //             zssfile.AddRange(BitConverter.GetBytes(txtMsgName.TextLength));
+        //         else
+        //             zssfile.AddRange(BitConverter.GetBytes(0));
+        //
+        //         if (DescsLoaded)
+        //             zssfile.AddRange(BitConverter.GetBytes(txtMsgDesc.TextLength));
+        //         else
+        //             zssfile.AddRange(BitConverter.GetBytes(0));
+        //
+        //         if (NamesLoaded)
+        //             zssfile.AddRange(CharByteArray(txtMsgName.Text));
+        //
+        //         if (DescsLoaded)
+        //             zssfile.AddRange(CharByteArray(txtMsgDesc.Text));
+        //
+        //         byte[] itempass = new byte[718];
+        //         Array.Copy(Items[itemList.SelectedIndex].Data, 2, itempass, 0, 718);
+        //         zssfile.AddRange(itempass);
+        //
+        //         //FileStream fs = new FileStream(txtMsgName.Text + ".zss", FileMode.Create);
+        //         FileStream fs = (FileStream)saveFileDialog1.OpenFile();
+        //         fs.Write(zssfile.ToArray(), 0, zssfile.Count);
+        //         fs.Close();
+        //     }
+        //
+        // }
 
-        }
-
-        private void exportToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Super Soul Share File | *.zss";
-            saveFileDialog1.Title = "Save a Super Soul File";
-            saveFileDialog1.ShowDialog();
-
-            if (saveFileDialog1.FileName != "")
-            {
-
-                //export ZSS
-                List<byte> zssfile = new List<byte>();
-                zssfile.AddRange(new byte[] { 0x23, 0x5A, 0x53, 0x53 });
-                if (NamesLoaded)
-                    zssfile.AddRange(BitConverter.GetBytes(txtMsgName.TextLength));
-                else
-                    zssfile.AddRange(BitConverter.GetBytes(0));
-
-                if (DescsLoaded)
-                    zssfile.AddRange(BitConverter.GetBytes(txtMsgDesc.TextLength));
-                else
-                    zssfile.AddRange(BitConverter.GetBytes(0));
-
-                if (NamesLoaded)
-                    zssfile.AddRange(CharByteArray(txtMsgName.Text));
-
-                if (DescsLoaded)
-                    zssfile.AddRange(CharByteArray(txtMsgDesc.Text));
-
-                byte[] itempass = new byte[718];
-                Array.Copy(Items[itemList.SelectedIndex].Data, 2, itempass, 0, 718);
-                zssfile.AddRange(itempass);
-
-                //FileStream fs = new FileStream(txtMsgName.Text + ".zss", FileMode.Create);
-                FileStream fs = (FileStream)saveFileDialog1.OpenFile();
-                fs.Write(zssfile.ToArray(), 0, zssfile.Count);
-                fs.Close();
-            }
-
-        }
         //UNLEASHED: Mugen's code to convert string into byte array
         //UNLEASHED: made public to use within export form. yes i know i could copy it to the export form class and made
         //it its own method, but it doesn't matter much.
+
         public byte[] CharByteArray(string text)
         {
             //char[] chrArray = text.ToCharArray();
@@ -2422,52 +2405,47 @@ namespace XV2SSEdit
             return System.Text.Encoding.Unicode.GetBytes(text.ToCharArray());
         }
 
-        private void importToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //import
-            OpenFileDialog browseFile = new OpenFileDialog();
-            browseFile.Filter = "Z Soul Share File (*.zss)|*.zss";
-            browseFile.Title = "Browse for Z Soul Share File";
-            if (browseFile.ShowDialog() == DialogResult.Cancel)
-                return;
+        //Demon: old zss import code
+        //private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    //import
+        //    OpenFileDialog browseFile = new OpenFileDialog();
+        //    browseFile.Filter = "Z Soul Share File (*.zss)|*.zss";
+        //    browseFile.Title = "Browse for Z Soul Share File";
+        //    if (browseFile.ShowDialog() == DialogResult.Cancel)
+        //        return;
+        //    loadzss(browseFile.FileName, itemList.SelectedIndex, 0 , 0, false);
+        //    UpdateData();
+        //}
 
-            loadzss(browseFile.FileName, itemList.SelectedIndex, 0 , 0, false);
+        //private void loadzss(string pFileName, int oItem, short nID, short dID, bool useID)
+        //{
+        //    byte[] zssfile = File.ReadAllBytes(pFileName);
+        //    int nameCount = BitConverter.ToInt32(zssfile, 4);
+        //    int DescCount = BitConverter.ToInt32(zssfile, 8);
+        //
+        //    Array.Copy(zssfile, 12 + (nameCount * 2) + (DescCount * 2), Items[oItem].Data, 2, 718);
+        //
+        //    byte[] pass;
+        //    if (nameCount > 0)
+        //    {
+        //        pass = new byte[nameCount * 2];
+        //        Array.Copy(zssfile, 12, pass, 0, nameCount * 2);
+        //        txtMsgName.Text = BytetoString(pass);
+        //    }
+        //
+        //    if (DescCount > 0)
+        //    {
+        //        pass = new byte[DescCount * 2];
+        //        Array.Copy(zssfile, 12 + (nameCount * 2), pass, 0, DescCount * 2);
+        //        txtMsgDesc.Text = BytetoString(pass);
+        //    }
+        //    //UpdateData();
+        //}
 
-            UpdateData();
-
-        }
-
-        private void loadzss(string pFileName, int oItem, short nID, short dID, bool useID)
-        {
-            byte[] zssfile = File.ReadAllBytes(pFileName);
-            int nameCount = BitConverter.ToInt32(zssfile, 4);
-            int DescCount = BitConverter.ToInt32(zssfile, 8);
-
-            Array.Copy(zssfile, 12 + (nameCount * 2) + (DescCount * 2), Items[oItem].Data, 2, 718);
-
-            byte[] pass;
-            if (nameCount > 0)
-            {
-                pass = new byte[nameCount * 2];
-                Array.Copy(zssfile, 12, pass, 0, nameCount * 2);
-                txtMsgName.Text = BytetoString(pass);
-            }
-
-            if (DescCount > 0)
-            {
-                pass = new byte[DescCount * 2];
-                Array.Copy(zssfile, 12 + (nameCount * 2), pass, 0, DescCount * 2);
-                txtMsgDesc.Text = BytetoString(pass);
-            }
-
-            
-
-            //UpdateData();
-        }
-
+        private string BytetoString(byte[] bytes)
         //UNLEASHED: Mugen's code to convert MSG strings from unicode to ASCII format
         //UNLEASHED: we could have use the .NET natvie System.Text methods. but this works..
-        private string BytetoString(byte[] bytes)
         {
             char[] chrArray = new char[bytes.Length / 2];
             for (int i = 0; i < bytes.Length / 2; i++)
@@ -2562,9 +2540,6 @@ namespace XV2SSEdit
 
         private void createNewSoulToolStripMenuItem_Click (object sender, EventArgs e)
         {
-
-         
-
             //loadzss(browseFile.FileName, Items.Length - 1);
             //itemList.SelectedIndex = itemList.Items.Count - 1;
             int index = AddSS(Properties.Resources.newss);
@@ -2583,10 +2558,9 @@ namespace XV2SSEdit
             itemList.SelectedIndex = index;
         }
 
-
         //UNLEASHED: decided to wrap this in 1 function so that we don't need to repeat same code for creating new SSF and importing SSP
 
-       private int AddSS(byte[] SSData)
+        private int AddSS(byte[] SSData)
         {
 
            //UNLEASHED: this function will return the ItemList index of the latest installed Super Soul
@@ -2951,11 +2925,6 @@ namespace XV2SSEdit
             MessageBox.Show("Extension Set Successfully");
         }
 
-        private void addNewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -3020,6 +2989,7 @@ namespace XV2SSEdit
             txtLBSoulID3.Text = "582";
             cbLBColor.SelectedIndex = 4;
         }
+
         private void removeCurrentSuperSoulFromShopToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtRace.Text = "0";
@@ -3028,6 +2998,7 @@ namespace XV2SSEdit
             txtBuy.Text = "0";
             txtSell.Text = "0";
             txtBuyTP.Text = "0";
+            cbStar.SelectedIndex = 4;
         }
 
         private void store_defaultBtn_Click(object sender, EventArgs e)
@@ -3039,11 +3010,6 @@ namespace XV2SSEdit
             txtSell.Text = "100";
             txtBuyTP.Text = "1";
             cbStar.SelectedIndex = 4;
-        }
-
-        private void setLimitBurstToToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
 
