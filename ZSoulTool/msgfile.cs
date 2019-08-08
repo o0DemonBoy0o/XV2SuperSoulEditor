@@ -79,7 +79,7 @@ namespace Msgfile
                 {
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&apos;", @"'");
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&quot;", "\"");
-                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@" & amp;", @"&");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&amp;", @"&");
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace("\n", "\r\n");
                 }
             }
@@ -196,7 +196,7 @@ namespace Msgfile
                {
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&apos;", @"'");
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&quot;", "\"");
-                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@" & amp;", @"&");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&amp;", @"&");
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace("\n", "\r\n");
                 }
            }
