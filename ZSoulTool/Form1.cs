@@ -790,6 +790,10 @@ namespace XV2SSEdit
                 {
                     Items[itemList.SelectedIndex].msgIndexBurst = FindmsgIndex(ref Burst, BitConverter.ToUInt16(Items[itemList.SelectedIndex].Data, 40));
                     txtMsgLBDesc.Text = Burst.data[Items[itemList.SelectedIndex].msgIndexBurst].Lines[0];
+                    //Demon: updates the in battle description text when the description id is changed
+                    Items[itemList.SelectedIndex].msgIndexBurstBTL = getLB_BTL_Pause_DescID(BurstBTLHUD, Burst.data[Items[itemList.SelectedIndex].msgIndexBurst].NameID);
+                    txtMsgLBDescBTL.Text = BurstBTLHUD.data[Items[itemList.SelectedIndex].msgIndexBurstBTL].Lines[0];
+
                 }
 
             }
@@ -2931,8 +2935,6 @@ namespace XV2SSEdit
             {
                 BurstBTLHUD.data[Items[itemList.SelectedIndex].msgIndexBurstBTL].Lines[0] = txtMsgLBDescBTL.Text;
                 BurstPause.data[Items[itemList.SelectedIndex].msgIndexBurstPause].Lines[0] = txtMsgLBDescBTL.Text;
-          
-   
             }
              
         }
@@ -3028,26 +3030,21 @@ namespace XV2SSEdit
             txtBuyTP.Text = "0";
         }
 
-        private void label53_Click(object sender, EventArgs e)
+        private void store_defaultBtn_Click(object sender, EventArgs e)
+        {
+            txtRace.Text = "255";
+            txtShopTest.Text = "-1";
+            txtTPTest.Text = "30";
+            txtBuy.Text = "10";
+            txtSell.Text = "100";
+            txtBuyTP.Text = "1";
+            cbStar.SelectedIndex = 4;
+        }
+
+        private void setLimitBurstToToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
-
-        // private void cbLangSelect_SelectedIndexChanged(object sender, EventArgs e)
-        // {
-        //
-        // }
-
 
 
         //I'll Maybe work on fixing the patches at another time
