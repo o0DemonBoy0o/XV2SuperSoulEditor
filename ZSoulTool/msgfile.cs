@@ -78,7 +78,8 @@ namespace Msgfile
                 for (int j = 0; j < file.data[i].Lines.Length; j++)
                 {
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&apos;", @"'");
-                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&amp;", @"&");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&quot;", "\"");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@" & amp;", @"&");
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace("\n", "\r\n");
                 }
             }
@@ -96,6 +97,7 @@ namespace Msgfile
                     //Gotta replace all instances of "&" to "&amp;" first else you start messing up the apostrophies and whatnot.
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&", @"&amp;");
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"'", @"&apos;");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace("\"", @"&quot;");
                     file.data[i].Lines[j] = file.data[i].Lines[j].Replace("\r\n", "\n");
                 }
             }
@@ -192,10 +194,11 @@ namespace Msgfile
            {
                for (int j = 0; j < file.data[i].Lines.Length; j++)
                {
-                   file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&apos;", @"'");
-                   file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&amp;", @"&");
-                   file.data[i].Lines[j] = file.data[i].Lines[j].Replace("\n", "\r\n");
-               }
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&apos;", @"'");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@"&quot;", "\"");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace(@" & amp;", @"&");
+                    file.data[i].Lines[j] = file.data[i].Lines[j].Replace("\n", "\r\n");
+                }
            }
             fs.Close();
         }
