@@ -2622,14 +2622,13 @@ namespace XV2SSEdit
                     
                     ushort currID = BitConverter.ToUInt16(Items[currentItemIndex].Data, 0);
                     ushort nextID = BitConverter.ToUInt16(Items[currentItemIndex + 1].Data, 0);
-                    if (currID + 1 < nextID) // our new ID can go in the middle
+                    if (currID + 1 < nextID && ((currID + 1) <= 32700)) // our new ID can go in the middle
                     {
                         foundProperID = true;
                         newPos = currentItemIndex + 1;
                         ID = (ushort)(currID + 1);
                         break;
                     }
-
                 }
             }
 
@@ -2847,7 +2846,7 @@ namespace XV2SSEdit
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("XV2 Super Soul Editor Version 1.5\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code");
+            MessageBox.Show("XV2 Super Soul Editor Version 1.51\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code");
            
          
         }
@@ -3011,6 +3010,272 @@ namespace XV2SSEdit
             txtBuyTP.Text = "1";
             cbStar.SelectedIndex = 4;
         }
+
+
+        private void debugLBSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (debugLBSelect.SelectedIndex == 0)
+            {
+                txtLBAura.Text = "250";
+                txtLBDesc.Text = "0";
+                txtLBSoulID1.Text = "500";
+                txtLBSoulID2.Text = "501";
+                txtLBSoulID3.Text = "502";
+                cbLBColor.SelectedIndex = 1;
+            }
+
+            if (debugLBSelect.SelectedIndex == 1)
+            {
+                txtLBAura.Text = "251";
+                txtLBDesc.Text = "1";
+                txtLBSoulID1.Text = "520";
+                txtLBSoulID2.Text = "521";
+                txtLBSoulID3.Text = "522";
+                cbLBColor.SelectedIndex = 2;
+            }
+
+            if (debugLBSelect.SelectedIndex == 2)
+            {
+                txtLBAura.Text = "252";
+                txtLBDesc.Text = "2";
+                txtLBSoulID1.Text = "540";
+                txtLBSoulID2.Text = "541";
+                txtLBSoulID3.Text = "542";
+                cbLBColor.SelectedIndex = 3;
+            }
+
+            if (debugLBSelect.SelectedIndex == 3)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "3";
+                txtLBSoulID1.Text = "560";
+                txtLBSoulID2.Text = "561";
+                txtLBSoulID3.Text = "562";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 4)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "4";
+                txtLBSoulID1.Text = "580";
+                txtLBSoulID2.Text = "581";
+                txtLBSoulID3.Text = "582";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 5)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "5";
+                txtLBSoulID1.Text = "600";
+                txtLBSoulID2.Text = "601";
+                txtLBSoulID3.Text = "602";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 6)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "6";
+                txtLBSoulID1.Text = "605";
+                txtLBSoulID2.Text = "606";
+                txtLBSoulID3.Text = "607";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 7)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "7";
+                txtLBSoulID1.Text = "610";
+                txtLBSoulID2.Text = "611";
+                txtLBSoulID3.Text = "612";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 8)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "8";
+                txtLBSoulID1.Text = "615";
+                txtLBSoulID2.Text = "616";
+                txtLBSoulID3.Text = "617";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 9)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "9";
+                txtLBSoulID1.Text = "620";
+                txtLBSoulID2.Text = "621";
+                txtLBSoulID3.Text = "622";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 10)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "10";
+                txtLBSoulID1.Text = "625";
+                txtLBSoulID2.Text = "626";
+                txtLBSoulID3.Text = "627";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 11)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "11";
+                txtLBSoulID1.Text = "630";
+                txtLBSoulID2.Text = "631";
+                txtLBSoulID3.Text = "632";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 12)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "12";
+                txtLBSoulID1.Text = "635";
+                txtLBSoulID2.Text = "636";
+                txtLBSoulID3.Text = "637";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 13)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "13";
+                txtLBSoulID1.Text = "640";
+                txtLBSoulID2.Text = "641";
+                txtLBSoulID3.Text = "642";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 14)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "14";
+                txtLBSoulID1.Text = "645";
+                txtLBSoulID2.Text = "646";
+                txtLBSoulID3.Text = "647";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 15)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "15";
+                txtLBSoulID1.Text = "648";
+                txtLBSoulID2.Text = "649";
+                txtLBSoulID3.Text = "650";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 16)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "16";
+                txtLBSoulID1.Text = "651";
+                txtLBSoulID2.Text = "652";
+                txtLBSoulID3.Text = "653";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 17)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "17";
+                txtLBSoulID1.Text = "654";
+                txtLBSoulID2.Text = "655";
+                txtLBSoulID3.Text = "656";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 18)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "18";
+                txtLBSoulID1.Text = "657";
+                txtLBSoulID2.Text = "658";
+                txtLBSoulID3.Text = "659";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 19)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "19";
+                txtLBSoulID1.Text = "660";
+                txtLBSoulID2.Text = "661";
+                txtLBSoulID3.Text = "662";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 20)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "20";
+                txtLBSoulID1.Text = "663";
+                txtLBSoulID2.Text = "664";
+                txtLBSoulID3.Text = "665";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 21)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "21";
+                txtLBSoulID1.Text = "666";
+                txtLBSoulID2.Text = "667";
+                txtLBSoulID3.Text = "668";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 22)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "22";
+                txtLBSoulID1.Text = "669";
+                txtLBSoulID2.Text = "670";
+                txtLBSoulID3.Text = "671";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 23)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "23";
+                txtLBSoulID1.Text = "672";
+                txtLBSoulID2.Text = "673";
+                txtLBSoulID3.Text = "674";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 24)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "24";
+                txtLBSoulID1.Text = "675";
+                txtLBSoulID2.Text = "676";
+                txtLBSoulID3.Text = "677";
+                cbLBColor.SelectedIndex = 4;
+            }
+
+            if (debugLBSelect.SelectedIndex == 25)
+            {
+                txtLBAura.Text = "253";
+                txtLBDesc.Text = "25";
+                txtLBSoulID1.Text = "678";
+                txtLBSoulID2.Text = "679";
+                txtLBSoulID3.Text = "680";
+                cbLBColor.SelectedIndex = 4;
+            }
+        }
+
+
 
 
         //I'll Maybe work on fixing the patches at another time

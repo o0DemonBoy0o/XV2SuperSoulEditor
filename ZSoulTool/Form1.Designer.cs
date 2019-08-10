@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.debugLBSelect = new System.Windows.Forms.ComboBox();
             this.store_defaultBtn = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label97 = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.txtRace = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescID = new System.Windows.Forms.TextBox();
@@ -344,8 +346,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.store_defaultBtn);
             this.tabPage1.Controls.Add(this.groupBox13);
+            this.tabPage1.Controls.Add(this.store_defaultBtn);
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Controls.Add(this.groupBox11);
             this.tabPage1.Controls.Add(this.groupBox12);
@@ -357,9 +359,47 @@
             this.tabPage1.Text = "Super Soul Details";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // debugLBSelect
+            // 
+            this.debugLBSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.debugLBSelect.FormattingEnabled = true;
+            this.debugLBSelect.Items.AddRange(new object[] {
+            "ATK Up",
+            "DEF Up",
+            "Health Recovery",
+            "Auto Just Guard",
+            "Revive Gauge",
+            "Death Beam",
+            "Full Power Energy Wave",
+            "Kamehameha",
+            "Dynamite Kick",
+            "Spirit Sword",
+            "Justice Combination",
+            "Super Kamehameha",
+            "Time Skip/Molotov",
+            "Final Kamehameha",
+            "Sword of Hope",
+            "Scatter Kamehameha",
+            "Wolf Fang Fist",
+            "Volleyball Fist",
+            "Special Beam Cannon",
+            "Masenko",
+            "Double Sunday",
+            "Arm Crash",
+            "Galick Gun",
+            "Cross Arm",
+            "Dodon Ray",
+            "Power Pole"});
+            this.debugLBSelect.Location = new System.Drawing.Point(97, 6);
+            this.debugLBSelect.Name = "debugLBSelect";
+            this.debugLBSelect.Size = new System.Drawing.Size(202, 21);
+            this.debugLBSelect.TabIndex = 42;
+            this.debugLBSelect.Visible = false;
+            this.debugLBSelect.SelectedIndexChanged += new System.EventHandler(this.debugLBSelect_SelectedIndexChanged);
+            // 
             // store_defaultBtn
             // 
-            this.store_defaultBtn.Location = new System.Drawing.Point(556, 35);
+            this.store_defaultBtn.Location = new System.Drawing.Point(568, 49);
             this.store_defaultBtn.Name = "store_defaultBtn";
             this.store_defaultBtn.Size = new System.Drawing.Size(75, 20);
             this.store_defaultBtn.TabIndex = 41;
@@ -634,6 +674,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.label52);
             this.groupBox11.Controls.Add(this.label1);
             this.groupBox11.Controls.Add(this.label3);
             this.groupBox11.Controls.Add(this.txtDescID);
@@ -649,6 +690,17 @@
             this.groupBox11.TabIndex = 4;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Soul Info";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(339, 16);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(43, 13);
+            this.label52.TabIndex = 42;
+            this.label52.Text = "133, 14";
+            this.toolTip1.SetToolTip(this.label52, resources.GetString("label52.ToolTip"));
+            this.label52.Visible = false;
             // 
             // label1
             // 
@@ -730,6 +782,7 @@
             // 
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox12.Controls.Add(this.debugLBSelect);
             this.groupBox12.Controls.Add(this.label49);
             this.groupBox12.Controls.Add(this.cbLBColor);
             this.groupBox12.Controls.Add(this.label50);
@@ -1249,7 +1302,6 @@
             this.lstvBasic.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader9});
-            this.lstvBasic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstvBasic.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lstvBasic.HideSelection = false;
             this.lstvBasic.Location = new System.Drawing.Point(7, 63);
@@ -2913,7 +2965,7 @@
             this.nameToolStripMenuItem,
             this.descriptionToolStripMenuItem});
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.addNewToolStripMenuItem.Text = "Name";
             // 
             // nameToolStripMenuItem
@@ -2937,7 +2989,7 @@
             this.nameToolStripMenuItem1,
             this.descriptionToolStripMenuItem1});
             this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.removeToolStripMenuItem1.Text = "Description";
             // 
             // nameToolStripMenuItem1
@@ -3358,5 +3410,7 @@
         private System.Windows.Forms.Button store_defaultBtn;
         private System.Windows.Forms.ToolStripMenuItem addCurrentSuperSoulToShopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeCurrentSuperSoulFromShopToolStripMenuItem;
+        private System.Windows.Forms.ComboBox debugLBSelect;
+        private System.Windows.Forms.Label label52;
     }
 }
