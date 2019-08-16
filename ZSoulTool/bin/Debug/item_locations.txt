@@ -40,27 +40,30 @@ Outset Island - Orca - Give 10 Knight's Crests:
   Paths:
     - rels/d_a_npc_ji1.rel@4267
     - Ojhous/Stage.arc/Event00D:Ji1_TeachSpRollCut/Actor003/Action003
-#Outset Island - Orca - Hit 100 Times:
-#  Need: Nothing
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_ji1.rel@4297
-#Outset Island - Orca - Hit 300 Times:
-#  Need: Nothing
-#  Original item: Orange Rupee
-#  Paths:
-#    - rels/d_a_npc_ji1.rel@42BB
+Outset Island - Orca - Hit 100 Times:
+  Need: Can Sword Fight with Orca
+  Original item: Purple Rupee
+  Types: Short Sidequest
+  Paths:
+    - rels/d_a_npc_ji1.rel@4297
+Outset Island - Orca - Hit 300 Times:
+  Need: Can Sword Fight with Orca
+  Original item: Orange Rupee
+  Types: Short Sidequest
+  Paths:
+    - rels/d_a_npc_ji1.rel@42BB
 Outset Island - Orca - Hit 500 Times:
   Need: Can Sword Fight with Orca
   Original item: Piece of Heart
-  Types: No progression # This is just tedious to do
+  Types: Long Sidequest
   Paths:
     - rels/d_a_npc_ji1.rel@42F7
-#Outset Island - Orca - Hit 999 Times:
-#  Need: Nothing
-#  Original item: Silver Rupee
-#  Paths:
-#    - rels/d_a_npc_ji1.rel@42EF
+Outset Island - Orca - Hit 999 Times:
+  Need: Can Sword Fight with Orca
+  Original item: Silver Rupee
+  Types: No progression # This is just tedious to do
+  Paths:
+    - rels/d_a_npc_ji1.rel@42EF
 Outset Island - Great Fairy:
   Need:
     Can Cut Down Outset Trees
@@ -73,6 +76,7 @@ Outset Island - Great Fairy:
 #Outset Island - Grandma Cured: # randomizing this might mess getting the soup later on too
 #  Need: Empty Bottle & Can Get Fairies
 #  Original item: Elixir Soup
+#  Types: Short Sidequest
 #  Paths:
 #    - LinkRM/Stage.arc/Event003:Ba1_Get_Itm/Actor002/Action001
 Outset Island - Jabun's Cave:
@@ -206,13 +210,13 @@ Windfall Island - Mrs. Marie - Catch Killer Bees:
   Types: Short Sidequest
   Paths:
     - rels/d_a_npc_ho.rel@0A07
-#Windfall Island - Roll Into Tree: # Buggy, if you get a rupee here you get it twice, and Link walking in the event looks weird
-#  Need: Nothing
-#  Original item: Joy Pendant
-#  Types: No progression # Many people won't know about this item. Also, it only works during the day, and only after playing hide and seek.
-#  Paths:
-#    - rels/d_a_tag_mk.rel@0637
-#    - sea/Stage.arc/Event093:MK_PENDANT/Actor001/Action005
+Windfall Island - Roll Into Tree: # Buggy, if you get a rupee here you get it twice, and Link walking in the event looks weird
+  Need: Nothing
+  Original item: Joy Pendant
+  Types: Short Sidequest
+  Paths:
+    - rels/d_a_tag_mk.rel@0637
+    - sea/Stage.arc/Event093:MK_PENDANT/Actor001/Action005
 Windfall Island - Mrs. Marie - Give 1 Joy Pendant:
   Need: Spoils Bag
   # Since it's just 1 Joy Pendant for this one, don't require Grappling Hook to farm spoils like the others.
@@ -272,7 +276,7 @@ Windfall Island - Lenzo's House - Become Lenzo's Assistant:
   Need:
     Picto Box
   Original item: Joy Pendant
-  Types: Long Sidequest
+  Types: Short Sidequest
   Paths:
     - rels/d_a_npc_photo.rel@1C13
 Windfall Island - Lenzo's House - Bring Forest Firefly:
@@ -281,7 +285,7 @@ Windfall Island - Lenzo's House - Bring Forest Firefly:
     & Empty Bottle
     & Can Access Forest Haven
   Original item: Deluxe Picto Box
-  Types: Long Sidequest
+  Types: Short Sidequest
   Paths:
     - rels/d_a_npc_photo.rel@1C37
     - rels/d_a_npc_photo.rel@3BE3
@@ -368,25 +372,25 @@ Windfall Island - Pirate Ship:
 Windfall Island - 40 Rupee Auction:
   Need: Nothing
   Original item: Joy Pendant
-  Types: Expensive Purchase, Minigame
+  Types: Short Sidequest, Minigame
   Paths:
     - rels/d_a_auction.rel@4489
 Windfall Island - 5 Rupee Auction:
   Need: Nothing
   Original item: Treasure Chart 18
-  Types: Expensive Purchase, Minigame
+  Types: Short Sidequest, Minigame
   Paths:
     - rels/d_a_auction.rel@4491
 Windfall Island - 60 Rupee Auction:
   Need: Nothing
   Original item: Treasure Chart 38
-  Types: Expensive Purchase, Minigame
+  Types: Short Sidequest, Minigame
   Paths:
     - rels/d_a_auction.rel@4499
 Windfall Island - 80 Rupee Auction:
   Need: Nothing
   Original item: Piece of Heart
-  Types: Expensive Purchase, Minigame
+  Types: Short Sidequest, Minigame
   Paths:
     - rels/d_a_auction.rel@44A1
 #Windfall Island - Zunari - Sail:
@@ -410,19 +414,21 @@ Windfall Island - Zunari - Stock Exotic Flower in Zunari's Shop:
 Windfall Island - Sam - Decorate the Town:
   Need: Rescued Aryll & Delivery Bag
   Original item: Piece of Heart
-  Types: Long Sidequest
+  Types: Expensive Purchase
   Paths:
     - rels/d_a_npc_people.rel@C54B
-#Windfall Island - Kane - Place Shop Guru Statue on Gate: # Too obscure to randomize
-#  Need: Rescued Aryll & Delivery Bag
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_people.rel@C21B
-#Windfall Island - Kane - Place Postman Statue on Gate: # Too obscure to randomize
-#  Need: Rescued Aryll & Delivery Bag
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_people.rel@C21F
+Windfall Island - Kane - Place Shop Guru Statue on Gate: # Too obscure to randomize
+  Need: Rescued Aryll & Delivery Bag
+  Original item: Purple Rupee
+  Types: Expensive Purchase, Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C21B
+Windfall Island - Kane - Place Postman Statue on Gate: # Too obscure to randomize
+  Need: Rescued Aryll & Delivery Bag
+  Original item: Purple Rupee
+  Types: Expensive Purchase, Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C21F
 #Windfall Island - Kane - Place Six Flags on Gate: # Too obscure to randomize
 #  # Pinwheel counts as a flag
 #  Need: Rescued Aryll & Delivery Bag
@@ -493,7 +499,7 @@ Windfall Island - Pompie and Vera:
 Windfall Island - Kamo:
   Need: Deluxe Picto Box & Song of Passing
   Original item: Treasure Chart 31
-  Types: Long Sidequest
+  Types: Short Sidequest
   Paths:
     - rels/d_a_npc_people.rel@C55F
 Windfall Island - Minenco:
@@ -508,11 +514,9 @@ Windfall Island - Linda and Anton:
   # Then take a photo of Linda with the Deluxe Picto Box and show it to Anton. (You can do this before the parts with Lenzo and Linda if you want.)
   # Then wait an additional two days, and Linda and Anton will be in the cafe.
   Original item: Piece of Heart
-  Types: Long Sidequest
+  Types: Short Sidequest
   Paths:
     - rels/d_a_npc_people.rel@C557
-
-
 #Dragon Roost Island - Gift from King of Red Lions:
 #  Need: 
 #  Original item: Wind Waker
@@ -618,7 +622,7 @@ Dragon Roost Cavern - Chest Across Lava Pit:
   Need:
     Can Access Dragon Roost Cavern
     & DRC Small Key x2
-    & (Grappling Hook | Deku Leaf)
+    & (Grappling Hook | Deku Leaf | Hookshot)
   # Note: It's also possible to throw a burning stick across the pit, then stand at the very very edge of the cliff and hookshot the chest to get across. But this is pretty precise, so this is not required. (Maybe for a higher difficulty level in the future it can be.)
   # Note: In swordless, you can throw a burning stick across the lava pit, then grapple across.
   Original item: Treasure Chart 11
@@ -782,8 +786,8 @@ Forest Haven - On Tree Branch:
 Forest Haven - Small Island Chest:
   Need:
     Can Access Forest Haven
-    & Grappling Hook
     & Can Fly With Deku Leaf Outdoors
+    & Grappling Hook
   # Note: You don't need Grappling Hook because you can take the lower platform exit out of Forest Haven, fly to the pillar outside, then fly east to this small island (Noob Skip). You can just barely make it without double magic meter as long as your magic meter is full. But this is not currently in the logic.
   Original item: Treasure Chart 3
   Types: Other Chest
@@ -2283,11 +2287,17 @@ Northern Fairy Island - Submarine:
   Paths:
     - Abship/Room4.arc/Chest000
 
-#Tingle Island - Ankle - Reward for 1 Tingle Statue:
-#  Need: 
-#  Original item: 50 Rupees, reward for finding 1 Tingle Statue
-#  Paths:
-#    - rels/d_a_npc_tc.rel@617F
+Tingle Island - Ankle - Reward for 1 Tingle Statue:
+  Need:
+    Dragon Tingle Statue
+    | Forbidden Tingle Statue
+    | Goddess Tingle Statue
+    | Earth Tingle Statue
+    | Wind Tingle Statue
+  Original item: Purple Rupee
+  Types: Misc
+  Paths:
+    - rels/d_a_npc_tc.rel@617F
 #Tingle Island - Ankle - Reward for 2 Tingle Statues:
 #  Need: 
 #  Original item: 100 Rupees, reward for finding 2 Tingle Statues
