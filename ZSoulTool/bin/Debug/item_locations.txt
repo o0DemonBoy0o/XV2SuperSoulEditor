@@ -299,7 +299,7 @@ Windfall Island - 80 Rupee Auction:
   Types: Minigame
   Paths:
     - rels/d_a_auction.rel@44A1
-Windfall Island - Zunari - Stock Exotic Flower
+Windfall Island - Zunari - Stock Exotic Flower in Zunari's Shop:
   Need: Delivery Bag
   Original item: Magic Armor
   Types: Short Sidequest
@@ -313,6 +313,31 @@ Windfall Island - Sam - Decorate the Town:
   Types: Expensive Purchase
   Paths:
     - rels/d_a_npc_people.rel@C54B
+Windfall Island - Kane - Place Shop Guru Statue on Gate: # Too obscure to randomize
+  Need: Delivery Bag
+  Original item: Purple Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C21B
+Windfall Island - Kane - Place Postman Statue on Gate: # Too obscure to randomize
+  Need: Delivery Bag
+  Original item: Purple Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C21F
+Windfall Island - Kane - Place Six Flags on Gate: # Too obscure to randomize
+  # Pinwheel counts as a flag
+  Need: Delivery Bag
+  Original item: Red Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C223
+Windfall Island - Kane - Place Six Idols on Gate: # Too obscure to randomize
+  Need: Delivery Bag
+  Original item: Red Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C227
 Windfall Island - Mila - Catch Stealing:
   Need: Nothing
   Original item: Empty Bottle
@@ -1685,32 +1710,6 @@ The Great Sea - Ghost Ship:
     - PShip2/Stage.arc/Chest000
     - PShip3/Stage.arc/Chest000
 
-The Great Sea - Kane - Place Shop Guru Statue on Gate: # Too obscure to randomize
-  Need: Delivery Bag
-  Original item: Purple Rupee
-  Types: Long Sidequest
-  Paths:
-    - rels/d_a_npc_people.rel@C21B
-The Great Sea - Kane - Place Postman Statue on Gate: # Too obscure to randomize
-  Need: Delivery Bag
-  Original item: Purple Rupee
-  Types: Long Sidequest
-  Paths:
-    - rels/d_a_npc_people.rel@C21F
-The Great Sea - Kane - Place Six Flags on Gate: # Too obscure to randomize
-  # Pinwheel counts as a flag
-  Need: Delivery Bag
-  Original item: Red Rupee
-  Types: Long Sidequest
-  Paths:
-    - rels/d_a_npc_people.rel@C223
-The Great Sea - Kane - Place Six Idols on Gate: # Too obscure to randomize
-  Need: Delivery Bag
-  Original item: Red Rupee
-  Types: Long Sidequest
-  Paths:
-    - rels/d_a_npc_people.rel@C227
-	
 Private Oasis - Chest at Top of Waterfall:
   Need: Hookshot | Can Fly With Deku Leaf Outdoors
   Original item: Treasure Chart 27
