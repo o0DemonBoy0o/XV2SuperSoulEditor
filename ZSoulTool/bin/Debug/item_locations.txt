@@ -1,13 +1,4 @@
-#Outset Island - Aryll's Birthday Gift:
-#  Need: 
-#  Original item: Telescope
-#  Paths:
-#    - sea/Stage.arc/Event085:get_telescope/Actor002/Action001
-#Outset Island - Bring a Pig to Rose:
-#  Need: 
-#  Original item: Red Rupee
-#  Paths:
-#    - sea/Stage.arc/Event0B1:Get_Rupee/Actor002/Action000
+#OUTSET
 Outset Island - Underneath Link's House:
   Need: Nothing
   Original item: Orange Rupee
@@ -20,16 +11,6 @@ Outset Island - Mesa the Grasscutter's House:
   Types: Other Chest
   Paths:
     - Omasao/Stage.arc/Chest000
-#Outset Island - Orca - Tutorial:
-#  Need: 
-#  Original item: Hero's Sword
-#  Paths:
-#    - rels/d_a_npc_ji1.rel@4253
-#Outset Island - Shield from Grandma:
-#  Need: 
-#  Original item: Hero's Shield
-#  Paths:
-#    - main.dol@358D3B
 Outset Island - Orca - Give 10 Knight's Crests:
   Need:
     Spoils Bag
@@ -73,12 +54,6 @@ Outset Island - Great Fairy:
   Types: Great Fairy
   Paths:
     - rels/d_a_bigelf.rel@21C7
-#Outset Island - Grandma Cured: # randomizing this might mess getting the soup later on too
-#  Need: Empty Bottle & Can Get Fairies
-#  Original item: Elixir Soup
-#  Types: Short Sidequest
-#  Paths:
-#    - LinkRM/Stage.arc/Event003:Ba1_Get_Itm/Actor002/Action001
 Outset Island - Jabun's Cave:
   Need: Bombs
   Original item: Nayru's Pearl
@@ -95,20 +70,6 @@ Outset Island - Dig up Black Soil:
 Outset Island - Savage Labyrinth - Floor 30:
   Need:
     Can Access Savage Labyrinth
-    & Can Defeat Keese
-    & Can Defeat Miniblins
-    & Can Defeat Red ChuChus
-    & Can Defeat Magtails
-    & Can Defeat Fire Keese
-    & Can Defeat Peahats
-    & Can Defeat Green ChuChus
-    & Can Defeat Boko Babas
-    & Can Defeat Mothulas
-    & Can Defeat Winged Mothulas
-    & Can Defeat Wizzrobes
-    & Can Defeat Armos
-    & Can Defeat Yellow ChuChus
-    & Can Defeat Red Bubbles
     & Can Defeat Darknuts
     & Can Play Wind's Requiem
     & (Grappling Hook | Hero's Sword | Skull Hammer)
@@ -129,11 +90,7 @@ Outset Island - Savage Labyrinth - Floor 50:
   Need:
     Can Access Other Location "Outset Island - Savage Labyrinth - Floor 30"
     & Can Aim Mirror Shield
-    & Can Defeat ReDeads
     & Can Defeat Blue Bubbles
-    & Can Defeat Dark ChuChus
-    & Can Defeat Poes
-    & Can Defeat Stalfos
     & Skull Hammer
   # 2 of the 3 Wizzrobes on floor 48 never seem to come down to ground level, but it doesn't matter since you can throw the swords the Darknuts drop at them to kill them.
   # The following floors don't have requirements listed because you can trick enemies into hitting each other, pick up one of their dropped weapons, and kill the enemies with the weapon:
@@ -146,13 +103,7 @@ Outset Island - Savage Labyrinth - Floor 50:
   Paths:
     - Cave10/Room20.arc/Chest000
 
-#Pirate Ship - First Visit:
-#  Need: 
-#  Original item: Spoils Bag
-#  Paths:
-#    - Asoko/Stage.arc/Layer0/Chest000
-
-
+#WINDFALL
 Windfall Island - Jail - Tingle - First Gift:
   Need: Nothing
   Original item: Tingle Tuner
@@ -171,21 +122,6 @@ Windfall Island - Jail - Maze Chest:
   Types: Other Chest
   Paths:
     - Pnezumi/Stage.arc/Chest000
-#Windfall Island - Chu Jelly Juice Shop - Red Potion Free Sample:
-#  Need: 
-#  Original item: Red Potion
-#  Paths:
-#    - rels/d_a_npc_ds1.rel@28C7
-#Windfall Island - Chu Jelly Juice Shop - Green Potion Free Sample:
-#  Need: 
-#  Original item: Green Potion
-#  Paths:
-#    - rels/d_a_npc_ds1.rel@28D7
-#Windfall Island - Chu Jelly Juice Shop - Blue Potion Free Sample:
-#  Need: 
-#  Original item: Blue Potion
-#  Paths:
-#    - rels/d_a_npc_ds1.rel@28DF
 Windfall Island - Chu Jelly Juice Shop - Give 15 Green Chu Jelly:
   Need: Can Farm Green Chu Jelly
   Original item: Green Potion
@@ -195,7 +131,7 @@ Windfall Island - Chu Jelly Juice Shop - Give 15 Green Chu Jelly:
 Windfall Island - Chu Jelly Juice Shop - Give 15 Blue Chu Jelly:
   Need: Can Obtain 15 Blue Chu Jelly
   Original item: Blue Potion
-  Types: Spoils Trading, Long Sidequest
+  Types: Long Sidequest
   Paths:
     - CustomSymbol:doc_bandam_blue_potion_slot_item_id
 Windfall Island - Ivan - Catch Killer Bees:
@@ -210,13 +146,13 @@ Windfall Island - Mrs. Marie - Catch Killer Bees:
   Types: Short Sidequest
   Paths:
     - rels/d_a_npc_ho.rel@0A07
-Windfall Island - Roll Into Tree: # Buggy, if you get a rupee here you get it twice, and Link walking in the event looks weird
-  Need: Nothing
-  Original item: Joy Pendant
-  Types: Short Sidequest
-  Paths:
-    - rels/d_a_tag_mk.rel@0637
-    - sea/Stage.arc/Event093:MK_PENDANT/Actor001/Action005
+#Windfall Island - Roll Into Tree: # Buggy, if you get a rupee here you get it twice, and Link walking in the event looks weird
+#  Need: Nothing
+#  Original item: Joy Pendant
+#  Types: Misc
+#  Paths:
+#    - rels/d_a_tag_mk.rel@0637
+#    - sea/Stage.arc/Event093:MK_PENDANT/Actor001/Action005
 Windfall Island - Mrs. Marie - Give 1 Joy Pendant:
   Need: Spoils Bag
   # Since it's just 1 Joy Pendant for this one, don't require Grappling Hook to farm spoils like the others.
@@ -237,21 +173,6 @@ Windfall Island - Mrs. Marie - Give 40 Joy Pendants:
   Types: Spoils Trading
   Paths:
     - rels/d_a_npc_ho.rel@0C87
-#Windfall Island - Mrs. Marie - Give 1 or 2 Joy Pendants at Once:
-#  Need: 
-#  Original item: Red Rupee
-#  Paths:
-#    - rels/d_a_npc_ho.rel@0C4B
-#Windfall Island - Mrs. Marie - Give 3 or 4 Joy Pendants at Once:
-#  Need: 
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_ho.rel@0C5F
-#Windfall Island - Mrs. Marie - Give 5+ Joy Pendants at Once:
-#  Need: 
-#  Original item: Orange Rupee
-#  Paths:
-#    - rels/d_a_npc_ho.rel@0C6B
 Windfall Island - Lenzo's House - Left Chest:
   Need:
     # Need Wind's Requiem to activate the Windmill
@@ -289,11 +210,6 @@ Windfall Island - Lenzo's House - Bring Forest Firefly:
   Paths:
     - rels/d_a_npc_photo.rel@1C37
     - rels/d_a_npc_photo.rel@3BE3
-#Windfall Island - Lenzo's House - Legendary Pictograph:
-#  Need: 
-#  Original item: Legendary Pictograph
-#  Paths:
-#    - rels/d_a_npc_photo.rel@3B8B
 Windfall Island - House of Wealth Chest:
   Need: Nothing
   Original item: Red Rupee
@@ -301,41 +217,31 @@ Windfall Island - House of Wealth Chest:
   Paths:
     - Orichh/Room0.arc/Chest000
 Windfall Island - Maggie's Father - Give 20 Skull Necklaces:
-  Need: Rescued Aryll & Spoils Bag & Can Farm Skull Necklaces
+  Need: Spoils Bag & Can Farm Skull Necklaces
   Original item: Treasure Chart 2
   Types: Spoils Trading
   Paths:
     - Orichh/Stage.arc/Event04C:Gp1_Get_Itm/Actor002/Action001
-#Windfall Island - Maggie's Father - Give More than 20 Skull Necklaces: # Doesn't work
-#  Need: Rescued Aryll & Spoils Bag & Can Farm Skull Necklaces
-#  Original item: Red Rupee
-#  Paths:
-#    - rels/d_a_npc_kf1.rel@17AF
-#Windfall Island - Maggie's Father - Give More than 20 Skull Necklaces 2: # Doesn't work
-#  Need: Rescued Aryll & Spoils Bag & Can Farm Skull Necklaces
-#  Original item: Red Rupee
-#  Paths:
-#    - rels/d_a_npc_kf1.rel@1A23
 Windfall Island - Maggie - Letter:
-  Need: Rescued Aryll
+  Need: Nothing
   # Note: If you say no when she asks you to deliver her letter, she won't prompt you again - but that's temporary. Simply leave the room and re-enter and she will ask again.
   Original item: Maggie's Letter
   Types: Free Gift
   Paths:
     - rels/d_a_npc_kp1.rel@17D7
 Windfall Island - Maggie - Reward:
-  Need: Rescued Aryll & Delivery Bag & Moblin's Letter
+  Need: Delivery Bag & Moblin's Letter
   Original item: Piece of Heart
   Types: Short Sidequest
   Paths:
     - rels/d_a_npc_kp1.rel@1817
 Windfall Island - Cafe Bar - Postman:
-  Need: Rescued Aryll & Delivery Bag & Maggie's Letter
+  Need: Delivery Bag & Maggie's Letter
   Original item: Moblin's Letter
   Types: Short Sidequest
   Paths:
     - Opub/Stage.arc/Event00E:Get_Mo3_Ltr/Actor002/Action001
-Windfall Island - Kreeb:
+Windfall Island - Kreeb - Light Windmill:
   Need:
     # Need to activate the windmill and light up the lighthouse for him to give this to you.
     Can Play Wind's Requiem
@@ -356,7 +262,7 @@ Windfall Island - Transparent Chest:
     - sea/Room11.arc/Layer1/Chest000
     - sea/Room11.arc/Layer3/Chest000
     - sea/Room11.arc/Layer5/Chest000
-Windfall Island - Tott:
+Windfall Island - Tott - Teach Song:
   Need: Wind Waker
   Original item: Song of Passing
   Types: Free Gift
@@ -372,39 +278,29 @@ Windfall Island - Pirate Ship:
 Windfall Island - 40 Rupee Auction:
   Need: Nothing
   Original item: Joy Pendant
-  Types: Short Sidequest, Minigame
+  Types: Minigame
   Paths:
     - rels/d_a_auction.rel@4489
 Windfall Island - 5 Rupee Auction:
   Need: Nothing
   Original item: Treasure Chart 18
-  Types: Short Sidequest, Minigame
+  Types: Minigame
   Paths:
     - rels/d_a_auction.rel@4491
 Windfall Island - 60 Rupee Auction:
   Need: Nothing
   Original item: Treasure Chart 38
-  Types: Short Sidequest, Minigame
+  Types: Minigame
   Paths:
     - rels/d_a_auction.rel@4499
 Windfall Island - 80 Rupee Auction:
   Need: Nothing
   Original item: Piece of Heart
-  Types: Short Sidequest, Minigame
+  Types: Minigame
   Paths:
     - rels/d_a_auction.rel@44A1
-#Windfall Island - Zunari - Sail:
-#  Need: 
-#  Original item: Boat's Sail
-#  Paths:
-#    - rels/d_a_npc_rsh1.rel@30FB
-#Windfall Island - Zunari - Goron Trading Starter: # Doesn't randomize correctly, he just keeps giving you this item repeatedly
-#  Need: Rescued Aryll & Delivery Bag
-#  Original item: Town Flower
-#  Paths:
-#    - rels/d_a_npc_rsh1.rel@30DF
-Windfall Island - Zunari - Stock Exotic Flower in Zunari's Shop:
-  Need: Rescued Aryll & Delivery Bag
+Windfall Island - Zunari - Stock Exotic Flower
+  Need: Delivery Bag
   Original item: Magic Armor
   Types: Short Sidequest
   Paths:
@@ -412,36 +308,13 @@ Windfall Island - Zunari - Stock Exotic Flower in Zunari's Shop:
     - rels/d_a_npc_rsh1.rel@338F
     - CustomSymbol:zunari_magic_armor_slot_item_id
 Windfall Island - Sam - Decorate the Town:
-  Need: Rescued Aryll & Delivery Bag
+  Need: Delivery Bag
   Original item: Piece of Heart
   Types: Expensive Purchase
   Paths:
     - rels/d_a_npc_people.rel@C54B
-Windfall Island - Kane - Place Shop Guru Statue on Gate: # Too obscure to randomize
-  Need: Rescued Aryll & Delivery Bag
-  Original item: Purple Rupee
-  Types: Expensive Purchase, Long Sidequest
-  Paths:
-    - rels/d_a_npc_people.rel@C21B
-Windfall Island - Kane - Place Postman Statue on Gate: # Too obscure to randomize
-  Need: Rescued Aryll & Delivery Bag
-  Original item: Purple Rupee
-  Types: Expensive Purchase, Long Sidequest
-  Paths:
-    - rels/d_a_npc_people.rel@C21F
-#Windfall Island - Kane - Place Six Flags on Gate: # Too obscure to randomize
-#  # Pinwheel counts as a flag
-#  Need: Rescued Aryll & Delivery Bag
-#  Original item: Red Rupee
-#  Paths:
-#    - rels/d_a_npc_people.rel@C223
-#Windfall Island - Kane - Place Six Idols on Gate: # Too obscure to randomize
-#  Need: Rescued Aryll & Delivery Bag
-#  Original item: Red Rupee
-#  Paths:
-#    - rels/d_a_npc_people.rel@C227
-Windfall Island - Mila:
-  Need: Rescued Aryll
+Windfall Island - Mila - Catch Stealing:
+  Need: Nothing
   Original item: Empty Bottle
   Types: Short Sidequest
   Paths:
@@ -458,33 +331,24 @@ Windfall Island - Battlesquid - Second Prize:
   Types: Battlesquid
   Paths:
     - rels/d_a_npc_kg1.rel@2C29
-#Windfall Island - Battlesquid - Prize 3+:
-#  Need: Nothing
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_kg1.rel@2C2A
+Windfall Island - Battlesquid - Prize 3+:
+  Need: Nothing
+  Original item: Purple Rupee
+  Types: Battlesquid
+  Paths:
+    - rels/d_a_npc_kg1.rel@2C2A
 Windfall Island - Battlesquid - Under 20 Shots Prize:
   Need: Nothing
   Original item: Treasure Chart 23
   Types: Battlesquid
   Paths:
     - rels/d_a_npc_kg1.rel@2C2C
-#Windfall Island - Battlesquid - Under 20 Shots Prize 2+:
-#  Need: Nothing
-#  Original item: Orange Rupee
-#  Paths:
-#    - rels/d_a_npc_kg1.rel@2C2D
-#Windfall Island - Dampa's Piggy Sitting Minigame:
-#  Need: Rescued Aryll & Spoils Bag & Can Farm Skull Necklaces
-#  Original item: Purple Rupee
-#  Types: Minigame
-#  Paths:
-#    - rels/d_a_npc_people.rel@5BDF
-#Windfall Island - Dampa's Piggy Sitting Minigame (Unused):
-#  Need: 
-#  Original item: Red Rupee
-#  Paths:
-#    - rels/d_a_npc_people.rel@5BC3
+Windfall Island - Dampa's Piggy Sitting Minigame:
+  Need: Rescued Aryll & Spoils Bag & Can Farm Skull Necklaces
+  Original item: Purple Rupee
+  Types: Minigame
+  Paths:
+    - rels/d_a_npc_people.rel@5BDF
 Windfall Island - Pompie and Vera:
   Need:
     # Need to snap a photo of Lenzo and Minenco in Lenzo's house.
@@ -496,13 +360,13 @@ Windfall Island - Pompie and Vera:
   Types: Short Sidequest
   Paths:
     - rels/d_a_npc_people.rel@C54F
-Windfall Island - Kamo:
+Windfall Island - Kamo - Get Round Picture:
   Need: Deluxe Picto Box & Song of Passing
   Original item: Treasure Chart 31
   Types: Short Sidequest
   Paths:
     - rels/d_a_npc_people.rel@C55F
-Windfall Island - Minenco:
+Windfall Island - Minenco - Take Picture:
   Need: Deluxe Picto Box
   Original item: Treasure Chart 33
   Types: Short Sidequest
@@ -517,39 +381,15 @@ Windfall Island - Linda and Anton:
   Types: Short Sidequest
   Paths:
     - rels/d_a_npc_people.rel@C557
-#Dragon Roost Island - Gift from King of Red Lions:
-#  Need: 
-#  Original item: Wind Waker
-#  Paths:
-#    - sea/Stage.arc/Event025:TACT_TEARCH3/Actor000/Action002
+
+#DRAGON
 Dragon Roost Island - Wind Shrine:
   Need: Wind Waker
   Original item: Wind's Requiem
   Types: Misc
   Paths:
-    - sea/Stage.arc/Event0D8:TACT_HT/Actor001/Action005
     #- rels/d_a_npc_hr.rel@1167 # Duplicate Wind's Requiem given by Zephos, we remove this from his code so the player doesn't get this item twice.
-#Dragon Roost Island - Quill:
-#  Need: 
-#  Original item: Delivery Bag
-#  Paths:
-#    - main.dol@358D3A
-#Dragon Roost Island - Rito Aerie - Letter for Komali:
-#  Need: Nothing
-#  Original item: Father's Letter
-#  Paths:
-#    - rels/d_a_npc_md.rel@AF1B
-#    - rels/d_a_npc_md.rel@AF47
-#Dragon Roost Island - Entrance to Cavern - Medli's Gift:
-#  Need: Delivery Bag & Father's Letter # Need to deliver this to Komali before Medli will appear
-#  Original item: Empty Bottle
-#  Paths:
-#    - rels/d_a_npc_md.rel@AF3F
-#Dragon Roost Island - Komali:
-#  Need: 
-#  Original item: Din's Pearl
-#  Paths:
-#    - main.dol@358D37
+    - sea/Stage.arc/Event0D8:TACT_HT/Actor001/Action005
 Dragon Roost Island - Rito Aerie - Give Hoskit 20 Golden Feathers:
   Need: Spoils Bag & Can Farm Golden Feathers
   Original item: Orange Rupee
@@ -594,8 +434,7 @@ Dragon Roost Island - Secret Cave:
   Types: Combat Secret Cave
   Paths:
     - TF_06/Stage.arc/Chest000
-
-# Dragon Roost Cavern
+#Dragon Roost Cavern
 Dragon Roost Cavern - First Room:
   Need: Can Access Dragon Roost Cavern
   Original item: Small Key
@@ -648,7 +487,7 @@ Dragon Roost Cavern - Rat Room Boarded Up Chest:
 Dragon Roost Cavern - Bird's Nest:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x3
+    & (DRC Small Key x3 | Can Get DRC Boss Early)
   Original item: Small Key
   Types: Dungeon
   Paths:
@@ -656,7 +495,7 @@ Dragon Roost Cavern - Bird's Nest:
 Dragon Roost Cavern - Dark Room:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
+    & (DRC Small Key x4 | Can Get DRC Boss Early)
   Original item: Joy Pendant
   Types: Dungeon
   Paths:
@@ -664,8 +503,7 @@ Dragon Roost Cavern - Dark Room:
 Dragon Roost Cavern - Tingle Chest in Hub Room:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
-    & Tingle Tuner Bombs
+    & ((DRC Small Key x4 & Tingle Tuner Bombs) | Can Get DRC Boss Early)
   Original item: Yellow Rupee
   Types: Tingle Chest, Dungeon
   Paths:
@@ -673,7 +511,7 @@ Dragon Roost Cavern - Tingle Chest in Hub Room:
 Dragon Roost Cavern - Pot Room Chest:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
+    & (DRC Small Key x4 | Can Get DRC Boss Early)
   Original item: Treasure Chart 39
   Types: Dungeon
   Paths:
@@ -681,7 +519,7 @@ Dragon Roost Cavern - Pot Room Chest:
 Dragon Roost Cavern - Mini-Boss:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
+    & (DRC Small Key x4 | Can Get DRC Boss Early)
   # Need to escape: Grappling Hook | Can Fly With Deku Leaf Outdoors
   Original item: Grappling Hook
   Types: Dungeon
@@ -691,8 +529,7 @@ Dragon Roost Cavern - Mini-Boss:
 Dragon Roost Cavern - Under Rope Bridge:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
-    & (Grappling Hook | Can Fly With Deku Leaf Outdoors)
+    & (((Grappling Hook | Can Fly With Deku Leaf Outdoors) & DRC Small Key x4) | Can Get DRC Boss Early)
   # The ropes holding up the bridge can be cut with a stick - note that it takes three spin attacks instead of one.
   Original item: Joy Pendant
   Types: Dungeon
@@ -701,14 +538,7 @@ Dragon Roost Cavern - Under Rope Bridge:
 Dragon Roost Cavern - Tingle Statue Chest:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x1
-    & (
-      (DRC Small Key x4 & Can Cut Down Hanging DRC Platform)
-      | Deku Leaf
-      | Ice Arrows
-    )
-    & Grappling Hook
-    & Tingle Tuner Bombs
+    & ((DRC Small Key x1 & Grappling Hook & Tingle Tuner Bombs) | (Can Get DRC Boss Early & Tingle Tuner Bombs))
   Original item: Dragon Tingle Statue
   Types: Tingle Chest, Dungeon
   Paths:
@@ -717,11 +547,7 @@ Dragon Roost Cavern - Big Key Chest:
   Need:
     Can Access Dragon Roost Cavern
     & DRC Small Key x1
-    & (
-      (DRC Small Key x4 & Can Cut Down Hanging DRC Platform)
-      | Deku Leaf
-      | Ice Arrows
-    )
+    & ((DRC Small Key x2 & Can Cut Down Hanging DRC Platform) | Deku Leaf | Ice Arrows)
     & Grappling Hook
   # You can sneak into the gap at the bottom of the second room of DRC to get this chest early.
   # In vanilla you couldn't because of an invisible wall, but the randomizer removes the wall.
@@ -734,8 +560,7 @@ Dragon Roost Cavern - Big Key Chest:
 Dragon Roost Cavern - Boss Stairs Right Chest:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
-    & (Grappling Hook | Deku Leaf | Hookshot | Ice Arrows)
+    & (Can Get DRC Boss Normal | Can Get DRC Boss Early)
     # Hookshot can reach the torches on the other side of the lava.
     # Ice Arrows can create a platform in the lava.
   Original item: Knight's Crest
@@ -745,8 +570,7 @@ Dragon Roost Cavern - Boss Stairs Right Chest:
 Dragon Roost Cavern - Boss Stairs Left Chest:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
-    & (Grappling Hook | Deku Leaf | Hookshot | Ice Arrows)
+    & (Can Get DRC Boss Normal | Can Get DRC Boss Early)
     # Hookshot can reach the torches on the other side of the lava.
     # Ice Arrows can create a platform in the lava.
   Original item: Yellow Rupee
@@ -756,7 +580,7 @@ Dragon Roost Cavern - Boss Stairs Left Chest:
 Dragon Roost Cavern - Gohma Heart Container:
   Need:
     Can Access Dragon Roost Cavern
-    & DRC Small Key x4
+    & (DRC Small Key x4 | Can Get DRC Boss Early)
     & Grappling Hook
     & DRC Big Key
     & Can Defeat Gohma
@@ -766,7 +590,7 @@ Dragon Roost Cavern - Gohma Heart Container:
     - rels/d_a_btd.rel@36FE
     - M_DragB/Room0.arc/Actor015
 
-
+#FORREST
 Forest Haven - On Tree Branch:
   Need:
     Can Access Forest Haven
@@ -778,27 +602,16 @@ Forest Haven - On Tree Branch:
     - rels/d_a_deku_item.rel@0DC3
     - Omori/Room0.arc/Layer0/Actor000
     - Omori/Room0.arc/Layer1/Actor00B
-#Forest Haven - Farore's Pearl:
-#  Need: 
-#  Original item: Farore's Pearl
-#  Paths:
-#    - main.dol@358D38
 Forest Haven - Small Island Chest:
   Need:
     Can Access Forest Haven
-    & Can Fly With Deku Leaf Outdoors
-    & Grappling Hook
+    & (Can Fly With Deku Leaf Outdoors | Grappling Hook)
   # Note: You don't need Grappling Hook because you can take the lower platform exit out of Forest Haven, fly to the pillar outside, then fly east to this small island (Noob Skip). You can just barely make it without double magic meter as long as your magic meter is full. But this is not currently in the logic.
   Original item: Treasure Chart 3
   Types: Other Chest
   Paths:
     - sea/Room41.arc/Chest000
-#Hollo's Forest Potion Shop:
-#  Need: Can Access Forest Haven
-#  Original item: Blue Potion
-#  Paths:
-#    - Ocrogh/Stage.arc/Event03F:Get_Blu_Btl/Actor002/Action001
-
+#Forbidden Woods
 Forbidden Woods - First Room:
   Need: Can Access Forbidden Woods
   Original item: Dungeon Map
@@ -972,14 +785,12 @@ Forbidden Woods - Kalle Demos Heart Container:
     - rels/d_a_bmd.rel@2B2E
     - kinBOSS/Room0.arc/Actor002
 
-
 Greatfish Isle - Hidden Chest:
   Need: Can Fly With Deku Leaf Outdoors
   Original item: Piece of Heart
   Types: Other Chest
   Paths:
     - sea/Room23.arc/Chest000
-
 
 Tower of the Gods - Chest Behind Bombable Walls:
   Need:
@@ -1129,16 +940,6 @@ Tower of the Gods - Big Key Chest:
   Types: Dungeon
   Paths:
     - Siren/Stage.arc/Chest00B
-#Tower of the Gods - Gohdan - Arrow Refill:
-#  Need: 
-#  Original item: 10 Arrows (Pickup)
-#  Paths:
-#    - rels/d_a_bst.rel@5CA7
-#Tower of the Gods - Gohdan - Bomb Refill:
-#  Need: 
-#  Original item: 5 Bombs (Pickup)
-#  Paths:
-#    - rels/d_a_bst.rel@5CD3
 Tower of the Gods - Gohdan Heart Container:
   Need:
     Can Access Tower of the Gods
@@ -1168,7 +969,6 @@ Hyrule - Master Sword Chamber:
   Paths:
     - main.dol@358D34
     - kenroom/Room0.arc/Chest000
-
 
 Forsaken Fortress - Phantom Ganon:
   Need: Can Reach and Defeat Phantom Ganon
@@ -1211,11 +1011,6 @@ Forsaken Fortress - Chest on Bed:
     - majroom/Stage.arc/Chest001
     - ma2room/Stage.arc/Chest001
     - ma3room/Stage.arc/Chest001
-#Forsaken Fortress - Dropped Sword:
-#  Need: 
-#  Original item: Recovered Hero's Sword
-#  Paths:
-#    - MajyuE/Room0.arc/Actor016
 Forsaken Fortress - Helmaroc King Heart Container:
   Need:
     Can Get Inside Forsaken Fortress
@@ -1235,7 +1030,6 @@ Forsaken Fortress - Helmaroc King Heart Container:
     - M2tower/Room0.arc/Layer3/Actor01B
     - sea/Room1.arc/Layer2/Actor001
     - sea/Room1.arc/Layer3/Actor001
-
 
 Mother and Child Isles - Inside Mother Isle:
   Need: Can Play Ballad of Gales
@@ -1312,11 +1106,6 @@ Headstone Island - Submarine:
     - Abship/Room3.arc/Chest000
     - Abship/Room5.arc/Chest000
 
-#Earth Temple - Entrance:
-#  Need: 
-#  Original item: Earth God's Lyric
-#  Paths:
-#    - Edaichi/Stage.arc/Event043:MKNJD_D_LESSON/Actor003/Action006
 Earth Temple - Transparent Chest In Warp Pot Room:
   Need:
     Can Access Earth Temple
@@ -1338,15 +1127,6 @@ Earth Temple - Chest Behind Destructible Walls:
   Types: Dungeon
   Paths:
     - M_Dai/Stage.arc/Chest00A
-#Earth Temple - Behind Curtain Next to Map Chest:
-#  Need:
-#    Can Access Earth Temple
-#    & Can Play Command Melody
-#    & Fire Arrows
-#    & Boomerang & TODO # Does boomerang work for items here other than rupees and spoils?
-#  Original item: Joy Pendant
-#  Paths:
-#    - M_Dai/Room2.arc/Actor010
 Earth Temple - Transparent Chest in First Crypt:
   Need:
     Can Access Earth Temple
@@ -1443,16 +1223,6 @@ Earth Temple - Kill All Floormasters in Foggy Room:
   Types: Dungeon
   Paths:
     - M_Dai/Stage.arc/Chest009
-#Earth Temple - Behind Curtains Next to Hammer Button:
-#  Need:
-#    Can Access Earth Temple
-#    & Can Play Command Melody
-#    & Can Aim Mirror Shield
-#    & Can Play Earth God's Lyric
-#    & Boomerang & TODO # Does boomerang work for items here other than rupees and spoils?
-#  Original item: Joy Pendant
-#  Paths:
-#    - M_Dai/Room13.arc/Actor01A
 Earth Temple - Chest in Third Crypt:
   Need:
     Can Access Earth Temple
@@ -1528,11 +1298,6 @@ Earth Temple - Big Key Chest:
   Types: Dungeon
   Paths:
     - M_Dai/Stage.arc/Chest006
-#Earth Temple - Duplicate Earth God's Lyric?:
-#  Need: 
-#  Original item: Earth God's Lyric
-#  Paths:
-#    - M_Dai/Stage.arc/Event050:MKNJD_D_LESSON/Actor003/Action006
 Earth Temple - Jalhalla Heart Container:
   Need:
     Can Access Earth Temple
@@ -1550,18 +1315,7 @@ Earth Temple - Jalhalla Heart Container:
   Paths:
     - rels/d_a_bpw.rel@877E
     - M_DaiB/Room0.arc/Actor001
-#Earth Temple - Master Sword Upgrade:
-#  Need: 
-#  Original item: Master Sword (Half Power)
-#  Paths:
-#    - main.dol@358D35
 
-
-#Wind Temple - Entrance:
-#  Need: 
-#  Original item: Wind God's Aria
-#  Paths:
-#    - Ekaze/Stage.arc/Event042:MKNJD_K_LESSON/Actor003/Action006
 Wind Temple - Chest Between Two Dirt Patches:
   Need:
     Can Access Wind Temple
@@ -1743,11 +1497,6 @@ Wind Temple - Kill All Enemies in Tall Basement Room:
   Types: Dungeon
   Paths:
     - kaze/Stage.arc/Chest009
-#Wind Temple - Duplicate Wind God's Aria?:
-#  Need: 
-#  Original item: Wind God's Aria
-#  Paths:
-#    - kaze/Stage.arc/Event04F:MKNJD_K_LESSON/Actor003/Action006
 Wind Temple - Molgera Heart Container:
   Need:
     Can Access Wind Temple
@@ -1765,11 +1514,6 @@ Wind Temple - Molgera Heart Container:
   Paths:
     - rels/d_a_bwd.rel@6D83
     - kazeB/Room0.arc/Actor001
-#Wind Temple - Master Sword Upgrade:
-#  Need: 
-#  Original item: Master Sword (Full Power)
-#  Paths:
-#    - main.dol@358D36
 
 Ganon's Tower - Maze Chest:
   Need:
@@ -1782,14 +1526,14 @@ Ganon's Tower - Maze Chest:
 
 # Note: In the vanilla game, the mailbox would not give you any mail until you owned Din's Pearl. But this requirement is removed in the randomizer.
 Mailbox - Letter from Hoskit's Girlfriend:
-  Need: Spoils Bag & Can Farm Golden Feathers & Song of Passing
+  Need: Spoils Bag & Can Farm Golden Feathers
   # Need to wait for time to pass.
   Original item: Piece of Heart (Alternate Message)
   Types: Mail, Spoils Trading
   Paths:
     - rels/d_a_obj_toripost.rel@25DC
 Mailbox - Letter from Baito's Mother:
-  Need: Delivery Bag & Note to Mom & Song of Passing
+  Need: Delivery Bag & Note to Mom
   # Need to wait for time to pass.
   Original item: Piece of Heart
   Types: Mail
@@ -1797,7 +1541,7 @@ Mailbox - Letter from Baito's Mother:
     - rels/d_a_obj_toripost.rel@2564
     - rels/d_a_obj_toripost.rel@25C4
 Mailbox - Letter from Baito:
-  Need: Delivery Bag & Note to Mom & Song of Passing & Can Access Other Location "Earth Temple - Jalhalla Heart Container"
+  Need: Delivery Bag & Note to Mom & Can Access Other Location "Earth Temple - Jalhalla Heart Container"
   # Need to kill Jalhalla and Baito's mom must have sent her letter (doesn't matter if you've read her letter or not).
   # You do not need to wait for time to pass for this one, but because you did need to wait for time to pass for the one from his mother first, we still require Song of Passing here.
   Original item: Red Rupee
@@ -1825,12 +1569,10 @@ Mailbox - Letter Advertising Rock Spire Shop Ship:
     - rels/d_a_obj_toripost.rel@25A0
 Mailbox - Beedle's Silver Membership Reward:
   Need:
-    (
       Bait Bag
       | Bombs
       | Hero's Bow
       | Empty Bottle
-    ) & Song of Passing
   # In order to get enough points to become a silver/gold member, you need to buy consumables.
   # Bait bag is needed to buy bait, bombs are needed to buy bombs, bow is needed to buy arrows, and empty bottle is needed to buy red potions.
   # Need to wait for time to pass.
@@ -1840,12 +1582,10 @@ Mailbox - Beedle's Silver Membership Reward:
     - rels/d_a_obj_toripost.rel@25D0
 Mailbox - Beedle's Gold Membership Reward:
   Need:
-    (
       Bait Bag
       | Bombs
       | Hero's Bow
       | Empty Bottle
-    ) & Song of Passing
   # In order to get enough points to become a silver/gold member, you need to buy consumables.
   # Bait bag is needed to buy bait, bombs are needed to buy bombs, bow is needed to buy arrows, and empty bottle is needed to buy red potions.
   # Need to wait for time to pass.
@@ -1863,14 +1603,14 @@ Mailbox - Letter from Orca:
   Paths:
     - rels/d_a_obj_toripost.rel@2588
 Mailbox - Letter from Grandma:
-  Need: Empty Bottle & Can Get Fairies & Song of Passing
+  Need: Empty Bottle & Can Get Fairies
   # Need to wait for time to pass.
   Original item: Red Rupee
   Types: Mail
   Paths:
     - rels/d_a_obj_toripost.rel@2594
 Mailbox - Letter from Aryll:
-  Need: Can Access Other Location "Forsaken Fortress - Helmaroc King Heart Container" & Song of Passing
+  Need: Can Access Other Location "Forsaken Fortress - Helmaroc King Heart Container"
   # Note: In the vanilla game, this letter is sent after you watch a cutscene in Hyrule 2.
   # But since that's impossible when cutscenes are removed, the randomizer changes it to be sent when you kill Helmaroc King.
   # Need to wait for time to pass.
@@ -1879,7 +1619,7 @@ Mailbox - Letter from Aryll:
   Paths:
     - rels/d_a_obj_toripost.rel@25B8
 Mailbox - Letter from Tingle:
-  Need: Rescued Tingle & Any Wallet Upgrade & Can Access Other Location "Forsaken Fortress - Helmaroc King Heart Container" & Song of Passing
+  Need: Rescued Tingle & Any Wallet Upgrade & Can Access Other Location "Forsaken Fortress - Helmaroc King Heart Container"
   # You need a wallet upgrade because it costs 201 rupees to receive this letter.
   # Note: In the vanilla game, this letter is sent after you watch a cutscene in Hyrule 2.
   # But since that's impossible when cutscenes are removed, the randomizer changes it to be sent when you kill Helmaroc King.
@@ -1945,33 +1685,32 @@ The Great Sea - Ghost Ship:
     - PShip2/Stage.arc/Chest000
     - PShip3/Stage.arc/Chest000
 
-#The Great Sea - Old Man Hoho 1 (Unused):
-#  Need: 
-#  Original item: Piece of Heart
-#  Paths:
-#    - rels/d_a_npc_ah.rel@174F
-#The Great Sea - Old Man Hoho 2 (Unused):
-#  Need: 
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_ah.rel@1773
-#The Great Sea - Fishman (Unused):
-#  Need: 
-#  Original item: Silver Rupee
-#  Paths:
-#    - sea/Stage.arc/Event0D2:SO_GET_RUPEE/Actor002/Action000
-
-#Nintendo Gallery - Carlov 1 (Unused):
-#  Need: 
-#  Original item: Piece of Heart
-#  Paths:
-#    - rels/d_a_npc_mt.rel@18AB
-#Nintendo Gallery - Carlov 2 (Unused):
-#  Need: 
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_mt.rel@18CF
-
+The Great Sea - Kane - Place Shop Guru Statue on Gate: # Too obscure to randomize
+  Need: Delivery Bag
+  Original item: Purple Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C21B
+The Great Sea - Kane - Place Postman Statue on Gate: # Too obscure to randomize
+  Need: Delivery Bag
+  Original item: Purple Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C21F
+The Great Sea - Kane - Place Six Flags on Gate: # Too obscure to randomize
+  # Pinwheel counts as a flag
+  Need: Delivery Bag
+  Original item: Red Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C223
+The Great Sea - Kane - Place Six Idols on Gate: # Too obscure to randomize
+  Need: Delivery Bag
+  Original item: Red Rupee
+  Types: Long Sidequest
+  Paths:
+    - rels/d_a_npc_people.rel@C227
+	
 Private Oasis - Chest at Top of Waterfall:
   Need: Hookshot | Can Fly With Deku Leaf Outdoors
   Original item: Treasure Chart 27
@@ -2329,46 +2068,6 @@ Tingle Island - Ankle - Reward for All Tingle Statues:
   Types: Misc
   Paths:
     - rels/d_a_npc_tc.rel@6143
-#Tingle Island - Tingle - Triforce Chart 1 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 1 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@61D7
-#Tingle Island - Tingle - Triforce Chart 2 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 2 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@61DF
-#Tingle Island - Tingle - Triforce Chart 3 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 3 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@61E7
-#Tingle Island - Tingle - Triforce Chart 4 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 4 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@61EF
-#Tingle Island - Tingle - Triforce Chart 5 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 5 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@61F7
-#Tingle Island - Tingle - Triforce Chart 6 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 6 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@61FF
-#Tingle Island - Tingle - Triforce Chart 7 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 7 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@6207
-#Tingle Island - Tingle - Triforce Chart 8 Deciphered:
-#  Need: 
-#  Original item: Triforce Chart 8 got deciphered
-#  Paths:
-#    - rels/d_a_npc_tc.rel@620F
 Tingle Island - Big Octo:
   Need: Can Defeat Big Octos & Grappling Hook
   Original item: Piece of Heart
@@ -2572,11 +2271,6 @@ Flight Control Platform - Bird-Man Contest - First Prize:
   Types: Minigame
   Paths:
     - rels/d_a_npc_bmcon1.rel@2B7B
-#Flight Control Platform - Bird-Man Contest - Prize 2+:
-#  Need: 
-#  Original item: Purple Rupee
-#  Paths:
-#    - rels/d_a_npc_bmcon1.rel@2B9F
 Flight Control Platform - Submarine:
   Need:
     Can Defeat Wizzrobes
