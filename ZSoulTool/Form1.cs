@@ -60,6 +60,10 @@ namespace XV2SSEdit
         private string lastInputString = "";
         //UNLEASHED: helper var for deleting
         private int currentSuperSoulIndex = -1;
+        //UNLEASHED remind user to save changes.
+        private bool hasSavedChanges = true;
+        //UNLEASHED copy and paste
+        private byte[] clipboardData = null;
 
         #endregion
 
@@ -378,7 +382,8 @@ namespace XV2SSEdit
 
             SaveXV2SSEdit();
         //UNLEASHED: added msgbox
-           MessageBox.Show("Save Successful");
+            hasSavedChanges = true;
+           MessageBox.Show("Save Successful\nTo see changes in-game, the XV2Patcher must be installed.");
         }
 
         public void EffectData()
@@ -601,6 +606,7 @@ namespace XV2SSEdit
 
         private void itemList_SelectedIndexChanged(object sender, EventArgs e)
         {
+                hasSavedChanges = false;
                 currentSuperSoulIndex = itemList.SelectedIndex;
                 UpdateData();
             
@@ -776,6 +782,7 @@ namespace XV2SSEdit
                     txtMsgLBDesc.Text = Burst.data[Items[itemList.SelectedIndex].msgIndexBurst].Lines[0];
                     //Demon: updates the in battle description text when the description id is changed
                     Items[itemList.SelectedIndex].msgIndexBurstBTL = getLB_BTL_Pause_DescID(BurstBTLHUD, Burst.data[Items[itemList.SelectedIndex].msgIndexBurst].NameID);
+                    Items[itemList.SelectedIndex].msgIndexBurstPause = getLB_BTL_Pause_DescID(BurstPause, Burst.data[Items[itemList.SelectedIndex].msgIndexBurst].NameID);
                     txtMsgLBDescBTL.Text = BurstBTLHUD.data[Items[itemList.SelectedIndex].msgIndexBurstBTL].Lines[0];
 
                 }
@@ -2294,7 +2301,6 @@ namespace XV2SSEdit
                 Names.data = Expand;
 
 
-
                 txtNameID.Text = Names.data[Names.data.Length - 1].ID.ToString();
             }
         }
@@ -2536,6 +2542,147 @@ namespace XV2SSEdit
             (new Export(this,Names,Descs,Burst,BurstBTLHUD,BurstPause)).Show();
             
 
+        }
+        private int AddLB(byte[] SSData)
+           
+        {
+
+           //UNLEASHED: this function will return the ItemList index of the latest installed Super Soul
+           //if the returned int is "-1" then Super Soul failed to install.
+
+
+            //Create and add Blank Super Soul (its not actually blank, it uses Raditz Super Soul as a base, which is a functional soul that has no effects)
+            //loading
+            // OpenFileDialog browseFile = new OpenFileDialog();
+            // browseFile.Filter = "Super Soul Share File | *.zss";
+            // browseFile.Title = "Select the Super Soul you want to import.";
+            // if (browseFile.ShowDialog() == DialogResult.Cancel)
+            //     return;
+
+            idbItem[] items_org = Items;
+            byte[] blankzss = SSData;
+
+            int nameCount = BitConverter.ToInt32(blankzss, 4);
+            int DescCount = BitConverter.ToInt32(blankzss, 8);
+            int LBDescCount = BitConverter.ToInt32(blankzss, 12);
+            int LBDescCountBtl = BitConverter.ToInt32(blankzss, 16);
+            int LBDescCountPause = BitConverter.ToInt32(blankzss, 20);
+
+
+
+            //UNLEASHED: we are gonna skip expanding itemlist until later..
+
+            //==================================EXPAND ITEMS CODE=========================
+            ////expand the item array
+            //idbItem[] Expand = new idbItem[Items.Length + 1];
+            ////copy the current items to the expanded array
+            //Array.Copy(Items, Expand, Items.Length);
+            ////add blank IDB data
+            //Expand[Expand.Length - 1].Data = new byte[720];
+
+
+            //Items = Expand;
+
+            //==================================EXPAND ITEMS CODE=========================
+
+            //UNLEASHED: first, lets the get the ID of the last SS's ID and increment by 1
+            ushort ID = BitConverter.ToUInt16(Items[Items.Length - 1].Data, 0);
+            ID++;
+
+
+
+            bool foundProperID = true;
+            int newPos = Items.Length; //UNLEASHED: Length = current items count + 1 (which is a  proper ID after we expand the list)
+            //UNLEASHED: after incrementing by 1, we check if its above 32700 (very close to Int16.MaxValue)
+            if (ID > 32700)
+            {
+                foundProperID = false;
+                int currentItemIndex = Items.Length - 1;
+                while ((currentItemIndex - 1) > 0)
+                {
+
+                    currentItemIndex--; //UNLEASHED: skiping last SS
+
+                    
+                    ushort currID = BitConverter.ToUInt16(Items[currentItemIndex].Data, 0);
+                    ushort nextID = BitConverter.ToUInt16(Items[currentItemIndex + 1].Data, 0);
+                    if (currID + 1 < nextID && ((currID + 1) <= 32700)) // our new ID can go in the middle
+                    {
+                        foundProperID = true;
+                        newPos = currentItemIndex + 1;
+                        ID = (ushort)(currID + 1);
+                        break;
+                    }
+                }
+            }
+
+            if (foundProperID)
+            {
+                //expand the item array
+                idbItem[] Expand = new idbItem[Items.Length + 1];
+                //copy the current items to the expanded array
+                Array.Copy(Items, Expand, Items.Length);
+                //add blank IDB data
+                Expand[Expand.Length - 1].Data = new byte[720];
+                //UNLEASHED: finally, set the new array with proper IDs
+                Items = Expand;
+
+                int currentIndex = Items.Length - 1;
+                int prevIndex = Items.Length - 2;
+                if (prevIndex < 0) //UNLEASHED: incase something went very wrong (corrupt IDB file?)
+                {
+                    MessageBox.Show("Cannot add new Super Soul");
+                    Items = items_org;
+                    return -1;
+                }
+
+                //UNLEASHED: Swap items until we reach newPos
+                while (currentIndex != newPos)
+                {
+                   
+                        idbItem tempIDBItem = Items[currentIndex];
+                        Items[currentIndex] = Items[prevIndex];
+                        Items[prevIndex] = tempIDBItem;
+                        currentIndex--;
+                        prevIndex--;
+                    
+
+               
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Cannot add new Super Soul");
+                Items = items_org;
+                return -1;
+            }
+            Array.Copy(BitConverter.GetBytes(ID), Items[newPos].Data, 2);
+
+            //apply Zss data to added z-soul
+
+            //UNLEASHED: original code was multiplying lengths by 2 (this is because of unicode names)
+            //instead, when exporting the SS get the length of the strings and multiy them by 2 before writing to binary
+            //so here we read the number normally
+            //Array.Copy(blankzss, 12 + (nameCount * 2) + (DescCount * 2), Items[newPos].Data, 2, 718);
+
+            //UNLEASHED: + (4) is for limit burst linker 4 bytes, only useful in SSP
+
+            Array.Copy(blankzss, 0x1C + (nameCount) + (DescCount) + (LBDescCount) + (LBDescCountBtl) + (LBDescCountPause), Items[newPos].Data, 2, 718);
+            Items[newPos].msgIndexName = 0;
+
+            Items[newPos].msgIndexDesc = 0;
+
+            Items[newPos].msgIndexBurst = 0;
+
+
+
+            Items[newPos].msgIndexBurstBTL = getLB_BTL_Pause_DescID(BurstBTLHUD, Burst.data[Items[newPos].msgIndexBurst].NameID);
+            Items[newPos].msgIndexBurstPause = getLB_BTL_Pause_DescID(BurstPause, Burst.data[Items[newPos].msgIndexBurst].NameID);
+     
+            return newPos;
         }
 
         private void createNewSoulToolStripMenuItem_Click (object sender, EventArgs e)
@@ -2846,7 +2993,7 @@ namespace XV2SSEdit
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("XV2 Super Soul Editor Version 1.51\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code");
+            MessageBox.Show("XV2 Super Soul Editor Version 1.60\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code");
            
          
         }
@@ -3273,6 +3420,216 @@ namespace XV2SSEdit
                 txtLBSoulID3.Text = "680";
                 cbLBColor.SelectedIndex = 4;
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (hasSavedChanges == false)
+            {
+                if (MessageBox.Show("You have unsaved data, close editor?", "Unsaved Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                    e.Cancel = true;
+                else
+                    e.Cancel = false;
+            }
+            else
+                Application.Exit();
+        }
+
+        private void copyCurrentSuperSoulToClipboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //System.Text.Encoding.Unicode.GetBytes(text.ToCharArray());
+            List<byte> copiedBytes = new List<byte>();
+
+
+            string nameText = Names.data[Items[currentSuperSoulIndex].msgIndexName].Lines[0];
+            string DescText = Descs.data[Items[currentSuperSoulIndex].msgIndexDesc].Lines[0];
+            string LBDescText = Burst.data[Items[currentSuperSoulIndex].msgIndexBurst].Lines[0];
+            string LBBTLHUDDescText = BurstBTLHUD.data[Items[currentSuperSoulIndex].msgIndexBurstBTL].Lines[0];
+            string LBPauseDescText = BurstPause.data[Items[currentSuperSoulIndex].msgIndexBurstPause].Lines[0];
+
+
+            int nameCount = nameText.Length * 2;
+            int DescCount = DescText.Length * 2;
+            int LBDescCount = LBDescText.Length * 2;
+            int LBBTLHUDDescCount = LBBTLHUDDescText.Length * 2;
+            int LBPauseDescCount = LBPauseDescText.Length * 2;
+            
+            copiedBytes.AddRange(new byte[] { 0x23, 0x53, 0x53, 0x46 });
+            copiedBytes.AddRange(BitConverter.GetBytes(nameCount));
+            copiedBytes.AddRange(BitConverter.GetBytes(DescCount));
+            copiedBytes.AddRange(BitConverter.GetBytes(LBDescCount));
+            copiedBytes.AddRange(BitConverter.GetBytes(LBBTLHUDDescCount));
+            copiedBytes.AddRange(BitConverter.GetBytes(LBPauseDescCount));
+
+            copiedBytes.AddRange(new byte[] { 0xFF, 0xFF, 0xFF, 0xFF });
+
+            copiedBytes.AddRange(System.Text.Encoding.Unicode.GetBytes(nameText.ToCharArray()));
+            copiedBytes.AddRange(System.Text.Encoding.Unicode.GetBytes(DescText.ToCharArray()));
+            copiedBytes.AddRange(System.Text.Encoding.Unicode.GetBytes(LBDescText.ToCharArray()));
+            copiedBytes.AddRange(System.Text.Encoding.Unicode.GetBytes(LBBTLHUDDescText.ToCharArray()));
+            copiedBytes.AddRange(System.Text.Encoding.Unicode.GetBytes(LBPauseDescText.ToCharArray()));
+
+            byte[] tmp = new byte[718];
+            Array.Copy(Items[currentSuperSoulIndex].Data,2,tmp,0,718);
+            copiedBytes.AddRange(tmp);
+            clipboardData = copiedBytes.ToArray();
+            MessageBox.Show("Super Soul copied successfully");
+
+
+
+        }
+
+        private void createNewSoulFromClipboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (clipboardData == null)
+            {
+                MessageBox.Show("Clipboard is empty.");
+                return;
+            }
+
+            int index = AddSS(clipboardData);
+
+            if (index < 0)
+                return;
+
+            itemList.Items.Clear();
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if (NamesLoaded)
+                    itemList.Items.Add(BitConverter.ToUInt16(Items[i].Data, 0).ToString() + " - " + Names.data[Items[i].msgIndexName].Lines[0]);
+                else
+                    itemList.Items.Add(BitConverter.ToUInt16(Items[i].Data, 0).ToString() + " / " + String.Format("{0:X}", BitConverter.ToUInt16(Items[i].Data, 0)));
+            }
+            itemList.SelectedIndex = index;
+        }
+
+        private void addNewEntryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            byte[] blankzss = Properties.Resources.newss;
+      
+            int nameCount = BitConverter.ToInt32(blankzss, 4);
+            int DescCount = BitConverter.ToInt32(blankzss, 8);
+            int LBDescCount = BitConverter.ToInt32(blankzss, 12);
+            int LBDescCountBtl = BitConverter.ToInt32(blankzss, 16);
+            int LBDescCountPause = BitConverter.ToInt32(blankzss, 20);
+            byte[] pass;
+            if (BurstLoaded)
+            {
+
+                msgData[] Expand4 = new msgData[Burst.data.Length + 1];
+                Array.Copy(Burst.data, Expand4, Burst.data.Length);
+                Expand4[Expand4.Length - 1].NameID = "talisman_olt_" + Burst.data.Length.ToString("000");
+                Expand4[Expand4.Length - 1].ID = Burst.data.Length;
+                if (LBDescCount > 0)
+                {
+                    pass = new byte[LBDescCount];
+                    Array.Copy(blankzss, 0x1C + (nameCount) + (DescCount), pass, 0, LBDescCount);
+                    Expand4[Expand4.Length - 1].Lines = new string[] { BytetoString(pass) };
+                }
+                else
+                    Expand4[Expand4.Length - 1].Lines = new string[] { "New LB Desc Entry" };
+
+                byte[] newMSGLBDescEntryIDBytes = BitConverter.GetBytes((short)Expand4[Expand4.Length - 1].ID);
+                Array.Copy(newMSGLBDescEntryIDBytes, 0, Items[currentSuperSoulIndex].Data, 40, 2);
+                Burst.data = Expand4;
+
+           
+                Items[currentSuperSoulIndex].msgIndexBurst = BitConverter.ToInt16(newMSGLBDescEntryIDBytes, 0);
+
+
+
+
+
+
+                msgData[] Expand5 = new msgData[BurstBTLHUD.data.Length + 1];
+                Array.Copy(BurstBTLHUD.data, Expand5, BurstBTLHUD.data.Length);
+                Expand5[Expand5.Length - 1].NameID = "BHD_OLT_000_" + Items[currentSuperSoulIndex].msgIndexBurst.ToString();// +BurstBTLHUD.data.Length.ToString("000");
+                Expand5[Expand5.Length - 1].ID = BurstBTLHUD.data.Length;
+                if (LBDescCountBtl > 0)
+                {
+                    pass = new byte[LBDescCountBtl];
+                    Array.Copy(blankzss, 0x1C + (nameCount) + (DescCount) + (LBDescCount), pass, 0, LBDescCountBtl);
+                    Expand5[Expand5.Length - 1].Lines = new string[] { BytetoString(pass) };
+                }
+                else
+                    Expand5[Expand5.Length - 1].Lines = new string[] { "New LB Battle Desc Entry" };
+
+                byte[] newMSGLBDescBtlEntryIDBytes = BitConverter.GetBytes((short)Expand5[Expand5.Length - 1].ID);
+     
+                BurstBTLHUD.data = Expand5;
+
+    
+                Items[currentSuperSoulIndex].msgIndexBurstBTL = BitConverter.ToInt16(newMSGLBDescBtlEntryIDBytes, 0);
+
+
+
+
+
+
+
+
+
+                msgData[] Expand6 = new msgData[BurstPause.data.Length + 1];
+                Array.Copy(BurstPause.data, Expand6, BurstPause.data.Length);
+                Expand6[Expand6.Length - 1].NameID = "BHD_OLT_000_" + Items[currentSuperSoulIndex].msgIndexBurst.ToString();// +BurstBTLHUD.data.Length.ToString("000");
+                Expand6[Expand6.Length - 1].ID = BurstPause.data.Length;
+                if (LBDescCountPause > 0)
+                {
+                    pass = new byte[LBDescCountPause];
+                    Array.Copy(blankzss, 0x1C + (nameCount) + (DescCount) + (LBDescCount) + (LBDescCountBtl), pass, 0, LBDescCountPause);
+                    Expand6[Expand6.Length - 1].Lines = new string[] { BytetoString(pass) };
+                }
+                else
+                    Expand6[Expand6.Length - 1].Lines = new string[] { "New LB Pause Desc Entry" };
+
+                byte[] newMSGLBDescPauseEntryIDBytes = BitConverter.GetBytes((short)Expand6[Expand6.Length - 1].ID);
+             
+                BurstPause.data = Expand6;
+
+         
+                Items[currentSuperSoulIndex].msgIndexBurstPause = BitConverter.ToInt16(newMSGLBDescPauseEntryIDBytes, 0);
+
+                txtLBDesc.Text = Expand4[Expand4.Length - 1].ID.ToString();
+
+            }
+        }
+
+        private void limitBurstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createNewSoulAsLimitBurstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int index = AddLB(Properties.Resources.newss);
+
+            if (index < 0)
+                return;
+
+            itemList.Items.Clear();
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if (NamesLoaded)
+                    itemList.Items.Add(BitConverter.ToUInt16(Items[i].Data, 0).ToString() + " - " + Names.data[Items[i].msgIndexName].Lines[0]);
+                else
+                    itemList.Items.Add(BitConverter.ToUInt16(Items[i].Data, 0).ToString() + " / " + String.Format("{0:X}", BitConverter.ToUInt16(Items[i].Data, 0)));
+            }
+            itemList.SelectedIndex = index;
+
+            txtRace.Text = "0";
+            txtShopTest.Text = "255";
+            txtTPTest.Text = "32767";
+            txtBuy.Text = "0";
+            txtSell.Text = "0";
+            txtBuyTP.Text = "0";
+            cbStar.SelectedIndex = 4;
+
+            txtLBAura.Text = "-1";
+            txtLBDesc.Text = "0";
+            txtLBSoulID1.Text = "65535";
+            txtLBSoulID2.Text = "65535";
+            txtLBSoulID3.Text = "65535";
+            cbLBColor.SelectedIndex = 0;
         }
 
 

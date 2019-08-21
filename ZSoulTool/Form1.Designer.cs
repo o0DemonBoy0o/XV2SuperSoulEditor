@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.debugLBSelect = new System.Windows.Forms.ComboBox();
-            this.store_defaultBtn = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label97 = new System.Windows.Forms.Label();
             this.txtMsgLBDescBTL = new System.Windows.Forms.TextBox();
@@ -43,6 +41,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtMsgDesc = new System.Windows.Forms.TextBox();
             this.txtMsgName = new System.Windows.Forms.TextBox();
+            this.store_defaultBtn = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtShopTest = new System.Windows.Forms.TextBox();
             this.txtTPTest = new System.Windows.Forms.TextBox();
@@ -69,6 +68,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.cbKiType = new System.Windows.Forms.ComboBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.debugLBSelect = new System.Windows.Forms.ComboBox();
             this.label49 = new System.Windows.Forms.Label();
             this.cbLBColor = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
@@ -282,6 +282,8 @@
             this.addCurrentSuperSoulToShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeCurrentSuperSoulFromShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.replaceImportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewSoulFromClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.limitBurstOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setCurrentBurstIDsToNULLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setLimitBurstToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -290,6 +292,7 @@
             this.setCurrentBurstToRECToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setCurrentBurstToGRDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setCurrentBurstToREVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewSoulAsLimitBurstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -297,6 +300,8 @@
             this.removeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.nameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.descriptionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.limitBurstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caseSensetiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -358,55 +363,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Super Soul Details";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // debugLBSelect
-            // 
-            this.debugLBSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.debugLBSelect.FormattingEnabled = true;
-            this.debugLBSelect.Items.AddRange(new object[] {
-            "ATK Up",
-            "DEF Up",
-            "Health Recovery",
-            "Auto Just Guard",
-            "Revive Gauge",
-            "Death Beam",
-            "Full Power Energy Wave",
-            "Kamehameha",
-            "Dynamite Kick",
-            "Spirit Sword",
-            "Justice Combination",
-            "Super Kamehameha",
-            "Time Skip/Molotov",
-            "Final Kamehameha",
-            "Sword of Hope",
-            "Scatter Kamehameha",
-            "Wolf Fang Fist",
-            "Volleyball Fist",
-            "Special Beam Cannon",
-            "Masenko",
-            "Double Sunday",
-            "Arm Crash",
-            "Galick Gun",
-            "Cross Arm",
-            "Dodon Ray",
-            "Power Pole"});
-            this.debugLBSelect.Location = new System.Drawing.Point(97, 6);
-            this.debugLBSelect.Name = "debugLBSelect";
-            this.debugLBSelect.Size = new System.Drawing.Size(202, 21);
-            this.debugLBSelect.TabIndex = 42;
-            this.debugLBSelect.Visible = false;
-            this.debugLBSelect.SelectedIndexChanged += new System.EventHandler(this.debugLBSelect_SelectedIndexChanged);
-            // 
-            // store_defaultBtn
-            // 
-            this.store_defaultBtn.Location = new System.Drawing.Point(568, 49);
-            this.store_defaultBtn.Name = "store_defaultBtn";
-            this.store_defaultBtn.Size = new System.Drawing.Size(75, 20);
-            this.store_defaultBtn.TabIndex = 41;
-            this.store_defaultBtn.Text = "store";
-            this.store_defaultBtn.UseVisualStyleBackColor = true;
-            this.store_defaultBtn.Visible = false;
-            this.store_defaultBtn.Click += new System.EventHandler(this.store_defaultBtn_Click);
             // 
             // groupBox13
             // 
@@ -514,6 +470,17 @@
             this.txtMsgName.Size = new System.Drawing.Size(275, 20);
             this.txtMsgName.TabIndex = 12;
             this.txtMsgName.TextChanged += new System.EventHandler(this.txtMsgName_TextChanged);
+            // 
+            // store_defaultBtn
+            // 
+            this.store_defaultBtn.Location = new System.Drawing.Point(568, 49);
+            this.store_defaultBtn.Name = "store_defaultBtn";
+            this.store_defaultBtn.Size = new System.Drawing.Size(75, 20);
+            this.store_defaultBtn.TabIndex = 41;
+            this.store_defaultBtn.Text = "store";
+            this.store_defaultBtn.UseVisualStyleBackColor = true;
+            this.store_defaultBtn.Visible = false;
+            this.store_defaultBtn.Click += new System.EventHandler(this.store_defaultBtn_Click);
             // 
             // groupBox10
             // 
@@ -801,6 +768,44 @@
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Limit Burst Settings";
+            // 
+            // debugLBSelect
+            // 
+            this.debugLBSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.debugLBSelect.FormattingEnabled = true;
+            this.debugLBSelect.Items.AddRange(new object[] {
+            "ATK Up",
+            "DEF Up",
+            "Health Recovery",
+            "Auto Just Guard",
+            "Revive Gauge",
+            "Death Beam",
+            "Full Power Energy Wave",
+            "Kamehameha",
+            "Dynamite Kick",
+            "Spirit Sword",
+            "Justice Combination",
+            "Super Kamehameha",
+            "Time Skip/Molotov",
+            "Final Kamehameha",
+            "Sword of Hope",
+            "Scatter Kamehameha",
+            "Wolf Fang Fist",
+            "Volleyball Fist",
+            "Special Beam Cannon",
+            "Masenko",
+            "Double Sunday",
+            "Arm Crash",
+            "Galick Gun",
+            "Cross Arm",
+            "Dodon Ray",
+            "Power Pole"});
+            this.debugLBSelect.Location = new System.Drawing.Point(97, 6);
+            this.debugLBSelect.Name = "debugLBSelect";
+            this.debugLBSelect.Size = new System.Drawing.Size(202, 21);
+            this.debugLBSelect.TabIndex = 42;
+            this.debugLBSelect.Visible = false;
+            this.debugLBSelect.SelectedIndexChanged += new System.EventHandler(this.debugLBSelect_SelectedIndexChanged);
             // 
             // label49
             // 
@@ -2830,7 +2835,9 @@
             this.exportToolStripMenuItem1,
             this.addCurrentSuperSoulToShopToolStripMenuItem,
             this.removeCurrentSuperSoulFromShopToolStripMenuItem,
-            this.replaceImportToolStripMenuItem});
+            this.replaceImportToolStripMenuItem,
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem,
+            this.createNewSoulFromClipboardToolStripMenuItem});
             this.addNewXV2SSEditStripMenuItem.Enabled = false;
             this.addNewXV2SSEditStripMenuItem.Name = "addNewXV2SSEditStripMenuItem";
             this.addNewXV2SSEditStripMenuItem.Size = new System.Drawing.Size(120, 20);
@@ -2886,11 +2893,26 @@
             this.replaceImportToolStripMenuItem.Visible = false;
             this.replaceImportToolStripMenuItem.Click += new System.EventHandler(this.replaceImportToolStripMenuItem_Click);
             // 
+            // copyCurrentSuperSoulToClipboardToolStripMenuItem
+            // 
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Name = "copyCurrentSuperSoulToClipboardToolStripMenuItem";
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Text = "Copy Current Soul to Clipboard";
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Click += new System.EventHandler(this.copyCurrentSuperSoulToClipboardToolStripMenuItem_Click);
+            // 
+            // createNewSoulFromClipboardToolStripMenuItem
+            // 
+            this.createNewSoulFromClipboardToolStripMenuItem.Name = "createNewSoulFromClipboardToolStripMenuItem";
+            this.createNewSoulFromClipboardToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.createNewSoulFromClipboardToolStripMenuItem.Text = "Create New Soul From Clipboard";
+            this.createNewSoulFromClipboardToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulFromClipboardToolStripMenuItem_Click);
+            // 
             // limitBurstOptionsToolStripMenuItem
             // 
             this.limitBurstOptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setCurrentBurstIDsToNULLToolStripMenuItem,
-            this.setLimitBurstToToolStripMenuItem});
+            this.setLimitBurstToToolStripMenuItem,
+            this.createNewSoulAsLimitBurstToolStripMenuItem});
             this.limitBurstOptionsToolStripMenuItem.Name = "limitBurstOptionsToolStripMenuItem";
             this.limitBurstOptionsToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
             this.limitBurstOptionsToolStripMenuItem.Text = "Limit Burst Options";
@@ -2898,7 +2920,7 @@
             // setCurrentBurstIDsToNULLToolStripMenuItem
             // 
             this.setCurrentBurstIDsToNULLToolStripMenuItem.Name = "setCurrentBurstIDsToNULLToolStripMenuItem";
-            this.setCurrentBurstIDsToNULLToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.setCurrentBurstIDsToNULLToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.setCurrentBurstIDsToNULLToolStripMenuItem.Text = "Set Current Burst IDs to NULL";
             this.setCurrentBurstIDsToNULLToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstIDsToNULLToolStripMenuItem_Click);
             // 
@@ -2911,7 +2933,7 @@
             this.setCurrentBurstToGRDToolStripMenuItem,
             this.setCurrentBurstToREVToolStripMenuItem});
             this.setLimitBurstToToolStripMenuItem.Name = "setLimitBurstToToolStripMenuItem";
-            this.setLimitBurstToToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.setLimitBurstToToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.setLimitBurstToToolStripMenuItem.Text = "Set Current Limit Burst to...";
             // 
             // setCurrentBurstToATKToolStripMenuItem
@@ -2949,11 +2971,19 @@
             this.setCurrentBurstToREVToolStripMenuItem.Text = "Auto Revive";
             this.setCurrentBurstToREVToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToREVToolStripMenuItem_Click);
             // 
+            // createNewSoulAsLimitBurstToolStripMenuItem
+            // 
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Name = "createNewSoulAsLimitBurstToolStripMenuItem";
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Text = "Create New Soul (As Limit Burst)";
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulAsLimitBurstToolStripMenuItem_Click);
+            // 
             // msgToolStripMenuItem
             // 
             this.msgToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewToolStripMenuItem,
-            this.removeToolStripMenuItem1});
+            this.removeToolStripMenuItem1,
+            this.limitBurstToolStripMenuItem});
             this.msgToolStripMenuItem.Enabled = false;
             this.msgToolStripMenuItem.Name = "msgToolStripMenuItem";
             this.msgToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
@@ -2965,7 +2995,7 @@
             this.nameToolStripMenuItem,
             this.descriptionToolStripMenuItem});
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addNewToolStripMenuItem.Text = "Name";
             // 
             // nameToolStripMenuItem
@@ -2989,7 +3019,7 @@
             this.nameToolStripMenuItem1,
             this.descriptionToolStripMenuItem1});
             this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
+            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.removeToolStripMenuItem1.Text = "Description";
             // 
             // nameToolStripMenuItem1
@@ -3006,6 +3036,22 @@
             this.descriptionToolStripMenuItem1.Text = "Remove";
             this.descriptionToolStripMenuItem1.Visible = false;
             this.descriptionToolStripMenuItem1.Click += new System.EventHandler(this.descriptionToolStripMenuItem1_Click);
+            // 
+            // limitBurstToolStripMenuItem
+            // 
+            this.limitBurstToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addNewEntryToolStripMenuItem});
+            this.limitBurstToolStripMenuItem.Name = "limitBurstToolStripMenuItem";
+            this.limitBurstToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.limitBurstToolStripMenuItem.Text = "Limit Burst";
+            this.limitBurstToolStripMenuItem.Click += new System.EventHandler(this.limitBurstToolStripMenuItem_Click);
+            // 
+            // addNewEntryToolStripMenuItem
+            // 
+            this.addNewEntryToolStripMenuItem.Name = "addNewEntryToolStripMenuItem";
+            this.addNewEntryToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.addNewEntryToolStripMenuItem.Text = "Add New Entry ";
+            this.addNewEntryToolStripMenuItem.Click += new System.EventHandler(this.addNewEntryToolStripMenuItem_Click);
             // 
             // searchOptionsToolStripMenuItem
             // 
@@ -3087,6 +3133,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "XV2 Super Soul Editor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -3412,5 +3459,10 @@
         private System.Windows.Forms.ToolStripMenuItem removeCurrentSuperSoulFromShopToolStripMenuItem;
         private System.Windows.Forms.ComboBox debugLBSelect;
         private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.ToolStripMenuItem limitBurstToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewEntryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyCurrentSuperSoulToClipboardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewSoulFromClipboardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewSoulAsLimitBurstToolStripMenuItem;
     }
 }

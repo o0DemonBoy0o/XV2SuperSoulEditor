@@ -68,3 +68,15 @@ C:\Users\Unleashed\Desktop\Xv2Modding\Xenoverse-Z-Soul-Tool-master\Xenoverse-Z-S
 C:\Users\Unleashed\Desktop\Xv2Modding\Xenoverse-Z-Soul-Tool-master\Xenoverse-Z-Soul-Tool-master\ZSoulTool\obj\Debug\ZSoulTool.csproj.GenerateResource.Cache
 C:\Users\Unleashed\Desktop\Xv2Modding\Xenoverse-Z-Soul-Tool-master\Xenoverse-Z-Soul-Tool-master\ZSoulTool\obj\Debug\XV2SSEdit.Export.resources
 C:\Users\Damion\Desktop\talisman\Xenoverse-Z-Soul-Tool-master\ZSoulTool\obj\Debug\XV2SSEdit.Export.resources
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\bin\Debug\XV2SSEdit.exe.config
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\XV2SSEdit.exe
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\XV2SSEdit.pdb
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\bin\Debug\XV2SSEdit.exe
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\bin\Debug\XV2SSEdit.pdb
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\bin\Debug\YAXLib.xml
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\ZSoulTool.csprojResolveAssemblyReference.cache
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\XV2SSEdit.Export.resources
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\XV2SSEdit.Form1.resources
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\XV2SSEdit.Forms.Settings.resources
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\XV2SSEdit.Properties.Resources.resources
+C:\Users\Unleashed\Documents\GitHub\XV2SuperSoulEditor\ZSoulTool\obj\Debug\ZSoulTool.csproj.GenerateResource.Cache
