@@ -327,7 +327,7 @@ namespace XV2SSEdit
         }
 
         //UNLEASHED: function to write empty Msg text for generic Msg files (for syncing purposes)
-        void writeToMsgText(int MsgType)
+        void writeToMsgText(int MsgType, string Msg, int OLT_ID = -1)
         {
  
         
@@ -343,7 +343,7 @@ namespace XV2SSEdit
                             Array.Copy(tmp.msgFile_m.data, Expand2, tmp.msgFile_m.data.Length);
                             Expand2[Expand2.Length - 1].NameID = "talisman_" + tmp.msgFile_m.data.Length.ToString("000");
                             Expand2[Expand2.Length - 1].ID = tmp.msgFile_m.data.Length;
-                            Expand2[Expand2.Length - 1].Lines = new string[] { "" }; //UNLEASHED: hopefully an empty string is enough
+                            Expand2[Expand2.Length - 1].Lines = new string[] { Msg }; 
                             tmp.msgFile_m.data = Expand2;
                             genericMsgListNames[i]= tmp;
      
@@ -361,7 +361,7 @@ namespace XV2SSEdit
                             Array.Copy(tmp.msgFile_m.data, Expand, tmp.msgFile_m.data.Length);
                             Expand[Expand.Length - 1].NameID = "talisman_eff_" + tmp.msgFile_m.data.Length.ToString("000");
                             Expand[Expand.Length - 1].ID = tmp.msgFile_m.data.Length;
-                            Expand[Expand.Length - 1].Lines = new string[] { "" };
+                            Expand[Expand.Length - 1].Lines = new string[] { Msg };
                             tmp.msgFile_m.data = Expand;
                             genericMsgLisDescs[i] = tmp;
                         }
@@ -373,7 +373,7 @@ namespace XV2SSEdit
                 case 2:
                     {
 
-                        int OLT_ID = -1;
+                
                         for (int i = 0; i < genericMsgListBurst.Count; i++)
                         {
                             GenericMsgFile tmp = genericMsgListBurst[i];
@@ -382,7 +382,7 @@ namespace XV2SSEdit
                             Expand4[Expand4.Length - 1].NameID = "talisman_olt_" + tmp.msgFile_m.data.Length.ToString("000");
                             OLT_ID = tmp.msgFile_m.data.Length;
                             Expand4[Expand4.Length - 1].ID = tmp.msgFile_m.data.Length;
-                            Expand4[Expand4.Length - 1].Lines = new string[] { "" };
+                            Expand4[Expand4.Length - 1].Lines = new string[] { Msg };
                             tmp.msgFile_m.data = Expand4;
 
                             genericMsgListBurst[i] = tmp;
@@ -390,21 +390,36 @@ namespace XV2SSEdit
 
 
 
+
+
+
+
+                
+
+				
+                        break;
+                    }
+
+                case 3:
+                    {
+
                         for (int i = 0; i < genericMsgListNameBurstBTLHUD.Count; i++)
                         {
                             GenericMsgFile tmp = genericMsgListNameBurstBTLHUD[i];
                             msgData[] Expand5 = new msgData[tmp.msgFile_m.data.Length + 1];
                             Array.Copy(tmp.msgFile_m.data, Expand5, tmp.msgFile_m.data.Length);
-                            Expand5[Expand5.Length - 1].NameID = "BHD_OLT_000_" + OLT_ID.ToString();// 
+                            Expand5[Expand5.Length - 1].NameID = "BHD_OLT_000_" + OLT_ID.ToString();
                             Expand5[Expand5.Length - 1].ID = tmp.msgFile_m.data.Length;
-                            Expand5[Expand5.Length - 1].Lines = new string[] { "" };
+                            Expand5[Expand5.Length - 1].Lines = new string[] { Msg };
                             tmp.msgFile_m.data = Expand5;
 
                             genericMsgListNameBurstBTLHUD[i] = tmp;
                         }
+                        break;
+                    }
 
-
-
+                case 4:
+                    {
 
                         for (int i = 0; i < genericMsgListNameBurstPause.Count; i++)
                         {
@@ -413,13 +428,11 @@ namespace XV2SSEdit
                             Array.Copy(tmp.msgFile_m.data, Expand6, tmp.msgFile_m.data.Length);
                             Expand6[Expand6.Length - 1].NameID = "BHD_OLT_000_" + OLT_ID.ToString();
                             Expand6[Expand6.Length - 1].ID = tmp.msgFile_m.data.Length;
-                            Expand6[Expand6.Length - 1].Lines = new string[] { "" };
+                            Expand6[Expand6.Length - 1].Lines = new string[] { Msg };
                             tmp.msgFile_m.data = Expand6;
 
                             genericMsgListNameBurstPause[i] = tmp;
                         }
-
-				
                         break;
                     }
 
@@ -547,7 +560,7 @@ namespace XV2SSEdit
             SaveXV2SSEdit();
         //UNLEASHED: added msgbox
             hasSavedChanges = true;
-           MessageBox.Show("Save Successful and files writtin to 'data' folder\nTo see changes in-game, the XV2Patcher must be installed.");
+            MessageBox.Show("Save Successful and files writtin to 'data' folder\nTo see changes in-game, the XV2Patcher must be installed.", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void EffectData()
@@ -2464,7 +2477,7 @@ namespace XV2SSEdit
                 Expand[Expand.Length - 1].Lines = new string[] { "New Name Entry" };
                 Names.data = Expand;
 
-                writeToMsgText(0);
+                writeToMsgText(0, "New Name Entry");
 
                 txtNameID.Text = Names.data[Names.data.Length - 1].ID.ToString();
             }
@@ -2496,7 +2509,7 @@ namespace XV2SSEdit
                 Descs.data = Expand;
 
 
-                writeToMsgText(1);
+                writeToMsgText(1,"New Description Entry");
         
                     txtDescID.Text = Descs.data[Descs.data.Length - 1].ID.ToString();
                 
@@ -3002,7 +3015,7 @@ namespace XV2SSEdit
 
             //expand Names msg
             //UNLEASHED we shouldn't worry about Msg IDs.. i think......
-            byte[] pass;
+            byte[] pass = null;
             if (NamesLoaded)
             {
                 msgData[] Expand2 = new msgData[Names.data.Length + 1];
@@ -3026,8 +3039,13 @@ namespace XV2SSEdit
                 //Items[newPos].msgIndexName = FindmsgIndex(ref Names, Names.data[Names.data.Length - 1].ID);
                 Items[newPos].msgIndexName = BitConverter.ToInt16(newMSGNameEntryIDBytes, 0);
 
+                if (nameCount > 0)
+                    writeToMsgText(0, BytetoString(pass));
+                else
+                    writeToMsgText(0, "New Name Entry");
+
             }
-            writeToMsgText(0);
+        
             //expand description msg
             if (DescsLoaded)
             {
@@ -3053,9 +3071,14 @@ namespace XV2SSEdit
                 //Items[newPos].msgIndexDesc = FindmsgIndex(ref Descs, Descs.data[Descs.data.Length - 1].ID);
                 Items[newPos].msgIndexDesc = BitConverter.ToInt16(newMSGDescEntryIDBytes, 0);
 
-            }
+                if (DescCount > 0)
+                    writeToMsgText(1, BytetoString(pass));
+                else
+                    writeToMsgText(1, "New Description Entry");
 
-            writeToMsgText(1);
+            }
+         
+      
             //UNLEASHED: expand LB Desc / LB DescBTL MSG
             if (BurstLoaded)
             {
@@ -3081,11 +3104,13 @@ namespace XV2SSEdit
                 //Items[newPos].msgIndexDesc = FindmsgIndex(ref Descs, Descs.data[Descs.data.Length - 1].ID);
                 Items[newPos].msgIndexBurst = BitConverter.ToInt16(newMSGLBDescEntryIDBytes, 0);
 
-          
 
+                if (LBDescCount > 0)
+                    writeToMsgText(2, BytetoString(pass));
+                else
+                 writeToMsgText(2 , "New LB Desc Entry");
 
-
-
+                int OLT_ID = Items[newPos].msgIndexBurst;
                 msgData[] Expand5 = new msgData[BurstBTLHUD.data.Length + 1];
                 Array.Copy(BurstBTLHUD.data, Expand5, BurstBTLHUD.data.Length);
                 Expand5[Expand5.Length - 1].NameID = "BHD_OLT_000_" + Items[newPos].msgIndexBurst.ToString();// +BurstBTLHUD.data.Length.ToString("000");
@@ -3111,7 +3136,10 @@ namespace XV2SSEdit
 
 
 
-              
+                if (LBDescCountBtl > 0)
+                    writeToMsgText(3, BytetoString(pass), OLT_ID);
+                else
+                    writeToMsgText(3, "New LB Battle Desc Entry", OLT_ID);
 
 
 
@@ -3139,7 +3167,10 @@ namespace XV2SSEdit
                 Items[newPos].msgIndexBurstPause = BitConverter.ToInt16(newMSGLBDescPauseEntryIDBytes, 0);
 
 
-                writeToMsgText(2);
+                if (LBDescCountPause > 0)
+                    writeToMsgText(4, BytetoString(pass), OLT_ID);
+                else
+                    writeToMsgText(4, "New LB Pause Desc Entry", OLT_ID);
             }
             return newPos;
         }
@@ -3162,7 +3193,7 @@ namespace XV2SSEdit
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("XV2 Super Soul Editor Version 1.60\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code");
+            MessageBox.Show("XV2 Super Soul Editor Version 1.60\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
            
          
         }
@@ -3681,7 +3712,7 @@ namespace XV2SSEdit
             int LBDescCount = BitConverter.ToInt32(blankzss, 12);
             int LBDescCountBtl = BitConverter.ToInt32(blankzss, 16);
             int LBDescCountPause = BitConverter.ToInt32(blankzss, 20);
-            byte[] pass;
+            byte[] pass = null;
             if (BurstLoaded)
             {
 
@@ -3707,9 +3738,13 @@ namespace XV2SSEdit
 
 
 
-         
+                if (LBDescCount > 0)
+                    writeToMsgText(2, BytetoString(pass));
+                else
+                    writeToMsgText(2, "New LB Desc Entry");
 
 
+                int OLT_ID = Items[currentSuperSoulIndex].msgIndexBurst;
                 msgData[] Expand5 = new msgData[BurstBTLHUD.data.Length + 1];
                 Array.Copy(BurstBTLHUD.data, Expand5, BurstBTLHUD.data.Length);
                 Expand5[Expand5.Length - 1].NameID = "BHD_OLT_000_" + Items[currentSuperSoulIndex].msgIndexBurst.ToString();// +BurstBTLHUD.data.Length.ToString("000");
@@ -3732,8 +3767,12 @@ namespace XV2SSEdit
 
 
 
-       
 
+
+                if (LBDescCountBtl > 0)
+                    writeToMsgText(3, BytetoString(pass), OLT_ID);
+                else
+                    writeToMsgText(3, "New LB Battle Desc Entry", OLT_ID);
 
 
 
@@ -3757,7 +3796,10 @@ namespace XV2SSEdit
 
          
                 Items[currentSuperSoulIndex].msgIndexBurstPause = BitConverter.ToInt16(newMSGLBDescPauseEntryIDBytes, 0);
-                writeToMsgText(2);
+                if (LBDescCountPause > 0)
+                    writeToMsgText(4, BytetoString(pass), OLT_ID);
+                else
+                    writeToMsgText(4, "New LB Pause Desc Entry", OLT_ID);
 
 
                 txtLBDesc.Text = Expand4[Expand4.Length - 1].ID.ToString();
