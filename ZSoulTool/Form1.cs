@@ -51,6 +51,22 @@ namespace XV2SSEdit
         private msg BurstBTLHUD;
         private msg BurstPause;
 
+        private List<GenericMsgFile> genericMsgListNames = new List<GenericMsgFile>();
+        private List<GenericMsgFile> genericMsgLisDescs = new List<GenericMsgFile>();
+        private List<GenericMsgFile> genericMsgListBurst = new List<GenericMsgFile>();
+        private List<GenericMsgFile> genericMsgListNameBurstBTLHUD = new List<GenericMsgFile>();
+        private List<GenericMsgFile> genericMsgListNameBurstPause = new List<GenericMsgFile>();
+
+        private struct GenericMsgFile
+        {
+            public string msgPath_m;
+            public msg msgFile_m;
+            public GenericMsgFile(string msgPath, msg msgFile)
+            {
+                msgPath_m = msgPath;
+                msgFile_m = msgFile;
+            }
+        }
 
         private ToolSettings settings { get; set; }
         private Xv2FileIO fileIO { get; set; }
@@ -177,13 +193,47 @@ namespace XV2SSEdit
             idbfile = fileIO.GetFileFromGame("system/item/talisman_item.idb");
             count = BitConverter.ToInt32(idbfile, 8);
 
-            //UNLEASHED: why are we checking for checkboxes? is this a debug option?
-            if (chkMsgName.Checked)
+            //UNLEASHED: Load the generic Msg files, and ignore current language suffix
+            
+            List<string> langsSuffix = ToolSettings.LanguageSuffix.ToList<string>();
+
+            //UNLEASHED: loop through and find our current language's index
+            for (int i = 0; i < ToolSettings.LanguageSuffix.Length; i++)
             {
-                NamesLoaded = true;
-                FileNameMsgN = String.Format("{0}/data/msg/proper_noun_talisman_name_{1}.msg", settings.GameDir, settings.LanguagePrefix);
-                Names = msgStream.Load(fileIO.GetFileFromGame(String.Format("msg/proper_noun_talisman_name_{0}.msg", settings.LanguagePrefix)));
+                if (ToolSettings.LanguageSuffix[i] == settings.LanguagePrefix)
+                {
+                    //UNLEASHED: remove the language suffix that is used for the current activate language
+                    langsSuffix.RemoveAt(i);
+                    break;
+                }
             }
+                for (int i = 0; i < langsSuffix.Count; i++)
+                {
+
+                    genericMsgListNames.Add(new GenericMsgFile(String.Format("{0}/data/msg/proper_noun_talisman_name_{1}.msg", settings.GameDir, langsSuffix[i]),
+                        msgStream.Load(fileIO.GetFileFromGame(String.Format("msg/proper_noun_talisman_name_{0}.msg", langsSuffix[i])))));
+
+                    genericMsgLisDescs.Add(new GenericMsgFile(String.Format("{0}/data/msg/proper_noun_talisman_info_{1}.msg", settings.GameDir, langsSuffix[i]),
+                       msgStream.Load(fileIO.GetFileFromGame(String.Format("msg/proper_noun_talisman_info_{0}.msg", langsSuffix[i])))));
+
+                    genericMsgListBurst.Add(new GenericMsgFile(String.Format("{0}/data/msg/proper_noun_talisman_info_olt_{1}.msg", settings.GameDir, langsSuffix[i]),
+                     msgStream.Load(fileIO.GetFileFromGame(String.Format("msg/proper_noun_talisman_info_olt_{0}.msg", langsSuffix[i])))));
+
+                    genericMsgListNameBurstBTLHUD.Add(new GenericMsgFile(String.Format("{0}/data/msg/quest_btlhud_{1}.msg", settings.GameDir, langsSuffix[i]),
+                     msgStream.Load(fileIO.GetFileFromGame(String.Format("msg/quest_btlhud_{0}.msg", langsSuffix[i])))));
+
+                    genericMsgListNameBurstPause.Add(new GenericMsgFile(String.Format("{0}/data/msg/pause_text_{1}.msg", settings.GameDir, langsSuffix[i]),
+                     msgStream.Load(fileIO.GetFileFromGame(String.Format("msg/pause_text_{0}.msg", langsSuffix[i])))));
+
+                }
+
+                //UNLEASHED: why are we checking for checkboxes? is this a debug option?
+                if (chkMsgName.Checked)
+                {
+                    NamesLoaded = true;
+                    FileNameMsgN = String.Format("{0}/data/msg/proper_noun_talisman_name_{1}.msg", settings.GameDir, settings.LanguagePrefix);
+                    Names = msgStream.Load(fileIO.GetFileFromGame(String.Format("msg/proper_noun_talisman_name_{0}.msg", settings.LanguagePrefix)));
+                }
 
             if (chkMsgDesc.Checked)
             {
@@ -276,6 +326,107 @@ namespace XV2SSEdit
             return -1;
         }
 
+        //UNLEASHED: function to write empty Msg text for generic Msg files (for syncing purposes)
+        void writeToMsgText(int MsgType)
+        {
+ 
+        
+
+            switch (MsgType)
+            {
+                case 0:
+                    {
+                        for (int i = 0; i < genericMsgListNames.Count; i++)
+                        {
+                            GenericMsgFile tmp = genericMsgListNames[i];
+                            msgData[] Expand2 = new msgData[tmp.msgFile_m.data.Length + 1];
+                            Array.Copy(tmp.msgFile_m.data, Expand2, tmp.msgFile_m.data.Length);
+                            Expand2[Expand2.Length - 1].NameID = "talisman_" + tmp.msgFile_m.data.Length.ToString("000");
+                            Expand2[Expand2.Length - 1].ID = tmp.msgFile_m.data.Length;
+                            Expand2[Expand2.Length - 1].Lines = new string[] { "" }; //UNLEASHED: hopefully an empty string is enough
+                            tmp.msgFile_m.data = Expand2;
+                            genericMsgListNames[i]= tmp;
+     
+                        }
+                            break;
+                    }
+
+                case 1:
+                    {
+
+                        for (int i = 0; i < genericMsgLisDescs.Count; i++)
+                        {
+                            GenericMsgFile tmp = genericMsgLisDescs[i];
+                            msgData[] Expand = new msgData[tmp.msgFile_m.data.Length + 1];
+                            Array.Copy(tmp.msgFile_m.data, Expand, tmp.msgFile_m.data.Length);
+                            Expand[Expand.Length - 1].NameID = "talisman_eff_" + tmp.msgFile_m.data.Length.ToString("000");
+                            Expand[Expand.Length - 1].ID = tmp.msgFile_m.data.Length;
+                            Expand[Expand.Length - 1].Lines = new string[] { "" };
+                            tmp.msgFile_m.data = Expand;
+                            genericMsgLisDescs[i] = tmp;
+                        }
+
+                     
+                        break;
+                    }
+
+                case 2:
+                    {
+
+                        int OLT_ID = -1;
+                        for (int i = 0; i < genericMsgListBurst.Count; i++)
+                        {
+                            GenericMsgFile tmp = genericMsgListBurst[i];
+                            msgData[] Expand4 = new msgData[tmp.msgFile_m.data.Length + 1];
+                            Array.Copy(tmp.msgFile_m.data, Expand4, tmp.msgFile_m.data.Length);
+                            Expand4[Expand4.Length - 1].NameID = "talisman_olt_" + tmp.msgFile_m.data.Length.ToString("000");
+                            OLT_ID = tmp.msgFile_m.data.Length;
+                            Expand4[Expand4.Length - 1].ID = tmp.msgFile_m.data.Length;
+                            Expand4[Expand4.Length - 1].Lines = new string[] { "" };
+                            tmp.msgFile_m.data = Expand4;
+
+                            genericMsgListBurst[i] = tmp;
+                        }
+
+
+
+                        for (int i = 0; i < genericMsgListNameBurstBTLHUD.Count; i++)
+                        {
+                            GenericMsgFile tmp = genericMsgListNameBurstBTLHUD[i];
+                            msgData[] Expand5 = new msgData[tmp.msgFile_m.data.Length + 1];
+                            Array.Copy(tmp.msgFile_m.data, Expand5, tmp.msgFile_m.data.Length);
+                            Expand5[Expand5.Length - 1].NameID = "BHD_OLT_000_" + OLT_ID.ToString();// 
+                            Expand5[Expand5.Length - 1].ID = tmp.msgFile_m.data.Length;
+                            Expand5[Expand5.Length - 1].Lines = new string[] { "" };
+                            tmp.msgFile_m.data = Expand5;
+
+                            genericMsgListNameBurstBTLHUD[i] = tmp;
+                        }
+
+
+
+
+                        for (int i = 0; i < genericMsgListNameBurstPause.Count; i++)
+                        {
+                            GenericMsgFile tmp = genericMsgListNameBurstPause[i];
+                            msgData[] Expand6 = new msgData[tmp.msgFile_m.data.Length + 1];
+                            Array.Copy(tmp.msgFile_m.data, Expand6, tmp.msgFile_m.data.Length);
+                            Expand6[Expand6.Length - 1].NameID = "BHD_OLT_000_" + OLT_ID.ToString();
+                            Expand6[Expand6.Length - 1].ID = tmp.msgFile_m.data.Length;
+                            Expand6[Expand6.Length - 1].Lines = new string[] { "" };
+                            tmp.msgFile_m.data = Expand6;
+
+                            genericMsgListNameBurstPause[i] = tmp;
+                        }
+
+				
+                        break;
+                    }
+
+       
+            }
+
+        }
         #region ListBox Methods
 
         private void lstvBasic_SelectedIndexChanged(object sender, EventArgs e)
@@ -366,6 +517,10 @@ namespace XV2SSEdit
             if (NamesLoaded)
                 msgStream.Save(Names, FileNameMsgN);
 
+            
+            
+               
+
             if (DescsLoaded)
                 msgStream.Save(Descs, FileNameMsgD);
 
@@ -375,6 +530,15 @@ namespace XV2SSEdit
                 msgStream.Save(BurstBTLHUD, FileNameMsgB_BTLHUD);
                 msgStream.Save(BurstPause, FileNameMsgB_Pause);
             }
+            //UNLEASHED: write all generic msg files, lets use "Names" as the counter since they all share the same length anyway.
+            for (int i = 0; i < genericMsgListNames.Count; i++)
+            {
+                msgStream.Save(genericMsgListNames[i].msgFile_m, genericMsgListNames[i].msgPath_m);
+                msgStream.Save(genericMsgLisDescs[i].msgFile_m, genericMsgLisDescs[i].msgPath_m);
+                msgStream.Save(genericMsgListBurst[i].msgFile_m, genericMsgListBurst[i].msgPath_m);
+                msgStream.Save(genericMsgListNameBurstBTLHUD[i].msgFile_m, genericMsgListNameBurstBTLHUD[i].msgPath_m);
+                msgStream.Save(genericMsgListNameBurstPause[i].msgFile_m, genericMsgListNameBurstPause[i].msgPath_m);
+            }
         }
         
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -383,7 +547,7 @@ namespace XV2SSEdit
             SaveXV2SSEdit();
         //UNLEASHED: added msgbox
             hasSavedChanges = true;
-           MessageBox.Show("Save Successful\nTo see changes in-game, the XV2Patcher must be installed.");
+           MessageBox.Show("Save Successful and files writtin to 'data' folder\nTo see changes in-game, the XV2Patcher must be installed.");
         }
 
         public void EffectData()
@@ -2300,6 +2464,7 @@ namespace XV2SSEdit
                 Expand[Expand.Length - 1].Lines = new string[] { "New Name Entry" };
                 Names.data = Expand;
 
+                writeToMsgText(0);
 
                 txtNameID.Text = Names.data[Names.data.Length - 1].ID.ToString();
             }
@@ -2330,8 +2495,8 @@ namespace XV2SSEdit
                 Expand[Expand.Length - 1].Lines = new string[] { "New Description Entry" };
                 Descs.data = Expand;
 
-              
 
+                writeToMsgText(1);
         
                     txtDescID.Text = Descs.data[Descs.data.Length - 1].ID.ToString();
                 
@@ -2862,7 +3027,7 @@ namespace XV2SSEdit
                 Items[newPos].msgIndexName = BitConverter.ToInt16(newMSGNameEntryIDBytes, 0);
 
             }
-
+            writeToMsgText(0);
             //expand description msg
             if (DescsLoaded)
             {
@@ -2889,6 +3054,8 @@ namespace XV2SSEdit
                 Items[newPos].msgIndexDesc = BitConverter.ToInt16(newMSGDescEntryIDBytes, 0);
 
             }
+
+            writeToMsgText(1);
             //UNLEASHED: expand LB Desc / LB DescBTL MSG
             if (BurstLoaded)
             {
@@ -2914,7 +3081,7 @@ namespace XV2SSEdit
                 //Items[newPos].msgIndexDesc = FindmsgIndex(ref Descs, Descs.data[Descs.data.Length - 1].ID);
                 Items[newPos].msgIndexBurst = BitConverter.ToInt16(newMSGLBDescEntryIDBytes, 0);
 
-
+          
 
 
 
@@ -2944,7 +3111,7 @@ namespace XV2SSEdit
 
 
 
-
+              
 
 
 
@@ -2971,6 +3138,8 @@ namespace XV2SSEdit
                 //Items[newPos].msgIndexDesc = FindmsgIndex(ref Descs, Descs.data[Descs.data.Length - 1].ID);
                 Items[newPos].msgIndexBurstPause = BitConverter.ToInt16(newMSGLBDescPauseEntryIDBytes, 0);
 
+
+                writeToMsgText(2);
             }
             return newPos;
         }
@@ -3538,7 +3707,7 @@ namespace XV2SSEdit
 
 
 
-
+         
 
 
                 msgData[] Expand5 = new msgData[BurstBTLHUD.data.Length + 1];
@@ -3563,7 +3732,7 @@ namespace XV2SSEdit
 
 
 
-
+       
 
 
 
@@ -3588,9 +3757,11 @@ namespace XV2SSEdit
 
          
                 Items[currentSuperSoulIndex].msgIndexBurstPause = BitConverter.ToInt16(newMSGLBDescPauseEntryIDBytes, 0);
+                writeToMsgText(2);
+
 
                 txtLBDesc.Text = Expand4[Expand4.Length - 1].ID.ToString();
-
+               
             }
         }
 
@@ -3630,6 +3801,11 @@ namespace XV2SSEdit
             txtLBSoulID2.Text = "65535";
             txtLBSoulID3.Text = "65535";
             cbLBColor.SelectedIndex = 0;
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 
