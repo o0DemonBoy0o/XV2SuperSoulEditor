@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using Msgfile;
+﻿using System.Xml;
 
+//Parses and reads the lists in the EffectData xml
 namespace XV2SSEdit
 {
     struct Effect
@@ -14,7 +9,7 @@ namespace XV2SSEdit
         public string Description;  
     }
 
-    struct Activation
+    struct Activator
     {
         public int ID;
         public string Description;   
@@ -26,7 +21,7 @@ namespace XV2SSEdit
         public string Description;
     }
 
-    struct Color
+    struct LBColor
     {
         public int ID;
         public string Description;
@@ -38,13 +33,14 @@ namespace XV2SSEdit
         public string Description;
     }
 
-    struct Checkbox
+    struct VfxType
     {
         public int ID;
         public string Description;
     }
+
     //UNLEASHED: made public to help with exporting
-   public struct idbItem
+    public struct idbItem
     {
         public int msgIndexName;
         public int msgIndexDesc;
@@ -67,28 +63,6 @@ namespace XV2SSEdit
             }
         }
 
-        public void ConstructFromUnknown(ref idbItem[] items)
-        {
-            List<int> IDs = new List<int>();
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 160)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 160));
-
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 384)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 384));
-            }
-
-            IDs.Sort();
-
-            effects = new Effect[IDs.Count];
-            for (int i = 0; i < IDs.Count; i++)
-            {
-                effects[i].ID = IDs[i];
-                effects[i].Description = "Undetermined";
-            }
-        }
-
         public int FindIndex(int ID)
         {
             for (int i = 0; i < effects.Length; i++)
@@ -100,46 +74,24 @@ namespace XV2SSEdit
         }
     }
 
-    class ActivationList
+    class ActivatorList
     {
-        public Activation[] activations;
-        public void ConstructList(XmlNodeList activationlist)
+        public Activator[] activators;
+        public void ConstructList(XmlNodeList activatorlist)
         {
-            activations = new Activation[activationlist.Count];
-            for (int i = 0; i < activationlist.Count; i++)
+            activators = new Activator[activatorlist.Count];
+            for (int i = 0; i < activatorlist.Count; i++)
             {
-                activations[i].ID = int.Parse(activationlist[i].Attributes["id"].Value);
-                activations[i].Description = activationlist[i].InnerText;
-            }
-        }
-
-        public void ConstructFromUnknown(ref idbItem[] items)
-        {
-            List<int> IDs = new List<int>();
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 164)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 164));
-
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 388)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 388));
-            }
-
-            IDs.Sort();
-
-            activations = new Activation[IDs.Count];
-            for (int i = 0; i < IDs.Count; i++)
-            {
-                activations[i].ID = IDs[i];
-                activations[i].Description = "Undetermined";
+                activators[i].ID = int.Parse(activatorlist[i].Attributes["id"].Value);
+                activators[i].Description = activatorlist[i].InnerText;
             }
         }
 
         public int FindIndex(int ID)
         {
-            for (int i = 0; i < activations.Length; i++)
+            for (int i = 0; i < activators.Length; i++)
             {
-                if (activations[i].ID == ID)
+                if (activators[i].ID == ID)
                     return i;
             }
             return 0;
@@ -160,28 +112,6 @@ namespace XV2SSEdit
             }
         }
 
-        public void ConstructFromUnknown(ref idbItem[] items)
-        {
-            List<int> IDs = new List<int>();
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 160)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 160));
-
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 384)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 384));
-            }
-
-            IDs.Sort();
-
-            targets = new Target[IDs.Count];
-            for (int i = 0; i < IDs.Count; i++)
-            {
-                targets[i].ID = IDs[i];
-                targets[i].Description = "Undetermined";
-            }
-        }
-
         public int FindIndex(int ID)
         {
             for (int i = 0; i < targets.Length; i++)
@@ -193,38 +123,16 @@ namespace XV2SSEdit
         }
     }
 
-    class ColorList
+    class LBColorList
     {
-        public Color[] colors;
-        public void ConstructList(XmlNodeList colorlist)
+        public LBColor[] colors;
+        public void ConstructList(XmlNodeList limitcolors)
         {
-            colors = new Color[colorlist.Count];
-            for (int i = 0; i < colorlist.Count; i++)
+            colors = new LBColor[limitcolors.Count];
+            for (int i = 0; i < limitcolors.Count; i++)
             {
-                colors[i].ID = int.Parse(colorlist[i].Attributes["id"].Value);
-                colors[i].Description = colorlist[i].InnerText;
-            }
-        }
-
-        public void ConstructFromUnknown(ref idbItem[] items)
-        {
-            List<int> IDs = new List<int>();
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (!IDs.Contains(BitConverter.ToInt16(items[i].Data, 160)))
-                    IDs.Add(BitConverter.ToInt16(items[i].Data, 160));
-
-                if (!IDs.Contains(BitConverter.ToInt16(items[i].Data, 384)))
-                    IDs.Add(BitConverter.ToInt16(items[i].Data, 384));
-            }
-
-            IDs.Sort();
-
-            colors = new Color[IDs.Count];
-            for (int i = 0; i < IDs.Count; i++)
-            {
-                colors[i].ID = IDs[i];
-                colors[i].Description = "Undetermined";
+                colors[i].ID = int.Parse(limitcolors[i].Attributes["id"].Value);
+                colors[i].Description = limitcolors[i].InnerText;
             }
         }
 
@@ -252,28 +160,6 @@ namespace XV2SSEdit
             }
         }
 
-        public void ConstructFromUnknown(ref idbItem[] items)
-        {
-            List<int> IDs = new List<int>();
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 160)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 160));
-
-                if (!IDs.Contains(BitConverter.ToInt32(items[i].Data, 384)))
-                    IDs.Add(BitConverter.ToInt32(items[i].Data, 384));
-            }
-
-            IDs.Sort();
-
-            kitypes = new Kitype[IDs.Count];
-            for (int i = 0; i < IDs.Count; i++)
-            {
-                kitypes[i].ID = IDs[i];
-                kitypes[i].Description = "Undetermined";
-            }
-        }
-
         public int FindIndex(int ID)
         {
             for (int i = 0; i < kitypes.Length; i++)
@@ -285,46 +171,24 @@ namespace XV2SSEdit
         }
     }
 
-    class CheckboxList
+    class VFXList
     {
-        public Checkbox[] checkboxs;
-        public void ConstructList(XmlNodeList checkboxlist)
+        public VfxType[] vfxtypes;
+        public void ConstructList(XmlNodeList vfxlist)
         {
-            checkboxs = new Checkbox[checkboxlist.Count];
-            for (int i = 0; i < checkboxlist.Count; i++)
+            vfxtypes = new VfxType[vfxlist.Count];
+            for (int i = 0; i < vfxlist.Count; i++)
             {
-                checkboxs[i].ID = int.Parse(checkboxlist[i].Attributes["id"].Value);
-                checkboxs[i].Description = checkboxlist[i].InnerText;
-            }
-        }
-
-        public void ConstructFromUnknown(ref idbItem[] items)
-        {
-            List<int> IDs = new List<int>();
-            for (int i = 0; i < items.Length; i++)
-            {
-                if (!IDs.Contains(BitConverter.ToInt16(items[i].Data, 160)))
-                    IDs.Add(BitConverter.ToInt16(items[i].Data, 160));
-
-                if (!IDs.Contains(BitConverter.ToInt16(items[i].Data, 384)))
-                    IDs.Add(BitConverter.ToInt16(items[i].Data, 384));
-            }
-
-            IDs.Sort();
-
-            checkboxs = new Checkbox[IDs.Count];
-            for (int i = 0; i < IDs.Count; i++)
-            {
-                checkboxs[i].ID = IDs[i];
-                checkboxs[i].Description = "Undetermined";
+                vfxtypes[i].ID = int.Parse(vfxlist[i].Attributes["id"].Value);
+                vfxtypes[i].Description = vfxlist[i].InnerText;
             }
         }
 
         public int FindIndex(int ID)
         {
-            for (int i = 0; i < checkboxs.Length; i++)
+            for (int i = 0; i < vfxtypes.Length; i++)
             {
-                if (checkboxs[i].ID == ID)
+                if (vfxtypes[i].ID == ID)
                     return i;
             }
             return 0;

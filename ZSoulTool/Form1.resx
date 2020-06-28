@@ -131,32 +131,6 @@
 Add any of the values together to 
 get the race lock value you need.</value>
   </data>
-  <data name="label52.ToolTip" xml:space="preserve">
-    <value>Define what Races can equip the Super Soul.
-0: Unequipable | 255: Everyone
-1: HUM | 2: SYM
-4: NMC | 8: FRI
-16: MAM | 32: HUF
-64: SYF | 128: MAF
-
-Add any of the values together to 
-get the race lock value you need.</value>
-  </data>
-  <data name="txtAValb.ToolTip" xml:space="preserve">
-    <value>Many different uses.
-Skill use activators use this for the skill ID needed to activate the effect. -1 is used for all skills
-Heath/Ki/Stamina activators use this for the HP/Ki/Stamina % needed to activate the effect.</value>
-  </data>
-  <data name="txtAVal1.ToolTip" xml:space="preserve">
-    <value>Many different uses.
-Skill use activators use this for the skill ID needed to activate the effect. -1 is used for all skills
-Heath/Ki/Stamina activators use this for the HP/Ki/Stamina % needed to activate the effect.</value>
-  </data>
-  <data name="txtAVal2.ToolTip" xml:space="preserve">
-    <value>Many different uses.
-Skill use activators use this for the skill ID needed to activate the effect. -1 is used for all skills
-Heath/Ki/Stamina activators use this for the HP/Ki/Stamina % needed to activate the effect.</value>
-  </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

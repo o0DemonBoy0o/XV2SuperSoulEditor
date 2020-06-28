@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.debugLBSelect = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label97 = new System.Windows.Forms.Label();
             this.txtMsgLBDescBTL = new System.Windows.Forms.TextBox();
@@ -41,7 +44,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtMsgDesc = new System.Windows.Forms.TextBox();
             this.txtMsgName = new System.Windows.Forms.TextBox();
-            this.store_defaultBtn = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtShopTest = new System.Windows.Forms.TextBox();
             this.txtTPTest = new System.Windows.Forms.TextBox();
@@ -58,17 +60,13 @@
             this.txtRace = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNameID = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.cbKiType = new System.Windows.Forms.ComboBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.debugLBSelect = new System.Windows.Forms.ComboBox();
             this.label49 = new System.Windows.Forms.Label();
             this.cbLBColor = new System.Windows.Forms.ComboBox();
             this.label50 = new System.Windows.Forms.Label();
@@ -81,34 +79,35 @@
             this.txtLBAura = new System.Windows.Forms.TextBox();
             this.txtLBSoulID1 = new System.Windows.Forms.TextBox();
             this.txtLBDesc = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.tabpage2 = new System.Windows.Forms.TabPage();
             this.label69 = new System.Windows.Forms.Label();
-            this.txtUnkf36b = new System.Windows.Forms.TextBox();
+            this.txtValue6B = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
             this.txtUnki88b = new System.Windows.Forms.TextBox();
             this.label76 = new System.Windows.Forms.Label();
-            this.txtUnkf32b = new System.Windows.Forms.TextBox();
+            this.txtValue5B = new System.Windows.Forms.TextBox();
             this.label77 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
-            this.txtUnkf68b = new System.Windows.Forms.TextBox();
-            this.txtUnkf64b = new System.Windows.Forms.TextBox();
+            this.txtAmount6B = new System.Windows.Forms.TextBox();
+            this.txtAmount5B = new System.Windows.Forms.TextBox();
             this.txtUnki44b = new System.Windows.Forms.TextBox();
-            this.txtUnkf28b = new System.Windows.Forms.TextBox();
-            this.txtUnkf24b = new System.Windows.Forms.TextBox();
-            this.txtUnkf20b = new System.Windows.Forms.TextBox();
+            this.txtValue4B = new System.Windows.Forms.TextBox();
+            this.txtValue3B = new System.Windows.Forms.TextBox();
+            this.txtValue2B = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.cbAuraCheckb = new System.Windows.Forms.ComboBox();
-            this.txtAurab = new System.Windows.Forms.TextBox();
+            this.cbVfxType1B = new System.Windows.Forms.ComboBox();
+            this.txtVfxId1B = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.cbUnknownCheckb = new System.Windows.Forms.ComboBox();
-            this.txtUnknownb = new System.Windows.Forms.TextBox();
+            this.cbVfxType2B = new System.Windows.Forms.ComboBox();
+            this.txtVfxId2B = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.cbTargetb = new System.Windows.Forms.ComboBox();
@@ -123,19 +122,19 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.txtEUnknownBb = new System.Windows.Forms.TextBox();
-            this.txtEUnknownAb = new System.Windows.Forms.TextBox();
+            this.txtAmount4B = new System.Windows.Forms.TextBox();
+            this.txtAmount3B = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.txtETimeb = new System.Windows.Forms.TextBox();
+            this.txtAmount2B = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.txtEAmntb = new System.Windows.Forms.TextBox();
+            this.txtAmount1B = new System.Windows.Forms.TextBox();
             this.txtChanceb = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.txtAValb = new System.Windows.Forms.TextBox();
+            this.txtValue1B = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
-            this.txtADelayb = new System.Windows.Forms.TextBox();
+            this.txtDurationB = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
-            this.txtTimesb = new System.Windows.Forms.TextBox();
+            this.txtLimitB = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
             this.cbActiveb = new System.Windows.Forms.ComboBox();
             this.label66 = new System.Windows.Forms.Label();
@@ -144,26 +143,26 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtEUnknownB1 = new System.Windows.Forms.TextBox();
-            this.txtEUnknownA1 = new System.Windows.Forms.TextBox();
+            this.txtAmount41 = new System.Windows.Forms.TextBox();
+            this.txtAmount31 = new System.Windows.Forms.TextBox();
             this.label79 = new System.Windows.Forms.Label();
             this.txtUnki881 = new System.Windows.Forms.TextBox();
             this.label81 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
-            this.txtUnkf681 = new System.Windows.Forms.TextBox();
-            this.txtUnkf641 = new System.Windows.Forms.TextBox();
+            this.txtAmount61 = new System.Windows.Forms.TextBox();
+            this.txtAmount51 = new System.Windows.Forms.TextBox();
             this.txtUnki441 = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
-            this.txtUnkf361 = new System.Windows.Forms.TextBox();
+            this.txtValue61 = new System.Windows.Forms.TextBox();
             this.label80 = new System.Windows.Forms.Label();
-            this.txtUnkf321 = new System.Windows.Forms.TextBox();
+            this.txtValue51 = new System.Windows.Forms.TextBox();
             this.label84 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
             this.label86 = new System.Windows.Forms.Label();
-            this.txtUnkf281 = new System.Windows.Forms.TextBox();
-            this.txtUnkf241 = new System.Windows.Forms.TextBox();
-            this.txtUnkf201 = new System.Windows.Forms.TextBox();
+            this.txtValue41 = new System.Windows.Forms.TextBox();
+            this.txtValue31 = new System.Windows.Forms.TextBox();
+            this.txtValue21 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbTarget1 = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -177,25 +176,25 @@
             this.txtEditValue1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.cbAuraCheck1 = new System.Windows.Forms.ComboBox();
-            this.txtAura1 = new System.Windows.Forms.TextBox();
+            this.cbVfxType11 = new System.Windows.Forms.ComboBox();
+            this.txtVfxId11 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.cbUnknownCheck1 = new System.Windows.Forms.ComboBox();
-            this.txtUnknown1 = new System.Windows.Forms.TextBox();
+            this.cbVfxType21 = new System.Windows.Forms.ComboBox();
+            this.txtVfxId12 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtETime1 = new System.Windows.Forms.TextBox();
+            this.txtAmount21 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.txtEAmnt1 = new System.Windows.Forms.TextBox();
+            this.txtAmount11 = new System.Windows.Forms.TextBox();
             this.txtChance1 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtAVal1 = new System.Windows.Forms.TextBox();
+            this.txtValue11 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtADelay1 = new System.Windows.Forms.TextBox();
+            this.txtDuration1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtTimes1 = new System.Windows.Forms.TextBox();
+            this.txtLimit1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbActive1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -204,30 +203,30 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label87 = new System.Windows.Forms.Label();
-            this.txtUnkf362 = new System.Windows.Forms.TextBox();
+            this.txtValue62 = new System.Windows.Forms.TextBox();
             this.label89 = new System.Windows.Forms.Label();
             this.label88 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.txtUnki882 = new System.Windows.Forms.TextBox();
             this.label94 = new System.Windows.Forms.Label();
-            this.txtUnkf322 = new System.Windows.Forms.TextBox();
+            this.txtValue52 = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
-            this.txtUnkf682 = new System.Windows.Forms.TextBox();
-            this.txtUnkf642 = new System.Windows.Forms.TextBox();
+            this.txtAmount62 = new System.Windows.Forms.TextBox();
+            this.txtAmount52 = new System.Windows.Forms.TextBox();
             this.txtUnki442 = new System.Windows.Forms.TextBox();
-            this.txtUnkf282 = new System.Windows.Forms.TextBox();
-            this.txtUnkf242 = new System.Windows.Forms.TextBox();
-            this.txtUnkf202 = new System.Windows.Forms.TextBox();
+            this.txtValue42 = new System.Windows.Forms.TextBox();
+            this.txtValue32 = new System.Windows.Forms.TextBox();
+            this.txtValue22 = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cbTarget2 = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.txtEUnknownA2 = new System.Windows.Forms.TextBox();
-            this.txtEUnknownB2 = new System.Windows.Forms.TextBox();
+            this.txtAmount32 = new System.Windows.Forms.TextBox();
+            this.txtAmount42 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label68 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
@@ -238,25 +237,25 @@
             this.txtEditName2 = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.cbAuraCheck2 = new System.Windows.Forms.ComboBox();
-            this.txtAura2 = new System.Windows.Forms.TextBox();
+            this.cbVfxType12 = new System.Windows.Forms.ComboBox();
+            this.txtVfxId21 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.cbUnknownCheck2 = new System.Windows.Forms.ComboBox();
-            this.txtUnknown2 = new System.Windows.Forms.TextBox();
+            this.cbVfxType22 = new System.Windows.Forms.ComboBox();
+            this.txtVfxId22 = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.txtETime2 = new System.Windows.Forms.TextBox();
+            this.txtAmount22 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.txtEAmnt2 = new System.Windows.Forms.TextBox();
+            this.txtAmount12 = new System.Windows.Forms.TextBox();
             this.txtChance2 = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.txtAVal2 = new System.Windows.Forms.TextBox();
+            this.txtValue12 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.txtADelay2 = new System.Windows.Forms.TextBox();
+            this.txtDuration2 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.txtTimes2 = new System.Windows.Forms.TextBox();
+            this.txtLimit2 = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.cbActive2 = new System.Windows.Forms.ComboBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -264,9 +263,6 @@
             this.label47 = new System.Windows.Forms.Label();
             this.srchBox = new System.Windows.Forms.TextBox();
             this.srchBtn = new System.Windows.Forms.Button();
-            this.chkMsgDesc = new System.Windows.Forms.CheckBox();
-            this.chkMsgBurst = new System.Windows.Forms.CheckBox();
-            this.chkMsgName = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -276,23 +272,15 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewXV2SSEditStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewSoulToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewSoulAsLimitBurstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.replaceImportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addCurrentSuperSoulToShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeCurrentSuperSoulFromShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.replaceImportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewSoulFromClipboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.limitBurstOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setCurrentBurstIDsToNULLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setLimitBurstToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setCurrentBurstToATKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setCurrentBurstToDEFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setCurrentBurstToRECToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setCurrentBurstToGRDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setCurrentBurstToREVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createNewSoulAsLimitBurstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -308,10 +296,11 @@
             this.itemList = new System.Windows.Forms.ComboBox();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label53 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label53 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -351,11 +340,12 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox9);
             this.tabPage1.Controls.Add(this.groupBox13);
-            this.tabPage1.Controls.Add(this.store_defaultBtn);
             this.tabPage1.Controls.Add(this.groupBox10);
             this.tabPage1.Controls.Add(this.groupBox11);
             this.tabPage1.Controls.Add(this.groupBox12);
+            this.tabPage1.Controls.Add(this.txtID);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -363,6 +353,68 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Super Soul Details";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.debugLBSelect);
+            this.groupBox9.Controls.Add(this.label1);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(400, 13);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(200, 70);
+            this.groupBox9.TabIndex = 42;
+            this.groupBox9.TabStop = false;
+            // 
+            // debugLBSelect
+            // 
+            this.debugLBSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.debugLBSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.debugLBSelect.FormattingEnabled = true;
+            this.debugLBSelect.Items.AddRange(new object[] {
+            "ATK Up",
+            "DEF Up",
+            "Health Recovery",
+            "Auto Just Guard",
+            "Revive Gauge",
+            "Death Beam",
+            "Full Power Energy Wave",
+            "Kamehameha",
+            "Dynamite Kick",
+            "Spirit Sword",
+            "Justice Combination",
+            "Super Kamehameha",
+            "Time Skip/Molotov",
+            "Final Kamehameha",
+            "Sword of Hope",
+            "Scatter Kamehameha",
+            "Wolf Fang Fist",
+            "Volleyball Fist",
+            "Special Beam Cannon",
+            "Masenko",
+            "Double Sunday",
+            "Arm Crash",
+            "Galick Gun",
+            "Cross Arm",
+            "Dodon Ray",
+            "Power Pole",
+            "--Nothing--"});
+            this.debugLBSelect.Location = new System.Drawing.Point(25, 37);
+            this.debugLBSelect.Name = "debugLBSelect";
+            this.debugLBSelect.Size = new System.Drawing.Size(150, 21);
+            this.debugLBSelect.TabIndex = 42;
+            this.debugLBSelect.SelectedIndexChanged += new System.EventHandler(this.debugLBSelect_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Limit Burst Quick Change";
+            this.toolTip1.SetToolTip(this.label1, "ID of the current Super Soul in the idb.");
             // 
             // groupBox13
             // 
@@ -471,17 +523,6 @@
             this.txtMsgName.TabIndex = 12;
             this.txtMsgName.TextChanged += new System.EventHandler(this.txtMsgName_TextChanged);
             // 
-            // store_defaultBtn
-            // 
-            this.store_defaultBtn.Location = new System.Drawing.Point(568, 49);
-            this.store_defaultBtn.Name = "store_defaultBtn";
-            this.store_defaultBtn.Size = new System.Drawing.Size(75, 20);
-            this.store_defaultBtn.TabIndex = 41;
-            this.store_defaultBtn.Text = "store";
-            this.store_defaultBtn.UseVisualStyleBackColor = true;
-            this.store_defaultBtn.Visible = false;
-            this.store_defaultBtn.Click += new System.EventHandler(this.store_defaultBtn_Click);
-            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.txtShopTest);
@@ -579,9 +620,9 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(177, 29);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 13);
+            this.label18.Size = new System.Drawing.Size(64, 13);
             this.label18.TabIndex = 36;
-            this.label18.Text = "Progression Val.";
+            this.label18.Text = "Unlock Flag";
             this.toolTip1.SetToolTip(this.label18, "Determines story progress needed to view\r\nsuper soul in the shop.");
             // 
             // txtBuyTP
@@ -641,48 +682,24 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.label52);
-            this.groupBox11.Controls.Add(this.label1);
             this.groupBox11.Controls.Add(this.label3);
             this.groupBox11.Controls.Add(this.txtDescID);
             this.groupBox11.Controls.Add(this.label2);
             this.groupBox11.Controls.Add(this.txtNameID);
             this.groupBox11.Controls.Add(this.label22);
-            this.groupBox11.Controls.Add(this.txtID);
             this.groupBox11.Controls.Add(this.cbKiType);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.Location = new System.Drawing.Point(133, 14);
+            this.groupBox11.Location = new System.Drawing.Point(59, 13);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(393, 70);
+            this.groupBox11.Size = new System.Drawing.Size(335, 70);
             this.groupBox11.TabIndex = 4;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Soul Info";
             // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(339, 16);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(43, 13);
-            this.label52.TabIndex = 42;
-            this.label52.Text = "133, 14";
-            this.toolTip1.SetToolTip(this.label52, resources.GetString("label52.ToolTip"));
-            this.label52.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Soul ID";
-            this.toolTip1.SetToolTip(this.label1, "ID of the current Super Soul in the idb.");
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 20);
+            this.label3.Location = new System.Drawing.Point(92, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 22;
@@ -691,17 +708,16 @@
             // 
             // txtDescID
             // 
-            this.txtDescID.Location = new System.Drawing.Point(163, 36);
+            this.txtDescID.Location = new System.Drawing.Point(95, 38);
             this.txtDescID.Name = "txtDescID";
-            this.txtDescID.ReadOnly = true;
-            this.txtDescID.Size = new System.Drawing.Size(70, 20);
+            this.txtDescID.Size = new System.Drawing.Size(75, 20);
             this.txtDescID.TabIndex = 21;
             this.txtDescID.TextChanged += new System.EventHandler(this.txtDescID_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 21);
+            this.label2.Location = new System.Drawing.Point(15, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 20;
@@ -710,39 +726,29 @@
             // 
             // txtNameID
             // 
-            this.txtNameID.Location = new System.Drawing.Point(87, 36);
+            this.txtNameID.Location = new System.Drawing.Point(14, 38);
             this.txtNameID.Name = "txtNameID";
-            this.txtNameID.ReadOnly = true;
-            this.txtNameID.Size = new System.Drawing.Size(70, 20);
+            this.txtNameID.Size = new System.Drawing.Size(75, 20);
             this.txtNameID.TabIndex = 19;
             this.txtNameID.TextChanged += new System.EventHandler(this.txtNameID_TextChanged);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(249, 21);
+            this.label22.Location = new System.Drawing.Point(175, 18);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(69, 13);
             this.label22.TabIndex = 28;
             this.label22.Text = "Ki Blast Type";
             this.toolTip1.SetToolTip(this.label22, "The Ki-Blast type the Super Soul \r\nwill give your character.");
             // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(11, 36);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(70, 20);
-            this.txtID.TabIndex = 16;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
-            // 
             // cbKiType
             // 
             this.cbKiType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKiType.FormattingEnabled = true;
-            this.cbKiType.Location = new System.Drawing.Point(247, 36);
+            this.cbKiType.Location = new System.Drawing.Point(178, 36);
             this.cbKiType.Name = "cbKiType";
-            this.cbKiType.Size = new System.Drawing.Size(130, 21);
+            this.cbKiType.Size = new System.Drawing.Size(145, 21);
             this.cbKiType.TabIndex = 31;
             this.cbKiType.SelectedIndexChanged += new System.EventHandler(this.cbKiType_SelectedIndexChanged);
             // 
@@ -750,7 +756,6 @@
             // 
             this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox12.Controls.Add(this.debugLBSelect);
             this.groupBox12.Controls.Add(this.label49);
             this.groupBox12.Controls.Add(this.cbLBColor);
             this.groupBox12.Controls.Add(this.label50);
@@ -769,44 +774,6 @@
             this.groupBox12.TabIndex = 4;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Limit Burst Settings";
-            // 
-            // debugLBSelect
-            // 
-            this.debugLBSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.debugLBSelect.FormattingEnabled = true;
-            this.debugLBSelect.Items.AddRange(new object[] {
-            "ATK Up",
-            "DEF Up",
-            "Health Recovery",
-            "Auto Just Guard",
-            "Revive Gauge",
-            "Death Beam",
-            "Full Power Energy Wave",
-            "Kamehameha",
-            "Dynamite Kick",
-            "Spirit Sword",
-            "Justice Combination",
-            "Super Kamehameha",
-            "Time Skip/Molotov",
-            "Final Kamehameha",
-            "Sword of Hope",
-            "Scatter Kamehameha",
-            "Wolf Fang Fist",
-            "Volleyball Fist",
-            "Special Beam Cannon",
-            "Masenko",
-            "Double Sunday",
-            "Arm Crash",
-            "Galick Gun",
-            "Cross Arm",
-            "Dodon Ray",
-            "Power Pole"});
-            this.debugLBSelect.Location = new System.Drawing.Point(97, 6);
-            this.debugLBSelect.Name = "debugLBSelect";
-            this.debugLBSelect.Size = new System.Drawing.Size(202, 21);
-            this.debugLBSelect.TabIndex = 42;
-            this.debugLBSelect.Visible = false;
-            this.debugLBSelect.SelectedIndexChanged += new System.EventHandler(this.debugLBSelect_SelectedIndexChanged);
             // 
             // label49
             // 
@@ -919,45 +886,54 @@
             this.txtLBDesc.TabIndex = 36;
             this.txtLBDesc.TextChanged += new System.EventHandler(this.txtLBDesc_TextChanged);
             // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(5, 50);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(48, 20);
+            this.txtID.TabIndex = 16;
+            this.txtID.Visible = false;
+            // 
             // tabpage2
             // 
             this.tabpage2.Controls.Add(this.label69);
-            this.tabpage2.Controls.Add(this.txtUnkf36b);
+            this.tabpage2.Controls.Add(this.txtValue6B);
             this.tabpage2.Controls.Add(this.label70);
             this.tabpage2.Controls.Add(this.label75);
             this.tabpage2.Controls.Add(this.label71);
             this.tabpage2.Controls.Add(this.txtUnki88b);
             this.tabpage2.Controls.Add(this.label76);
-            this.tabpage2.Controls.Add(this.txtUnkf32b);
+            this.tabpage2.Controls.Add(this.txtValue5B);
             this.tabpage2.Controls.Add(this.label77);
             this.tabpage2.Controls.Add(this.label74);
             this.tabpage2.Controls.Add(this.label73);
             this.tabpage2.Controls.Add(this.label72);
-            this.tabpage2.Controls.Add(this.txtUnkf68b);
-            this.tabpage2.Controls.Add(this.txtUnkf64b);
+            this.tabpage2.Controls.Add(this.txtAmount6B);
+            this.tabpage2.Controls.Add(this.txtAmount5B);
             this.tabpage2.Controls.Add(this.txtUnki44b);
-            this.tabpage2.Controls.Add(this.txtUnkf28b);
-            this.tabpage2.Controls.Add(this.txtUnkf24b);
-            this.tabpage2.Controls.Add(this.txtUnkf20b);
+            this.tabpage2.Controls.Add(this.txtValue4B);
+            this.tabpage2.Controls.Add(this.txtValue3B);
+            this.tabpage2.Controls.Add(this.txtValue2B);
             this.tabpage2.Controls.Add(this.groupBox16);
             this.tabpage2.Controls.Add(this.groupBox17);
             this.tabpage2.Controls.Add(this.groupBox14);
             this.tabpage2.Controls.Add(this.groupBox15);
             this.tabpage2.Controls.Add(this.label54);
             this.tabpage2.Controls.Add(this.label55);
-            this.tabpage2.Controls.Add(this.txtEUnknownBb);
-            this.tabpage2.Controls.Add(this.txtEUnknownAb);
+            this.tabpage2.Controls.Add(this.txtAmount4B);
+            this.tabpage2.Controls.Add(this.txtAmount3B);
             this.tabpage2.Controls.Add(this.label60);
-            this.tabpage2.Controls.Add(this.txtETimeb);
+            this.tabpage2.Controls.Add(this.txtAmount2B);
             this.tabpage2.Controls.Add(this.label61);
-            this.tabpage2.Controls.Add(this.txtEAmntb);
+            this.tabpage2.Controls.Add(this.txtAmount1B);
             this.tabpage2.Controls.Add(this.txtChanceb);
             this.tabpage2.Controls.Add(this.label62);
-            this.tabpage2.Controls.Add(this.txtAValb);
+            this.tabpage2.Controls.Add(this.txtValue1B);
             this.tabpage2.Controls.Add(this.label63);
-            this.tabpage2.Controls.Add(this.txtADelayb);
+            this.tabpage2.Controls.Add(this.txtDurationB);
             this.tabpage2.Controls.Add(this.label64);
-            this.tabpage2.Controls.Add(this.txtTimesb);
+            this.tabpage2.Controls.Add(this.txtLimitB);
             this.tabpage2.Controls.Add(this.label65);
             this.tabpage2.Controls.Add(this.cbActiveb);
             this.tabpage2.Controls.Add(this.label66);
@@ -980,13 +956,13 @@
             this.label69.TabIndex = 94;
             this.label69.Text = "Value 6";
             // 
-            // txtUnkf36b
+            // txtValue6B
             // 
-            this.txtUnkf36b.Location = new System.Drawing.Point(598, 155);
-            this.txtUnkf36b.Name = "txtUnkf36b";
-            this.txtUnkf36b.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf36b.TabIndex = 89;
-            this.txtUnkf36b.TextChanged += new System.EventHandler(this.txtUnkf36b_TextChanged);
+            this.txtValue6B.Location = new System.Drawing.Point(598, 155);
+            this.txtValue6B.Name = "txtValue6B";
+            this.txtValue6B.Size = new System.Drawing.Size(52, 20);
+            this.txtValue6B.TabIndex = 89;
+            this.txtValue6B.TextChanged += new System.EventHandler(this.txtValue6B_TextChanged);
             // 
             // label70
             // 
@@ -1032,13 +1008,13 @@
             this.label76.TabIndex = 91;
             this.label76.Text = "Value 3";
             // 
-            // txtUnkf32b
+            // txtValue5B
             // 
-            this.txtUnkf32b.Location = new System.Drawing.Point(540, 155);
-            this.txtUnkf32b.Name = "txtUnkf32b";
-            this.txtUnkf32b.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf32b.TabIndex = 86;
-            this.txtUnkf32b.TextChanged += new System.EventHandler(this.txtUnkf32b_TextChanged);
+            this.txtValue5B.Location = new System.Drawing.Point(540, 155);
+            this.txtValue5B.Name = "txtValue5B";
+            this.txtValue5B.Size = new System.Drawing.Size(52, 20);
+            this.txtValue5B.TabIndex = 86;
+            this.txtValue5B.TextChanged += new System.EventHandler(this.txtValue5B_TextChanged);
             // 
             // label77
             // 
@@ -1076,21 +1052,21 @@
             this.label72.TabIndex = 83;
             this.label72.Text = "Amount 5";
             // 
-            // txtUnkf68b
+            // txtAmount6B
             // 
-            this.txtUnkf68b.Location = new System.Drawing.Point(598, 197);
-            this.txtUnkf68b.Name = "txtUnkf68b";
-            this.txtUnkf68b.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf68b.TabIndex = 82;
-            this.txtUnkf68b.TextChanged += new System.EventHandler(this.txtUnkf68b_TextChanged);
+            this.txtAmount6B.Location = new System.Drawing.Point(598, 197);
+            this.txtAmount6B.Name = "txtAmount6B";
+            this.txtAmount6B.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount6B.TabIndex = 82;
+            this.txtAmount6B.TextChanged += new System.EventHandler(this.txtAmount6B_TextChanged);
             // 
-            // txtUnkf64b
+            // txtAmount5B
             // 
-            this.txtUnkf64b.Location = new System.Drawing.Point(540, 197);
-            this.txtUnkf64b.Name = "txtUnkf64b";
-            this.txtUnkf64b.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf64b.TabIndex = 81;
-            this.txtUnkf64b.TextChanged += new System.EventHandler(this.txtUnkf64b_TextChanged);
+            this.txtAmount5B.Location = new System.Drawing.Point(540, 197);
+            this.txtAmount5B.Name = "txtAmount5B";
+            this.txtAmount5B.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount5B.TabIndex = 81;
+            this.txtAmount5B.TextChanged += new System.EventHandler(this.txtAmount5B_TextChanged);
             // 
             // txtUnki44b
             // 
@@ -1100,128 +1076,128 @@
             this.txtUnki44b.TabIndex = 80;
             this.txtUnki44b.TextChanged += new System.EventHandler(this.txtUnki44b_TextChanged);
             // 
-            // txtUnkf28b
+            // txtValue4B
             // 
-            this.txtUnkf28b.Location = new System.Drawing.Point(482, 155);
-            this.txtUnkf28b.Name = "txtUnkf28b";
-            this.txtUnkf28b.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf28b.TabIndex = 79;
-            this.txtUnkf28b.TextChanged += new System.EventHandler(this.txtUnkf28b_TextChanged);
+            this.txtValue4B.Location = new System.Drawing.Point(482, 155);
+            this.txtValue4B.Name = "txtValue4B";
+            this.txtValue4B.Size = new System.Drawing.Size(52, 20);
+            this.txtValue4B.TabIndex = 79;
+            this.txtValue4B.TextChanged += new System.EventHandler(this.txtValue4B_TextChanged);
             // 
-            // txtUnkf24b
+            // txtValue3B
             // 
-            this.txtUnkf24b.Location = new System.Drawing.Point(424, 155);
-            this.txtUnkf24b.Name = "txtUnkf24b";
-            this.txtUnkf24b.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf24b.TabIndex = 78;
-            this.txtUnkf24b.TextChanged += new System.EventHandler(this.txtUnkf24b_TextChanged);
+            this.txtValue3B.Location = new System.Drawing.Point(424, 155);
+            this.txtValue3B.Name = "txtValue3B";
+            this.txtValue3B.Size = new System.Drawing.Size(52, 20);
+            this.txtValue3B.TabIndex = 78;
+            this.txtValue3B.TextChanged += new System.EventHandler(this.txtValue3B_TextChanged);
             // 
-            // txtUnkf20b
+            // txtValue2B
             // 
-            this.txtUnkf20b.Location = new System.Drawing.Point(366, 155);
-            this.txtUnkf20b.Name = "txtUnkf20b";
-            this.txtUnkf20b.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf20b.TabIndex = 77;
-            this.txtUnkf20b.TextChanged += new System.EventHandler(this.txtUnkf20b_TextChanged);
+            this.txtValue2B.Location = new System.Drawing.Point(366, 155);
+            this.txtValue2B.Name = "txtValue2B";
+            this.txtValue2B.Size = new System.Drawing.Size(52, 20);
+            this.txtValue2B.TabIndex = 77;
+            this.txtValue2B.TextChanged += new System.EventHandler(this.txtValue2B_TextChanged);
             // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.label56);
-            this.groupBox16.Controls.Add(this.cbAuraCheckb);
-            this.groupBox16.Controls.Add(this.txtAurab);
+            this.groupBox16.Controls.Add(this.cbVfxType1B);
+            this.groupBox16.Controls.Add(this.txtVfxId1B);
             this.groupBox16.Controls.Add(this.label57);
             this.groupBox16.Location = new System.Drawing.Point(211, 14);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(218, 65);
             this.groupBox16.TabIndex = 76;
             this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Aura";
+            this.groupBox16.Text = "VFX Type 1";
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(15, 16);
+            this.label56.Location = new System.Drawing.Point(15, 17);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(46, 13);
+            this.label56.Size = new System.Drawing.Size(69, 13);
             this.label56.TabIndex = 47;
-            this.label56.Text = "Enabled";
+            this.label56.Text = "EEPK to Use";
             // 
-            // cbAuraCheckb
+            // cbVfxType1B
             // 
-            this.cbAuraCheckb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAuraCheckb.FormattingEnabled = true;
-            this.cbAuraCheckb.Location = new System.Drawing.Point(17, 34);
-            this.cbAuraCheckb.Name = "cbAuraCheckb";
-            this.cbAuraCheckb.Size = new System.Drawing.Size(85, 21);
-            this.cbAuraCheckb.TabIndex = 46;
-            this.cbAuraCheckb.SelectedIndexChanged += new System.EventHandler(this.cbAuraCheckb_SelectedIndexChanged);
+            this.cbVfxType1B.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVfxType1B.FormattingEnabled = true;
+            this.cbVfxType1B.Location = new System.Drawing.Point(17, 35);
+            this.cbVfxType1B.Name = "cbVfxType1B";
+            this.cbVfxType1B.Size = new System.Drawing.Size(100, 21);
+            this.cbVfxType1B.TabIndex = 46;
+            this.cbVfxType1B.SelectedIndexChanged += new System.EventHandler(this.cbVfxType1B_SelectedIndexChanged);
             // 
-            // txtAurab
+            // txtVfxId1B
             // 
-            this.txtAurab.Location = new System.Drawing.Point(117, 35);
-            this.txtAurab.Name = "txtAurab";
-            this.txtAurab.Size = new System.Drawing.Size(85, 20);
-            this.txtAurab.TabIndex = 42;
-            this.txtAurab.TextChanged += new System.EventHandler(this.txtAurab_TextChanged);
+            this.txtVfxId1B.Location = new System.Drawing.Point(127, 35);
+            this.txtVfxId1B.Name = "txtVfxId1B";
+            this.txtVfxId1B.Size = new System.Drawing.Size(75, 20);
+            this.txtVfxId1B.TabIndex = 42;
+            this.txtVfxId1B.TextChanged += new System.EventHandler(this.txtVfxId1B_TextChanged);
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(113, 16);
+            this.label57.Location = new System.Drawing.Point(123, 17);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(34, 13);
+            this.label57.Size = new System.Drawing.Size(49, 13);
             this.label57.TabIndex = 43;
-            this.label57.Text = "Value";
+            this.label57.Text = "Effect ID";
             this.toolTip1.SetToolTip(this.label57, "The Aura the Super Soul will use on effect activation.");
             // 
             // groupBox17
             // 
             this.groupBox17.Controls.Add(this.label58);
-            this.groupBox17.Controls.Add(this.cbUnknownCheckb);
-            this.groupBox17.Controls.Add(this.txtUnknownb);
+            this.groupBox17.Controls.Add(this.cbVfxType2B);
+            this.groupBox17.Controls.Add(this.txtVfxId2B);
             this.groupBox17.Controls.Add(this.label59);
             this.groupBox17.Location = new System.Drawing.Point(435, 14);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(218, 65);
             this.groupBox17.TabIndex = 75;
             this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Unknown";
+            this.groupBox17.Text = "VFX Type 2";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(16, 18);
+            this.label58.Location = new System.Drawing.Point(15, 17);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(46, 13);
+            this.label58.Size = new System.Drawing.Size(69, 13);
             this.label58.TabIndex = 46;
-            this.label58.Text = "Enabled";
+            this.label58.Text = "EEPK to Use";
             // 
-            // cbUnknownCheckb
+            // cbVfxType2B
             // 
-            this.cbUnknownCheckb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnknownCheckb.FormattingEnabled = true;
-            this.cbUnknownCheckb.Location = new System.Drawing.Point(19, 35);
-            this.cbUnknownCheckb.Name = "cbUnknownCheckb";
-            this.cbUnknownCheckb.Size = new System.Drawing.Size(85, 21);
-            this.cbUnknownCheckb.TabIndex = 45;
-            this.cbUnknownCheckb.SelectedIndexChanged += new System.EventHandler(this.cbUnknownCheckb_SelectedIndexChanged);
+            this.cbVfxType2B.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVfxType2B.FormattingEnabled = true;
+            this.cbVfxType2B.Location = new System.Drawing.Point(17, 35);
+            this.cbVfxType2B.Name = "cbVfxType2B";
+            this.cbVfxType2B.Size = new System.Drawing.Size(100, 21);
+            this.cbVfxType2B.TabIndex = 45;
+            this.cbVfxType2B.SelectedIndexChanged += new System.EventHandler(this.cbVfxType2B_SelectedIndexChanged);
             // 
-            // txtUnknownb
+            // txtVfxId2B
             // 
-            this.txtUnknownb.Location = new System.Drawing.Point(120, 36);
-            this.txtUnknownb.Name = "txtUnknownb";
-            this.txtUnknownb.Size = new System.Drawing.Size(85, 20);
-            this.txtUnknownb.TabIndex = 42;
-            this.txtUnknownb.TextChanged += new System.EventHandler(this.txtUnknownb_TextChanged);
+            this.txtVfxId2B.Location = new System.Drawing.Point(127, 35);
+            this.txtVfxId2B.Name = "txtVfxId2B";
+            this.txtVfxId2B.Size = new System.Drawing.Size(75, 20);
+            this.txtVfxId2B.TabIndex = 42;
+            this.txtVfxId2B.TextChanged += new System.EventHandler(this.txtVfxId2B_TextChanged);
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(117, 18);
+            this.label59.Location = new System.Drawing.Point(123, 17);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(34, 13);
+            this.label59.Size = new System.Drawing.Size(49, 13);
             this.label59.TabIndex = 43;
-            this.label59.Text = "Value";
+            this.label59.Text = "Effect ID";
             // 
             // groupBox14
             // 
@@ -1343,21 +1319,21 @@
             this.label55.TabIndex = 71;
             this.label55.Text = "Amount 3";
             // 
-            // txtEUnknownBb
+            // txtAmount4B
             // 
-            this.txtEUnknownBb.Location = new System.Drawing.Point(482, 197);
-            this.txtEUnknownBb.Name = "txtEUnknownBb";
-            this.txtEUnknownBb.Size = new System.Drawing.Size(52, 20);
-            this.txtEUnknownBb.TabIndex = 70;
-            this.txtEUnknownBb.TextChanged += new System.EventHandler(this.txtEUnknownBb_TextChanged);
+            this.txtAmount4B.Location = new System.Drawing.Point(482, 197);
+            this.txtAmount4B.Name = "txtAmount4B";
+            this.txtAmount4B.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount4B.TabIndex = 70;
+            this.txtAmount4B.TextChanged += new System.EventHandler(this.txtAmount4B_TextChanged);
             // 
-            // txtEUnknownAb
+            // txtAmount3B
             // 
-            this.txtEUnknownAb.Location = new System.Drawing.Point(424, 197);
-            this.txtEUnknownAb.Name = "txtEUnknownAb";
-            this.txtEUnknownAb.Size = new System.Drawing.Size(52, 20);
-            this.txtEUnknownAb.TabIndex = 69;
-            this.txtEUnknownAb.TextChanged += new System.EventHandler(this.txtEUnknownAb_TextChanged);
+            this.txtAmount3B.Location = new System.Drawing.Point(424, 197);
+            this.txtAmount3B.Name = "txtAmount3B";
+            this.txtAmount3B.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount3B.TabIndex = 69;
+            this.txtAmount3B.TextChanged += new System.EventHandler(this.txtAmount3B_TextChanged);
             // 
             // label60
             // 
@@ -1368,15 +1344,15 @@
             this.label60.TabIndex = 66;
             this.label60.Text = "Amount 2";
             // 
-            // txtETimeb
+            // txtAmount2B
             // 
-            this.txtETimeb.Location = new System.Drawing.Point(366, 197);
-            this.txtETimeb.Name = "txtETimeb";
-            this.txtETimeb.Size = new System.Drawing.Size(52, 20);
-            this.txtETimeb.TabIndex = 65;
-            this.toolTip1.SetToolTip(this.txtETimeb, "Many different uses.\r\nStatus Ailments seem to use this for strength of the ailmen" +
+            this.txtAmount2B.Location = new System.Drawing.Point(366, 197);
+            this.txtAmount2B.Name = "txtAmount2B";
+            this.txtAmount2B.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount2B.TabIndex = 65;
+            this.toolTip1.SetToolTip(this.txtAmount2B, "Many different uses.\r\nStatus Ailments seem to use this for strength of the ailmen" +
         "t.");
-            this.txtETimeb.TextChanged += new System.EventHandler(this.txtETimeb_TextChanged);
+            this.txtAmount2B.TextChanged += new System.EventHandler(this.txtAmount2B_TextChanged);
             // 
             // label61
             // 
@@ -1387,15 +1363,15 @@
             this.label61.TabIndex = 64;
             this.label61.Text = "Amount 1";
             // 
-            // txtEAmntb
+            // txtAmount1B
             // 
-            this.txtEAmntb.Location = new System.Drawing.Point(308, 197);
-            this.txtEAmntb.Name = "txtEAmntb";
-            this.txtEAmntb.Size = new System.Drawing.Size(52, 20);
-            this.txtEAmntb.TabIndex = 63;
-            this.toolTip1.SetToolTip(this.txtEAmntb, "Many different uses.\r\nMost common is the strength of the effect.\r\nStatus Ailments" +
+            this.txtAmount1B.Location = new System.Drawing.Point(308, 197);
+            this.txtAmount1B.Name = "txtAmount1B";
+            this.txtAmount1B.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount1B.TabIndex = 63;
+            this.toolTip1.SetToolTip(this.txtAmount1B, "Many different uses.\r\nMost common is the strength of the effect.\r\nStatus Ailments" +
         " seem to use this for duration of the ailment.");
-            this.txtEAmntb.TextChanged += new System.EventHandler(this.txtEAmntb_TextChanged);
+            this.txtAmount1B.TextChanged += new System.EventHandler(this.txtAmount1B_TextChanged);
             // 
             // txtChanceb
             // 
@@ -1415,14 +1391,13 @@
             this.label62.TabIndex = 61;
             this.label62.Text = "Chance";
             // 
-            // txtAValb
+            // txtValue1B
             // 
-            this.txtAValb.Location = new System.Drawing.Point(308, 155);
-            this.txtAValb.Name = "txtAValb";
-            this.txtAValb.Size = new System.Drawing.Size(52, 20);
-            this.txtAValb.TabIndex = 60;
-            this.toolTip1.SetToolTip(this.txtAValb, resources.GetString("txtAValb.ToolTip"));
-            this.txtAValb.TextChanged += new System.EventHandler(this.txtAValb_TextChanged);
+            this.txtValue1B.Location = new System.Drawing.Point(308, 155);
+            this.txtValue1B.Name = "txtValue1B";
+            this.txtValue1B.Size = new System.Drawing.Size(52, 20);
+            this.txtValue1B.TabIndex = 60;
+            this.txtValue1B.TextChanged += new System.EventHandler(this.txtValue1B_TextChanged);
             // 
             // label63
             // 
@@ -1433,16 +1408,16 @@
             this.label63.TabIndex = 59;
             this.label63.Text = "Value 1";
             // 
-            // txtADelayb
+            // txtDurationB
             // 
-            this.txtADelayb.Location = new System.Drawing.Point(351, 104);
-            this.txtADelayb.Name = "txtADelayb";
-            this.txtADelayb.Size = new System.Drawing.Size(55, 20);
-            this.txtADelayb.TabIndex = 58;
-            this.toolTip1.SetToolTip(this.txtADelayb, "A few different uses.\r\nUsually determines how long the effect will stay active fo" +
+            this.txtDurationB.Location = new System.Drawing.Point(351, 104);
+            this.txtDurationB.Name = "txtDurationB";
+            this.txtDurationB.Size = new System.Drawing.Size(55, 20);
+            this.txtDurationB.TabIndex = 58;
+            this.toolTip1.SetToolTip(this.txtDurationB, "A few different uses.\r\nUsually determines how long the effect will stay active fo" +
         "r.\r\nBattle start activators use this to determaine how long until the effect act" +
         "ivates from match start.");
-            this.txtADelayb.TextChanged += new System.EventHandler(this.txtADelayb_TextChanged);
+            this.txtDurationB.TextChanged += new System.EventHandler(this.txtDurationB_TextChanged);
             // 
             // label64
             // 
@@ -1453,14 +1428,14 @@
             this.label64.TabIndex = 57;
             this.label64.Text = "Duration";
             // 
-            // txtTimesb
+            // txtLimitB
             // 
-            this.txtTimesb.Location = new System.Drawing.Point(412, 104);
-            this.txtTimesb.Name = "txtTimesb";
-            this.txtTimesb.Size = new System.Drawing.Size(55, 20);
-            this.txtTimesb.TabIndex = 56;
-            this.toolTip1.SetToolTip(this.txtTimesb, "Determines how many times you can activate the effect in a singe match.");
-            this.txtTimesb.TextChanged += new System.EventHandler(this.txtTimesb_TextChanged);
+            this.txtLimitB.Location = new System.Drawing.Point(412, 104);
+            this.txtLimitB.Name = "txtLimitB";
+            this.txtLimitB.Size = new System.Drawing.Size(55, 20);
+            this.txtLimitB.TabIndex = 56;
+            this.toolTip1.SetToolTip(this.txtLimitB, "Determines how many times you can activate the effect in a singe match.");
+            this.txtLimitB.TextChanged += new System.EventHandler(this.txtLimitB_TextChanged);
             // 
             // label65
             // 
@@ -1513,41 +1488,41 @@
             // 
             this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Controls.Add(this.txtEUnknownB1);
-            this.tabPage3.Controls.Add(this.txtEUnknownA1);
+            this.tabPage3.Controls.Add(this.txtAmount41);
+            this.tabPage3.Controls.Add(this.txtAmount31);
             this.tabPage3.Controls.Add(this.label79);
             this.tabPage3.Controls.Add(this.txtUnki881);
             this.tabPage3.Controls.Add(this.label81);
             this.tabPage3.Controls.Add(this.label82);
             this.tabPage3.Controls.Add(this.label83);
-            this.tabPage3.Controls.Add(this.txtUnkf681);
-            this.tabPage3.Controls.Add(this.txtUnkf641);
+            this.tabPage3.Controls.Add(this.txtAmount61);
+            this.tabPage3.Controls.Add(this.txtAmount51);
             this.tabPage3.Controls.Add(this.txtUnki441);
             this.tabPage3.Controls.Add(this.label78);
-            this.tabPage3.Controls.Add(this.txtUnkf361);
+            this.tabPage3.Controls.Add(this.txtValue61);
             this.tabPage3.Controls.Add(this.label80);
-            this.tabPage3.Controls.Add(this.txtUnkf321);
+            this.tabPage3.Controls.Add(this.txtValue51);
             this.tabPage3.Controls.Add(this.label84);
             this.tabPage3.Controls.Add(this.label85);
             this.tabPage3.Controls.Add(this.label86);
-            this.tabPage3.Controls.Add(this.txtUnkf281);
-            this.tabPage3.Controls.Add(this.txtUnkf241);
-            this.tabPage3.Controls.Add(this.txtUnkf201);
+            this.tabPage3.Controls.Add(this.txtValue41);
+            this.tabPage3.Controls.Add(this.txtValue31);
+            this.tabPage3.Controls.Add(this.txtValue21);
             this.tabPage3.Controls.Add(this.groupBox4);
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Controls.Add(this.label25);
-            this.tabPage3.Controls.Add(this.txtETime1);
+            this.tabPage3.Controls.Add(this.txtAmount21);
             this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.txtEAmnt1);
+            this.tabPage3.Controls.Add(this.txtAmount11);
             this.tabPage3.Controls.Add(this.txtChance1);
             this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.txtAVal1);
+            this.tabPage3.Controls.Add(this.txtValue11);
             this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.txtADelay1);
+            this.tabPage3.Controls.Add(this.txtDuration1);
             this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.txtTimes1);
+            this.tabPage3.Controls.Add(this.txtLimit1);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.cbActive1);
             this.tabPage3.Controls.Add(this.label11);
@@ -1580,21 +1555,21 @@
             this.label29.TabIndex = 71;
             this.label29.Text = "Amount 3";
             // 
-            // txtEUnknownB1
+            // txtAmount41
             // 
-            this.txtEUnknownB1.Location = new System.Drawing.Point(482, 197);
-            this.txtEUnknownB1.Name = "txtEUnknownB1";
-            this.txtEUnknownB1.Size = new System.Drawing.Size(52, 20);
-            this.txtEUnknownB1.TabIndex = 70;
-            this.txtEUnknownB1.TextChanged += new System.EventHandler(this.txtEUnknownB1_TextChanged);
+            this.txtAmount41.Location = new System.Drawing.Point(482, 197);
+            this.txtAmount41.Name = "txtAmount41";
+            this.txtAmount41.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount41.TabIndex = 70;
+            this.txtAmount41.TextChanged += new System.EventHandler(this.txtAmount41_TextChanged);
             // 
-            // txtEUnknownA1
+            // txtAmount31
             // 
-            this.txtEUnknownA1.Location = new System.Drawing.Point(424, 197);
-            this.txtEUnknownA1.Name = "txtEUnknownA1";
-            this.txtEUnknownA1.Size = new System.Drawing.Size(52, 20);
-            this.txtEUnknownA1.TabIndex = 69;
-            this.txtEUnknownA1.TextChanged += new System.EventHandler(this.txtEUnknownA1_TextChanged);
+            this.txtAmount31.Location = new System.Drawing.Point(424, 197);
+            this.txtAmount31.Name = "txtAmount31";
+            this.txtAmount31.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount31.TabIndex = 69;
+            this.txtAmount31.TextChanged += new System.EventHandler(this.txtAmount31_TextChanged);
             // 
             // label79
             // 
@@ -1640,21 +1615,21 @@
             this.label83.TabIndex = 64;
             this.label83.Text = "Amount 5";
             // 
-            // txtUnkf681
+            // txtAmount61
             // 
-            this.txtUnkf681.Location = new System.Drawing.Point(598, 197);
-            this.txtUnkf681.Name = "txtUnkf681";
-            this.txtUnkf681.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf681.TabIndex = 63;
-            this.txtUnkf681.TextChanged += new System.EventHandler(this.txtUnkf681_TextChanged);
+            this.txtAmount61.Location = new System.Drawing.Point(598, 197);
+            this.txtAmount61.Name = "txtAmount61";
+            this.txtAmount61.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount61.TabIndex = 63;
+            this.txtAmount61.TextChanged += new System.EventHandler(this.txtAmount61_TextChanged);
             // 
-            // txtUnkf641
+            // txtAmount51
             // 
-            this.txtUnkf641.Location = new System.Drawing.Point(540, 197);
-            this.txtUnkf641.Name = "txtUnkf641";
-            this.txtUnkf641.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf641.TabIndex = 62;
-            this.txtUnkf641.TextChanged += new System.EventHandler(this.txtUnkf641_TextChanged);
+            this.txtAmount51.Location = new System.Drawing.Point(540, 197);
+            this.txtAmount51.Name = "txtAmount51";
+            this.txtAmount51.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount51.TabIndex = 62;
+            this.txtAmount51.TextChanged += new System.EventHandler(this.txtAmount51_TextChanged);
             // 
             // txtUnki441
             // 
@@ -1673,13 +1648,13 @@
             this.label78.TabIndex = 60;
             this.label78.Text = "Value 6";
             // 
-            // txtUnkf361
+            // txtValue61
             // 
-            this.txtUnkf361.Location = new System.Drawing.Point(598, 155);
-            this.txtUnkf361.Name = "txtUnkf361";
-            this.txtUnkf361.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf361.TabIndex = 59;
-            this.txtUnkf361.TextChanged += new System.EventHandler(this.txtUnkf361_TextChanged);
+            this.txtValue61.Location = new System.Drawing.Point(598, 155);
+            this.txtValue61.Name = "txtValue61";
+            this.txtValue61.Size = new System.Drawing.Size(52, 20);
+            this.txtValue61.TabIndex = 59;
+            this.txtValue61.TextChanged += new System.EventHandler(this.txtValue61_TextChanged);
             // 
             // label80
             // 
@@ -1690,13 +1665,13 @@
             this.label80.TabIndex = 58;
             this.label80.Text = "Value 5";
             // 
-            // txtUnkf321
+            // txtValue51
             // 
-            this.txtUnkf321.Location = new System.Drawing.Point(540, 155);
-            this.txtUnkf321.Name = "txtUnkf321";
-            this.txtUnkf321.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf321.TabIndex = 57;
-            this.txtUnkf321.TextChanged += new System.EventHandler(this.txtUnkf321_TextChanged);
+            this.txtValue51.Location = new System.Drawing.Point(540, 155);
+            this.txtValue51.Name = "txtValue51";
+            this.txtValue51.Size = new System.Drawing.Size(52, 20);
+            this.txtValue51.TabIndex = 57;
+            this.txtValue51.TextChanged += new System.EventHandler(this.txtValue51_TextChanged);
             // 
             // label84
             // 
@@ -1725,29 +1700,29 @@
             this.label86.TabIndex = 54;
             this.label86.Text = "Value 2";
             // 
-            // txtUnkf281
+            // txtValue41
             // 
-            this.txtUnkf281.Location = new System.Drawing.Point(482, 155);
-            this.txtUnkf281.Name = "txtUnkf281";
-            this.txtUnkf281.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf281.TabIndex = 53;
-            this.txtUnkf281.TextChanged += new System.EventHandler(this.txtUnkf281_TextChanged);
+            this.txtValue41.Location = new System.Drawing.Point(482, 155);
+            this.txtValue41.Name = "txtValue41";
+            this.txtValue41.Size = new System.Drawing.Size(52, 20);
+            this.txtValue41.TabIndex = 53;
+            this.txtValue41.TextChanged += new System.EventHandler(this.txtValue41_TextChanged);
             // 
-            // txtUnkf241
+            // txtValue31
             // 
-            this.txtUnkf241.Location = new System.Drawing.Point(424, 155);
-            this.txtUnkf241.Name = "txtUnkf241";
-            this.txtUnkf241.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf241.TabIndex = 52;
-            this.txtUnkf241.TextChanged += new System.EventHandler(this.txtUnkf241_TextChanged);
+            this.txtValue31.Location = new System.Drawing.Point(424, 155);
+            this.txtValue31.Name = "txtValue31";
+            this.txtValue31.Size = new System.Drawing.Size(52, 20);
+            this.txtValue31.TabIndex = 52;
+            this.txtValue31.TextChanged += new System.EventHandler(this.txtValue31_TextChanged);
             // 
-            // txtUnkf201
+            // txtValue21
             // 
-            this.txtUnkf201.Location = new System.Drawing.Point(366, 155);
-            this.txtUnkf201.Name = "txtUnkf201";
-            this.txtUnkf201.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf201.TabIndex = 51;
-            this.txtUnkf201.TextChanged += new System.EventHandler(this.txtUnkf201_TextChanged);
+            this.txtValue21.Location = new System.Drawing.Point(366, 155);
+            this.txtValue21.Name = "txtValue21";
+            this.txtValue21.Size = new System.Drawing.Size(52, 20);
+            this.txtValue21.TabIndex = 51;
+            this.txtValue21.TextChanged += new System.EventHandler(this.txtValue21_TextChanged);
             // 
             // groupBox4
             // 
@@ -1853,101 +1828,101 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label31);
-            this.groupBox1.Controls.Add(this.cbAuraCheck1);
-            this.groupBox1.Controls.Add(this.txtAura1);
+            this.groupBox1.Controls.Add(this.cbVfxType11);
+            this.groupBox1.Controls.Add(this.txtVfxId11);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Location = new System.Drawing.Point(211, 14);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(218, 65);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Aura";
+            this.groupBox1.Text = "VFX Type 1";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(15, 16);
+            this.label31.Location = new System.Drawing.Point(15, 17);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(46, 13);
+            this.label31.Size = new System.Drawing.Size(69, 13);
             this.label31.TabIndex = 47;
-            this.label31.Text = "Enabled";
+            this.label31.Text = "EEPK to Use";
             // 
-            // cbAuraCheck1
+            // cbVfxType11
             // 
-            this.cbAuraCheck1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAuraCheck1.FormattingEnabled = true;
-            this.cbAuraCheck1.Location = new System.Drawing.Point(17, 34);
-            this.cbAuraCheck1.Name = "cbAuraCheck1";
-            this.cbAuraCheck1.Size = new System.Drawing.Size(85, 21);
-            this.cbAuraCheck1.TabIndex = 46;
-            this.cbAuraCheck1.SelectedIndexChanged += new System.EventHandler(this.cbAuraCheck1_SelectedIndexChanged);
+            this.cbVfxType11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVfxType11.FormattingEnabled = true;
+            this.cbVfxType11.Location = new System.Drawing.Point(17, 35);
+            this.cbVfxType11.Name = "cbVfxType11";
+            this.cbVfxType11.Size = new System.Drawing.Size(100, 21);
+            this.cbVfxType11.TabIndex = 46;
+            this.cbVfxType11.SelectedIndexChanged += new System.EventHandler(this.cbVfxType11_SelectedIndexChanged);
             // 
-            // txtAura1
+            // txtVfxId11
             // 
-            this.txtAura1.Location = new System.Drawing.Point(117, 35);
-            this.txtAura1.Name = "txtAura1";
-            this.txtAura1.Size = new System.Drawing.Size(85, 20);
-            this.txtAura1.TabIndex = 42;
-            this.toolTip1.SetToolTip(this.txtAura1, "The Aura the Super Soul will use on effect activation.");
-            this.txtAura1.TextChanged += new System.EventHandler(this.txtAura1_TextChanged);
+            this.txtVfxId11.Location = new System.Drawing.Point(127, 35);
+            this.txtVfxId11.Name = "txtVfxId11";
+            this.txtVfxId11.Size = new System.Drawing.Size(75, 20);
+            this.txtVfxId11.TabIndex = 42;
+            this.toolTip1.SetToolTip(this.txtVfxId11, "The Aura the Super Soul will use on effect activation.");
+            this.txtVfxId11.TextChanged += new System.EventHandler(this.txtVfxId11_TextChanged);
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(113, 16);
+            this.label27.Location = new System.Drawing.Point(123, 17);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(34, 13);
+            this.label27.Size = new System.Drawing.Size(49, 13);
             this.label27.TabIndex = 43;
-            this.label27.Text = "Value";
+            this.label27.Text = "Effect ID";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label32);
-            this.groupBox2.Controls.Add(this.cbUnknownCheck1);
-            this.groupBox2.Controls.Add(this.txtUnknown1);
+            this.groupBox2.Controls.Add(this.cbVfxType21);
+            this.groupBox2.Controls.Add(this.txtVfxId12);
             this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.Location = new System.Drawing.Point(435, 14);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(218, 65);
             this.groupBox2.TabIndex = 41;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Unknown";
+            this.groupBox2.Text = "VFX Type 2";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(16, 18);
+            this.label32.Location = new System.Drawing.Point(15, 17);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(46, 13);
+            this.label32.Size = new System.Drawing.Size(69, 13);
             this.label32.TabIndex = 46;
-            this.label32.Text = "Enabled";
+            this.label32.Text = "EEPK to Use";
             // 
-            // cbUnknownCheck1
+            // cbVfxType21
             // 
-            this.cbUnknownCheck1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnknownCheck1.FormattingEnabled = true;
-            this.cbUnknownCheck1.Location = new System.Drawing.Point(19, 35);
-            this.cbUnknownCheck1.Name = "cbUnknownCheck1";
-            this.cbUnknownCheck1.Size = new System.Drawing.Size(85, 21);
-            this.cbUnknownCheck1.TabIndex = 45;
-            this.cbUnknownCheck1.SelectedIndexChanged += new System.EventHandler(this.cbUnknownCheck1_SelectedIndexChanged);
+            this.cbVfxType21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVfxType21.FormattingEnabled = true;
+            this.cbVfxType21.Location = new System.Drawing.Point(17, 35);
+            this.cbVfxType21.Name = "cbVfxType21";
+            this.cbVfxType21.Size = new System.Drawing.Size(100, 21);
+            this.cbVfxType21.TabIndex = 45;
+            this.cbVfxType21.SelectedIndexChanged += new System.EventHandler(this.cbVfxType21_SelectedIndexChanged);
             // 
-            // txtUnknown1
+            // txtVfxId12
             // 
-            this.txtUnknown1.Location = new System.Drawing.Point(120, 36);
-            this.txtUnknown1.Name = "txtUnknown1";
-            this.txtUnknown1.Size = new System.Drawing.Size(85, 20);
-            this.txtUnknown1.TabIndex = 42;
-            this.txtUnknown1.TextChanged += new System.EventHandler(this.txtUnknown1_TextChanged);
+            this.txtVfxId12.Location = new System.Drawing.Point(127, 35);
+            this.txtVfxId12.Name = "txtVfxId12";
+            this.txtVfxId12.Size = new System.Drawing.Size(75, 20);
+            this.txtVfxId12.TabIndex = 42;
+            this.txtVfxId12.TextChanged += new System.EventHandler(this.txtVfxId12_TextChanged);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(117, 18);
+            this.label28.Location = new System.Drawing.Point(123, 17);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(34, 13);
+            this.label28.Size = new System.Drawing.Size(49, 13);
             this.label28.TabIndex = 43;
-            this.label28.Text = "Value";
+            this.label28.Text = "Effect ID";
             // 
             // label25
             // 
@@ -1958,15 +1933,15 @@
             this.label25.TabIndex = 36;
             this.label25.Text = "Amount 2";
             // 
-            // txtETime1
+            // txtAmount21
             // 
-            this.txtETime1.Location = new System.Drawing.Point(366, 197);
-            this.txtETime1.Name = "txtETime1";
-            this.txtETime1.Size = new System.Drawing.Size(52, 20);
-            this.txtETime1.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.txtETime1, "Many different uses.\r\nStatus Ailments seem to use this for strength of the ailmen" +
+            this.txtAmount21.Location = new System.Drawing.Point(366, 197);
+            this.txtAmount21.Name = "txtAmount21";
+            this.txtAmount21.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount21.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.txtAmount21, "Many different uses.\r\nStatus Ailments seem to use this for strength of the ailmen" +
         "t.");
-            this.txtETime1.TextChanged += new System.EventHandler(this.txtETime1_TextChanged);
+            this.txtAmount21.TextChanged += new System.EventHandler(this.txtAmount21_TextChanged);
             // 
             // label24
             // 
@@ -1977,14 +1952,14 @@
             this.label24.TabIndex = 33;
             this.label24.Text = "Amount 1";
             // 
-            // txtEAmnt1
+            // txtAmount11
             // 
-            this.txtEAmnt1.Location = new System.Drawing.Point(308, 197);
-            this.txtEAmnt1.Name = "txtEAmnt1";
-            this.txtEAmnt1.Size = new System.Drawing.Size(52, 20);
-            this.txtEAmnt1.TabIndex = 32;
-            this.toolTip1.SetToolTip(this.txtEAmnt1, "Many different uses.");
-            this.txtEAmnt1.TextChanged += new System.EventHandler(this.txtEAmnt1_TextChanged);
+            this.txtAmount11.Location = new System.Drawing.Point(308, 197);
+            this.txtAmount11.Name = "txtAmount11";
+            this.txtAmount11.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount11.TabIndex = 32;
+            this.toolTip1.SetToolTip(this.txtAmount11, "Many different uses.");
+            this.txtAmount11.TextChanged += new System.EventHandler(this.txtAmount11_TextChanged);
             // 
             // txtChance1
             // 
@@ -2004,14 +1979,13 @@
             this.label20.TabIndex = 30;
             this.label20.Text = "Chance";
             // 
-            // txtAVal1
+            // txtValue11
             // 
-            this.txtAVal1.Location = new System.Drawing.Point(308, 155);
-            this.txtAVal1.Name = "txtAVal1";
-            this.txtAVal1.Size = new System.Drawing.Size(52, 20);
-            this.txtAVal1.TabIndex = 27;
-            this.toolTip1.SetToolTip(this.txtAVal1, resources.GetString("txtAVal1.ToolTip"));
-            this.txtAVal1.TextChanged += new System.EventHandler(this.txtAVal1_TextChanged);
+            this.txtValue11.Location = new System.Drawing.Point(308, 155);
+            this.txtValue11.Name = "txtValue11";
+            this.txtValue11.Size = new System.Drawing.Size(52, 20);
+            this.txtValue11.TabIndex = 27;
+            this.txtValue11.TextChanged += new System.EventHandler(this.txtValue11_TextChanged);
             // 
             // label14
             // 
@@ -2022,16 +1996,16 @@
             this.label14.TabIndex = 26;
             this.label14.Text = "Value 1";
             // 
-            // txtADelay1
+            // txtDuration1
             // 
-            this.txtADelay1.Location = new System.Drawing.Point(351, 104);
-            this.txtADelay1.Name = "txtADelay1";
-            this.txtADelay1.Size = new System.Drawing.Size(55, 20);
-            this.txtADelay1.TabIndex = 25;
-            this.toolTip1.SetToolTip(this.txtADelay1, "A few different uses.\r\nUsually determines how long the effect will stay active fo" +
+            this.txtDuration1.Location = new System.Drawing.Point(351, 104);
+            this.txtDuration1.Name = "txtDuration1";
+            this.txtDuration1.Size = new System.Drawing.Size(55, 20);
+            this.txtDuration1.TabIndex = 25;
+            this.toolTip1.SetToolTip(this.txtDuration1, "A few different uses.\r\nUsually determines how long the effect will stay active fo" +
         "r.\r\nBattle start activators use this to determaine how long until the effect act" +
         "ivates from match start.");
-            this.txtADelay1.TextChanged += new System.EventHandler(this.txtADelay1_TextChanged);
+            this.txtDuration1.TextChanged += new System.EventHandler(this.txtDuration1_TextChanged);
             // 
             // label13
             // 
@@ -2042,14 +2016,14 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Duration";
             // 
-            // txtTimes1
+            // txtLimit1
             // 
-            this.txtTimes1.Location = new System.Drawing.Point(412, 104);
-            this.txtTimes1.Name = "txtTimes1";
-            this.txtTimes1.Size = new System.Drawing.Size(55, 20);
-            this.txtTimes1.TabIndex = 23;
-            this.toolTip1.SetToolTip(this.txtTimes1, "Determines how many times you can activate the effect in a singe match.");
-            this.txtTimes1.TextChanged += new System.EventHandler(this.txtTimes1_TextChanged);
+            this.txtLimit1.Location = new System.Drawing.Point(412, 104);
+            this.txtLimit1.Name = "txtLimit1";
+            this.txtLimit1.Size = new System.Drawing.Size(55, 20);
+            this.txtLimit1.TabIndex = 23;
+            this.toolTip1.SetToolTip(this.txtLimit1, "Determines how many times you can activate the effect in a singe match.");
+            this.txtLimit1.TextChanged += new System.EventHandler(this.txtLimit1_TextChanged);
             // 
             // label12
             // 
@@ -2110,42 +2084,42 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.label87);
-            this.tabPage4.Controls.Add(this.txtUnkf362);
+            this.tabPage4.Controls.Add(this.txtValue62);
             this.tabPage4.Controls.Add(this.label89);
             this.tabPage4.Controls.Add(this.label88);
             this.tabPage4.Controls.Add(this.label93);
             this.tabPage4.Controls.Add(this.txtUnki882);
             this.tabPage4.Controls.Add(this.label94);
-            this.tabPage4.Controls.Add(this.txtUnkf322);
+            this.tabPage4.Controls.Add(this.txtValue52);
             this.tabPage4.Controls.Add(this.label95);
             this.tabPage4.Controls.Add(this.label90);
             this.tabPage4.Controls.Add(this.label91);
             this.tabPage4.Controls.Add(this.label92);
-            this.tabPage4.Controls.Add(this.txtUnkf682);
-            this.tabPage4.Controls.Add(this.txtUnkf642);
+            this.tabPage4.Controls.Add(this.txtAmount62);
+            this.tabPage4.Controls.Add(this.txtAmount52);
             this.tabPage4.Controls.Add(this.txtUnki442);
-            this.tabPage4.Controls.Add(this.txtUnkf282);
-            this.tabPage4.Controls.Add(this.txtUnkf242);
-            this.tabPage4.Controls.Add(this.txtUnkf202);
+            this.tabPage4.Controls.Add(this.txtValue42);
+            this.tabPage4.Controls.Add(this.txtValue32);
+            this.tabPage4.Controls.Add(this.txtValue22);
             this.tabPage4.Controls.Add(this.label35);
             this.tabPage4.Controls.Add(this.label34);
             this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Controls.Add(this.txtEUnknownA2);
-            this.tabPage4.Controls.Add(this.txtEUnknownB2);
+            this.tabPage4.Controls.Add(this.txtAmount32);
+            this.tabPage4.Controls.Add(this.txtAmount42);
             this.tabPage4.Controls.Add(this.groupBox6);
             this.tabPage4.Controls.Add(this.groupBox7);
             this.tabPage4.Controls.Add(this.groupBox8);
             this.tabPage4.Controls.Add(this.label40);
-            this.tabPage4.Controls.Add(this.txtETime2);
+            this.tabPage4.Controls.Add(this.txtAmount22);
             this.tabPage4.Controls.Add(this.label41);
-            this.tabPage4.Controls.Add(this.txtEAmnt2);
+            this.tabPage4.Controls.Add(this.txtAmount12);
             this.tabPage4.Controls.Add(this.txtChance2);
             this.tabPage4.Controls.Add(this.label42);
-            this.tabPage4.Controls.Add(this.txtAVal2);
+            this.tabPage4.Controls.Add(this.txtValue12);
             this.tabPage4.Controls.Add(this.label43);
-            this.tabPage4.Controls.Add(this.txtADelay2);
+            this.tabPage4.Controls.Add(this.txtDuration2);
             this.tabPage4.Controls.Add(this.label44);
-            this.tabPage4.Controls.Add(this.txtTimes2);
+            this.tabPage4.Controls.Add(this.txtLimit2);
             this.tabPage4.Controls.Add(this.label45);
             this.tabPage4.Controls.Add(this.cbActive2);
             this.tabPage4.Controls.Add(this.label46);
@@ -2168,13 +2142,13 @@
             this.label87.TabIndex = 92;
             this.label87.Text = "Value 6";
             // 
-            // txtUnkf362
+            // txtValue62
             // 
-            this.txtUnkf362.Location = new System.Drawing.Point(598, 155);
-            this.txtUnkf362.Name = "txtUnkf362";
-            this.txtUnkf362.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf362.TabIndex = 87;
-            this.txtUnkf362.TextChanged += new System.EventHandler(this.txtUnkf362_TextChanged);
+            this.txtValue62.Location = new System.Drawing.Point(598, 155);
+            this.txtValue62.Name = "txtValue62";
+            this.txtValue62.Size = new System.Drawing.Size(52, 20);
+            this.txtValue62.TabIndex = 87;
+            this.txtValue62.TextChanged += new System.EventHandler(this.txtValue62_TextChanged);
             // 
             // label89
             // 
@@ -2220,13 +2194,13 @@
             this.label94.TabIndex = 89;
             this.label94.Text = "Value 3";
             // 
-            // txtUnkf322
+            // txtValue52
             // 
-            this.txtUnkf322.Location = new System.Drawing.Point(540, 155);
-            this.txtUnkf322.Name = "txtUnkf322";
-            this.txtUnkf322.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf322.TabIndex = 84;
-            this.txtUnkf322.TextChanged += new System.EventHandler(this.txtUnkf322_TextChanged);
+            this.txtValue52.Location = new System.Drawing.Point(540, 155);
+            this.txtValue52.Name = "txtValue52";
+            this.txtValue52.Size = new System.Drawing.Size(52, 20);
+            this.txtValue52.TabIndex = 84;
+            this.txtValue52.TextChanged += new System.EventHandler(this.txtValue52_TextChanged);
             // 
             // label95
             // 
@@ -2264,21 +2238,21 @@
             this.label92.TabIndex = 81;
             this.label92.Text = "Amount 5";
             // 
-            // txtUnkf682
+            // txtAmount62
             // 
-            this.txtUnkf682.Location = new System.Drawing.Point(598, 197);
-            this.txtUnkf682.Name = "txtUnkf682";
-            this.txtUnkf682.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf682.TabIndex = 80;
-            this.txtUnkf682.TextChanged += new System.EventHandler(this.txtUnkf682_TextChanged);
+            this.txtAmount62.Location = new System.Drawing.Point(598, 197);
+            this.txtAmount62.Name = "txtAmount62";
+            this.txtAmount62.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount62.TabIndex = 80;
+            this.txtAmount62.TextChanged += new System.EventHandler(this.txtAmount62_TextChanged);
             // 
-            // txtUnkf642
+            // txtAmount52
             // 
-            this.txtUnkf642.Location = new System.Drawing.Point(540, 197);
-            this.txtUnkf642.Name = "txtUnkf642";
-            this.txtUnkf642.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf642.TabIndex = 79;
-            this.txtUnkf642.TextChanged += new System.EventHandler(this.txtUnkf642_TextChanged);
+            this.txtAmount52.Location = new System.Drawing.Point(540, 197);
+            this.txtAmount52.Name = "txtAmount52";
+            this.txtAmount52.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount52.TabIndex = 79;
+            this.txtAmount52.TextChanged += new System.EventHandler(this.txtAmount52_TextChanged);
             // 
             // txtUnki442
             // 
@@ -2288,29 +2262,29 @@
             this.txtUnki442.TabIndex = 78;
             this.txtUnki442.TextChanged += new System.EventHandler(this.txtUnki442_TextChanged);
             // 
-            // txtUnkf282
+            // txtValue42
             // 
-            this.txtUnkf282.Location = new System.Drawing.Point(482, 155);
-            this.txtUnkf282.Name = "txtUnkf282";
-            this.txtUnkf282.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf282.TabIndex = 77;
-            this.txtUnkf282.TextChanged += new System.EventHandler(this.txtUnkf282_TextChanged);
+            this.txtValue42.Location = new System.Drawing.Point(482, 155);
+            this.txtValue42.Name = "txtValue42";
+            this.txtValue42.Size = new System.Drawing.Size(52, 20);
+            this.txtValue42.TabIndex = 77;
+            this.txtValue42.TextChanged += new System.EventHandler(this.txtValue42_TextChanged);
             // 
-            // txtUnkf242
+            // txtValue32
             // 
-            this.txtUnkf242.Location = new System.Drawing.Point(424, 155);
-            this.txtUnkf242.Name = "txtUnkf242";
-            this.txtUnkf242.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf242.TabIndex = 76;
-            this.txtUnkf242.TextChanged += new System.EventHandler(this.txtUnkf242_TextChanged);
+            this.txtValue32.Location = new System.Drawing.Point(424, 155);
+            this.txtValue32.Name = "txtValue32";
+            this.txtValue32.Size = new System.Drawing.Size(52, 20);
+            this.txtValue32.TabIndex = 76;
+            this.txtValue32.TextChanged += new System.EventHandler(this.txtValue32_TextChanged);
             // 
-            // txtUnkf202
+            // txtValue22
             // 
-            this.txtUnkf202.Location = new System.Drawing.Point(366, 155);
-            this.txtUnkf202.Name = "txtUnkf202";
-            this.txtUnkf202.Size = new System.Drawing.Size(52, 20);
-            this.txtUnkf202.TabIndex = 75;
-            this.txtUnkf202.TextChanged += new System.EventHandler(this.txtUnkf202_TextChanged);
+            this.txtValue22.Location = new System.Drawing.Point(366, 155);
+            this.txtValue22.Name = "txtValue22";
+            this.txtValue22.Size = new System.Drawing.Size(52, 20);
+            this.txtValue22.TabIndex = 75;
+            this.txtValue22.TextChanged += new System.EventHandler(this.txtValue22_TextChanged);
             // 
             // label35
             // 
@@ -2360,21 +2334,21 @@
             this.label33.TabIndex = 38;
             this.label33.Text = "Value";
             // 
-            // txtEUnknownA2
+            // txtAmount32
             // 
-            this.txtEUnknownA2.Location = new System.Drawing.Point(424, 197);
-            this.txtEUnknownA2.Name = "txtEUnknownA2";
-            this.txtEUnknownA2.Size = new System.Drawing.Size(52, 20);
-            this.txtEUnknownA2.TabIndex = 69;
-            this.txtEUnknownA2.TextChanged += new System.EventHandler(this.txtEUnknownA2_TextChanged);
+            this.txtAmount32.Location = new System.Drawing.Point(424, 197);
+            this.txtAmount32.Name = "txtAmount32";
+            this.txtAmount32.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount32.TabIndex = 69;
+            this.txtAmount32.TextChanged += new System.EventHandler(this.txtAmount32_TextChanged);
             // 
-            // txtEUnknownB2
+            // txtAmount42
             // 
-            this.txtEUnknownB2.Location = new System.Drawing.Point(482, 197);
-            this.txtEUnknownB2.Name = "txtEUnknownB2";
-            this.txtEUnknownB2.Size = new System.Drawing.Size(52, 20);
-            this.txtEUnknownB2.TabIndex = 70;
-            this.txtEUnknownB2.TextChanged += new System.EventHandler(this.txtEUnknownB2_TextChanged);
+            this.txtAmount42.Location = new System.Drawing.Point(482, 197);
+            this.txtAmount42.Name = "txtAmount42";
+            this.txtAmount42.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount42.TabIndex = 70;
+            this.txtAmount42.TextChanged += new System.EventHandler(this.txtAmount42_TextChanged);
             // 
             // groupBox6
             // 
@@ -2449,101 +2423,101 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.label36);
-            this.groupBox7.Controls.Add(this.cbAuraCheck2);
-            this.groupBox7.Controls.Add(this.txtAura2);
+            this.groupBox7.Controls.Add(this.cbVfxType12);
+            this.groupBox7.Controls.Add(this.txtVfxId21);
             this.groupBox7.Controls.Add(this.label37);
             this.groupBox7.Location = new System.Drawing.Point(211, 14);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(218, 65);
             this.groupBox7.TabIndex = 68;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Aura";
+            this.groupBox7.Text = "VFX Type 1";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(15, 16);
+            this.label36.Location = new System.Drawing.Point(15, 17);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(46, 13);
+            this.label36.Size = new System.Drawing.Size(69, 13);
             this.label36.TabIndex = 45;
-            this.label36.Text = "Enabled";
+            this.label36.Text = "EEPK to Use";
             // 
-            // cbAuraCheck2
+            // cbVfxType12
             // 
-            this.cbAuraCheck2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAuraCheck2.FormattingEnabled = true;
-            this.cbAuraCheck2.Location = new System.Drawing.Point(17, 34);
-            this.cbAuraCheck2.Name = "cbAuraCheck2";
-            this.cbAuraCheck2.Size = new System.Drawing.Size(85, 21);
-            this.cbAuraCheck2.TabIndex = 44;
-            this.cbAuraCheck2.SelectedIndexChanged += new System.EventHandler(this.cbAuraCheck2_SelectedIndexChanged);
+            this.cbVfxType12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVfxType12.FormattingEnabled = true;
+            this.cbVfxType12.Location = new System.Drawing.Point(17, 35);
+            this.cbVfxType12.Name = "cbVfxType12";
+            this.cbVfxType12.Size = new System.Drawing.Size(100, 21);
+            this.cbVfxType12.TabIndex = 44;
+            this.cbVfxType12.SelectedIndexChanged += new System.EventHandler(this.cbVfxType12_SelectedIndexChanged);
             // 
-            // txtAura2
+            // txtVfxId21
             // 
-            this.txtAura2.Location = new System.Drawing.Point(117, 35);
-            this.txtAura2.Name = "txtAura2";
-            this.txtAura2.Size = new System.Drawing.Size(85, 20);
-            this.txtAura2.TabIndex = 42;
-            this.toolTip1.SetToolTip(this.txtAura2, "The Aura the Super Soul will use on effect activation.");
-            this.txtAura2.TextChanged += new System.EventHandler(this.txtAura2_TextChanged);
+            this.txtVfxId21.Location = new System.Drawing.Point(127, 35);
+            this.txtVfxId21.Name = "txtVfxId21";
+            this.txtVfxId21.Size = new System.Drawing.Size(75, 20);
+            this.txtVfxId21.TabIndex = 42;
+            this.toolTip1.SetToolTip(this.txtVfxId21, "The Aura the Super Soul will use on effect activation.");
+            this.txtVfxId21.TextChanged += new System.EventHandler(this.txtVfxId21_TextChanged);
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(113, 16);
+            this.label37.Location = new System.Drawing.Point(123, 17);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(34, 13);
+            this.label37.Size = new System.Drawing.Size(49, 13);
             this.label37.TabIndex = 43;
-            this.label37.Text = "Value";
+            this.label37.Text = "Effect ID";
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.label38);
-            this.groupBox8.Controls.Add(this.cbUnknownCheck2);
-            this.groupBox8.Controls.Add(this.txtUnknown2);
+            this.groupBox8.Controls.Add(this.cbVfxType22);
+            this.groupBox8.Controls.Add(this.txtVfxId22);
             this.groupBox8.Controls.Add(this.label39);
             this.groupBox8.Location = new System.Drawing.Point(435, 14);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(218, 65);
             this.groupBox8.TabIndex = 67;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Unknown";
+            this.groupBox8.Text = "VFX Type 2";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(16, 18);
+            this.label38.Location = new System.Drawing.Point(15, 17);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(46, 13);
+            this.label38.Size = new System.Drawing.Size(69, 13);
             this.label38.TabIndex = 46;
-            this.label38.Text = "Enabled";
+            this.label38.Text = "EEPK to Use";
             // 
-            // cbUnknownCheck2
+            // cbVfxType22
             // 
-            this.cbUnknownCheck2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUnknownCheck2.FormattingEnabled = true;
-            this.cbUnknownCheck2.Location = new System.Drawing.Point(19, 35);
-            this.cbUnknownCheck2.Name = "cbUnknownCheck2";
-            this.cbUnknownCheck2.Size = new System.Drawing.Size(85, 21);
-            this.cbUnknownCheck2.TabIndex = 45;
-            this.cbUnknownCheck2.SelectedIndexChanged += new System.EventHandler(this.cbUnknownCheck2_SelectedIndexChanged);
+            this.cbVfxType22.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVfxType22.FormattingEnabled = true;
+            this.cbVfxType22.Location = new System.Drawing.Point(17, 35);
+            this.cbVfxType22.Name = "cbVfxType22";
+            this.cbVfxType22.Size = new System.Drawing.Size(100, 21);
+            this.cbVfxType22.TabIndex = 45;
+            this.cbVfxType22.SelectedIndexChanged += new System.EventHandler(this.cbVfxType22_SelectedIndexChanged);
             // 
-            // txtUnknown2
+            // txtVfxId22
             // 
-            this.txtUnknown2.Location = new System.Drawing.Point(120, 36);
-            this.txtUnknown2.Name = "txtUnknown2";
-            this.txtUnknown2.Size = new System.Drawing.Size(85, 20);
-            this.txtUnknown2.TabIndex = 42;
-            this.txtUnknown2.TextChanged += new System.EventHandler(this.txtUnknown2_TextChanged);
+            this.txtVfxId22.Location = new System.Drawing.Point(127, 35);
+            this.txtVfxId22.Name = "txtVfxId22";
+            this.txtVfxId22.Size = new System.Drawing.Size(75, 20);
+            this.txtVfxId22.TabIndex = 42;
+            this.txtVfxId22.TextChanged += new System.EventHandler(this.txtVfxId22_TextChanged);
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(117, 18);
+            this.label39.Location = new System.Drawing.Point(123, 17);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(34, 13);
+            this.label39.Size = new System.Drawing.Size(49, 13);
             this.label39.TabIndex = 43;
-            this.label39.Text = "Value";
+            this.label39.Text = "Effect ID";
             // 
             // label40
             // 
@@ -2554,15 +2528,15 @@
             this.label40.TabIndex = 66;
             this.label40.Text = "Amount 2";
             // 
-            // txtETime2
+            // txtAmount22
             // 
-            this.txtETime2.Location = new System.Drawing.Point(366, 197);
-            this.txtETime2.Name = "txtETime2";
-            this.txtETime2.Size = new System.Drawing.Size(52, 20);
-            this.txtETime2.TabIndex = 65;
-            this.toolTip1.SetToolTip(this.txtETime2, "Many different uses.\r\nStatus Ailments seem to use this for strength of the ailmen" +
+            this.txtAmount22.Location = new System.Drawing.Point(366, 197);
+            this.txtAmount22.Name = "txtAmount22";
+            this.txtAmount22.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount22.TabIndex = 65;
+            this.toolTip1.SetToolTip(this.txtAmount22, "Many different uses.\r\nStatus Ailments seem to use this for strength of the ailmen" +
         "t.");
-            this.txtETime2.TextChanged += new System.EventHandler(this.txtETime2_TextChanged);
+            this.txtAmount22.TextChanged += new System.EventHandler(this.txtAmount22_TextChanged);
             // 
             // label41
             // 
@@ -2573,15 +2547,15 @@
             this.label41.TabIndex = 64;
             this.label41.Text = "Amount 1";
             // 
-            // txtEAmnt2
+            // txtAmount12
             // 
-            this.txtEAmnt2.Location = new System.Drawing.Point(308, 197);
-            this.txtEAmnt2.Name = "txtEAmnt2";
-            this.txtEAmnt2.Size = new System.Drawing.Size(52, 20);
-            this.txtEAmnt2.TabIndex = 63;
-            this.toolTip1.SetToolTip(this.txtEAmnt2, "Many different uses.\r\nMost common is the strength of the effect.\r\nStatus Ailments" +
+            this.txtAmount12.Location = new System.Drawing.Point(308, 197);
+            this.txtAmount12.Name = "txtAmount12";
+            this.txtAmount12.Size = new System.Drawing.Size(52, 20);
+            this.txtAmount12.TabIndex = 63;
+            this.toolTip1.SetToolTip(this.txtAmount12, "Many different uses.\r\nMost common is the strength of the effect.\r\nStatus Ailments" +
         " seem to use this for duration of the ailment.");
-            this.txtEAmnt2.TextChanged += new System.EventHandler(this.txtEAmnt2_TextChanged);
+            this.txtAmount12.TextChanged += new System.EventHandler(this.txtAmount12_TextChanged);
             // 
             // txtChance2
             // 
@@ -2601,14 +2575,13 @@
             this.label42.TabIndex = 61;
             this.label42.Text = "Chance";
             // 
-            // txtAVal2
+            // txtValue12
             // 
-            this.txtAVal2.Location = new System.Drawing.Point(308, 155);
-            this.txtAVal2.Name = "txtAVal2";
-            this.txtAVal2.Size = new System.Drawing.Size(52, 20);
-            this.txtAVal2.TabIndex = 60;
-            this.toolTip1.SetToolTip(this.txtAVal2, resources.GetString("txtAVal2.ToolTip"));
-            this.txtAVal2.TextChanged += new System.EventHandler(this.txtAVal2_TextChanged);
+            this.txtValue12.Location = new System.Drawing.Point(308, 155);
+            this.txtValue12.Name = "txtValue12";
+            this.txtValue12.Size = new System.Drawing.Size(52, 20);
+            this.txtValue12.TabIndex = 60;
+            this.txtValue12.TextChanged += new System.EventHandler(this.txtValue12_TextChanged);
             // 
             // label43
             // 
@@ -2619,16 +2592,16 @@
             this.label43.TabIndex = 59;
             this.label43.Text = "Value 1";
             // 
-            // txtADelay2
+            // txtDuration2
             // 
-            this.txtADelay2.Location = new System.Drawing.Point(351, 104);
-            this.txtADelay2.Name = "txtADelay2";
-            this.txtADelay2.Size = new System.Drawing.Size(55, 20);
-            this.txtADelay2.TabIndex = 58;
-            this.toolTip1.SetToolTip(this.txtADelay2, "A few different uses.\r\nUsually determines how long the effect will stay active fo" +
+            this.txtDuration2.Location = new System.Drawing.Point(351, 104);
+            this.txtDuration2.Name = "txtDuration2";
+            this.txtDuration2.Size = new System.Drawing.Size(55, 20);
+            this.txtDuration2.TabIndex = 58;
+            this.toolTip1.SetToolTip(this.txtDuration2, "A few different uses.\r\nUsually determines how long the effect will stay active fo" +
         "r.\r\nBattle start activators use this to determaine how long until the effect act" +
         "ivates from match start.");
-            this.txtADelay2.TextChanged += new System.EventHandler(this.txtADelay2_TextChanged);
+            this.txtDuration2.TextChanged += new System.EventHandler(this.txtDuration2_TextChanged);
             // 
             // label44
             // 
@@ -2639,14 +2612,14 @@
             this.label44.TabIndex = 57;
             this.label44.Text = "Duration";
             // 
-            // txtTimes2
+            // txtLimit2
             // 
-            this.txtTimes2.Location = new System.Drawing.Point(412, 104);
-            this.txtTimes2.Name = "txtTimes2";
-            this.txtTimes2.Size = new System.Drawing.Size(55, 20);
-            this.txtTimes2.TabIndex = 56;
-            this.toolTip1.SetToolTip(this.txtTimes2, "Determines how many times you can activate the effect in a singe match.");
-            this.txtTimes2.TextChanged += new System.EventHandler(this.txtTimes2_TextChanged);
+            this.txtLimit2.Location = new System.Drawing.Point(412, 104);
+            this.txtLimit2.Name = "txtLimit2";
+            this.txtLimit2.Size = new System.Drawing.Size(55, 20);
+            this.txtLimit2.TabIndex = 56;
+            this.toolTip1.SetToolTip(this.txtLimit2, "Determines how many times you can activate the effect in a singe match.");
+            this.txtLimit2.TextChanged += new System.EventHandler(this.txtLimit2_TextChanged);
             // 
             // label45
             // 
@@ -2712,64 +2685,12 @@
             this.srchBtn.UseVisualStyleBackColor = true;
             this.srchBtn.Click += new System.EventHandler(this.srchBtn_Click);
             // 
-            // chkMsgDesc
-            // 
-            this.chkMsgDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkMsgDesc.AutoSize = true;
-            this.chkMsgDesc.Checked = true;
-            this.chkMsgDesc.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMsgDesc.Location = new System.Drawing.Point(93, 595);
-            this.chkMsgDesc.Name = "chkMsgDesc";
-            this.chkMsgDesc.Size = new System.Drawing.Size(106, 17);
-            this.chkMsgDesc.TabIndex = 1;
-            this.chkMsgDesc.Text = "Load Description";
-            this.toolTip1.SetToolTip(this.chkMsgDesc, "Enable Loading of the Description msg file.");
-            this.chkMsgDesc.UseVisualStyleBackColor = true;
-            this.chkMsgDesc.Visible = false;
-            // 
-            // chkMsgBurst
-            // 
-            this.chkMsgBurst.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkMsgBurst.AutoSize = true;
-            this.chkMsgBurst.Checked = true;
-            this.chkMsgBurst.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMsgBurst.Location = new System.Drawing.Point(205, 595);
-            this.chkMsgBurst.Name = "chkMsgBurst";
-            this.chkMsgBurst.Size = new System.Drawing.Size(122, 17);
-            this.chkMsgBurst.TabIndex = 2;
-            this.chkMsgBurst.Text = "Load LB Description";
-            this.toolTip1.SetToolTip(this.chkMsgBurst, "Enable Loading of the LB Description msg file.");
-            this.chkMsgBurst.UseVisualStyleBackColor = true;
-            this.chkMsgBurst.Visible = false;
-            // 
-            // chkMsgName
-            // 
-            this.chkMsgName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkMsgName.AutoSize = true;
-            this.chkMsgName.Checked = true;
-            this.chkMsgName.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkMsgName.Location = new System.Drawing.Point(3, 595);
-            this.chkMsgName.Name = "chkMsgName";
-            this.chkMsgName.Size = new System.Drawing.Size(81, 17);
-            this.chkMsgName.TabIndex = 0;
-            this.chkMsgName.Text = "Load Name";
-            this.toolTip1.SetToolTip(this.chkMsgName, "Enable Loading of the Name msg file.");
-            this.chkMsgName.UseVisualStyleBackColor = true;
-            this.chkMsgName.Visible = false;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.addNewXV2SSEditStripMenuItem,
-            this.limitBurstOptionsToolStripMenuItem,
             this.msgToolStripMenuItem,
             this.searchOptionsToolStripMenuItem,
             this.aboutToolStripMenuItem});
@@ -2831,12 +2752,13 @@
             // 
             this.addNewXV2SSEditStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createNewSoulToolStripMenuItem,
+            this.createNewSoulAsLimitBurstToolStripMenuItem,
             this.removeToolStripMenuItem,
+            this.replaceImportToolStripMenuItem,
             this.addToolStripMenuItem,
             this.exportToolStripMenuItem1,
             this.addCurrentSuperSoulToShopToolStripMenuItem,
             this.removeCurrentSuperSoulFromShopToolStripMenuItem,
-            this.replaceImportToolStripMenuItem,
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem,
             this.createNewSoulFromClipboardToolStripMenuItem});
             this.addNewXV2SSEditStripMenuItem.Enabled = false;
@@ -2847,137 +2769,72 @@
             // createNewSoulToolStripMenuItem
             // 
             this.createNewSoulToolStripMenuItem.Name = "createNewSoulToolStripMenuItem";
-            this.createNewSoulToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.createNewSoulToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.createNewSoulToolStripMenuItem.Text = "Create New Soul";
             this.createNewSoulToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulToolStripMenuItem_Click);
+            // 
+            // createNewSoulAsLimitBurstToolStripMenuItem
+            // 
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Name = "createNewSoulAsLimitBurstToolStripMenuItem";
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Text = "Create New Soul (For Limit Burst)";
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulAsLimitBurstToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.removeToolStripMenuItem.Text = "Remove Current Soul";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            // 
+            // replaceImportToolStripMenuItem
+            // 
+            this.replaceImportToolStripMenuItem.Name = "replaceImportToolStripMenuItem";
+            this.replaceImportToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.replaceImportToolStripMenuItem.Text = "Replace Current Soul (*.zss)";
+            this.replaceImportToolStripMenuItem.Visible = false;
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.addToolStripMenuItem.Text = "Import Super Soul Package File (*.ssp)";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem1
             // 
             this.exportToolStripMenuItem1.Name = "exportToolStripMenuItem1";
-            this.exportToolStripMenuItem1.Size = new System.Drawing.Size(284, 22);
+            this.exportToolStripMenuItem1.Size = new System.Drawing.Size(285, 22);
             this.exportToolStripMenuItem1.Text = "Export to Super Soul Package File (*.ssp)";
             this.exportToolStripMenuItem1.Click += new System.EventHandler(this.exportToolStripMenuItem1_Click);
             // 
             // addCurrentSuperSoulToShopToolStripMenuItem
             // 
             this.addCurrentSuperSoulToShopToolStripMenuItem.Name = "addCurrentSuperSoulToShopToolStripMenuItem";
-            this.addCurrentSuperSoulToShopToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.addCurrentSuperSoulToShopToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.addCurrentSuperSoulToShopToolStripMenuItem.Text = "Add Current Super Soul to Shop";
             this.addCurrentSuperSoulToShopToolStripMenuItem.Click += new System.EventHandler(this.store_defaultBtn_Click);
             // 
             // removeCurrentSuperSoulFromShopToolStripMenuItem
             // 
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Name = "removeCurrentSuperSoulFromShopToolStripMenuItem";
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Text = "Remove Current Super Soul From Shop";
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Click += new System.EventHandler(this.removeCurrentSuperSoulFromShopToolStripMenuItem_Click);
-            // 
-            // replaceImportToolStripMenuItem
-            // 
-            this.replaceImportToolStripMenuItem.Name = "replaceImportToolStripMenuItem";
-            this.replaceImportToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
-            this.replaceImportToolStripMenuItem.Text = "Replace Current Soul (*.zss)";
-            this.replaceImportToolStripMenuItem.Visible = false;
-            this.replaceImportToolStripMenuItem.Click += new System.EventHandler(this.replaceImportToolStripMenuItem_Click);
             // 
             // copyCurrentSuperSoulToClipboardToolStripMenuItem
             // 
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Name = "copyCurrentSuperSoulToClipboardToolStripMenuItem";
-            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Text = "Copy Current Soul to Clipboard";
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Click += new System.EventHandler(this.copyCurrentSuperSoulToClipboardToolStripMenuItem_Click);
             // 
             // createNewSoulFromClipboardToolStripMenuItem
             // 
             this.createNewSoulFromClipboardToolStripMenuItem.Name = "createNewSoulFromClipboardToolStripMenuItem";
-            this.createNewSoulFromClipboardToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
-            this.createNewSoulFromClipboardToolStripMenuItem.Text = "Create New Soul From Clipboard";
+            this.createNewSoulFromClipboardToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.createNewSoulFromClipboardToolStripMenuItem.Text = "Paste New Soul From Clipboard";
             this.createNewSoulFromClipboardToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulFromClipboardToolStripMenuItem_Click);
-            // 
-            // limitBurstOptionsToolStripMenuItem
-            // 
-            this.limitBurstOptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setCurrentBurstIDsToNULLToolStripMenuItem,
-            this.setLimitBurstToToolStripMenuItem,
-            this.createNewSoulAsLimitBurstToolStripMenuItem});
-            this.limitBurstOptionsToolStripMenuItem.Name = "limitBurstOptionsToolStripMenuItem";
-            this.limitBurstOptionsToolStripMenuItem.Size = new System.Drawing.Size(121, 20);
-            this.limitBurstOptionsToolStripMenuItem.Text = "Limit Burst Options";
-            // 
-            // setCurrentBurstIDsToNULLToolStripMenuItem
-            // 
-            this.setCurrentBurstIDsToNULLToolStripMenuItem.Name = "setCurrentBurstIDsToNULLToolStripMenuItem";
-            this.setCurrentBurstIDsToNULLToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
-            this.setCurrentBurstIDsToNULLToolStripMenuItem.Text = "Set Current Burst IDs to NULL";
-            this.setCurrentBurstIDsToNULLToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstIDsToNULLToolStripMenuItem_Click);
-            // 
-            // setLimitBurstToToolStripMenuItem
-            // 
-            this.setLimitBurstToToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setCurrentBurstToATKToolStripMenuItem,
-            this.setCurrentBurstToDEFToolStripMenuItem,
-            this.setCurrentBurstToRECToolStripMenuItem,
-            this.setCurrentBurstToGRDToolStripMenuItem,
-            this.setCurrentBurstToREVToolStripMenuItem});
-            this.setLimitBurstToToolStripMenuItem.Name = "setLimitBurstToToolStripMenuItem";
-            this.setLimitBurstToToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
-            this.setLimitBurstToToolStripMenuItem.Text = "Set Current Limit Burst to...";
-            // 
-            // setCurrentBurstToATKToolStripMenuItem
-            // 
-            this.setCurrentBurstToATKToolStripMenuItem.Name = "setCurrentBurstToATKToolStripMenuItem";
-            this.setCurrentBurstToATKToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.setCurrentBurstToATKToolStripMenuItem.Text = "ATK Up";
-            this.setCurrentBurstToATKToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToATKToolStripMenuItem_Click);
-            // 
-            // setCurrentBurstToDEFToolStripMenuItem
-            // 
-            this.setCurrentBurstToDEFToolStripMenuItem.Name = "setCurrentBurstToDEFToolStripMenuItem";
-            this.setCurrentBurstToDEFToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.setCurrentBurstToDEFToolStripMenuItem.Text = "DEF Up";
-            this.setCurrentBurstToDEFToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToDEFToolStripMenuItem_Click);
-            // 
-            // setCurrentBurstToRECToolStripMenuItem
-            // 
-            this.setCurrentBurstToRECToolStripMenuItem.Name = "setCurrentBurstToRECToolStripMenuItem";
-            this.setCurrentBurstToRECToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.setCurrentBurstToRECToolStripMenuItem.Text = "HP Recovery";
-            this.setCurrentBurstToRECToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToRECToolStripMenuItem_Click);
-            // 
-            // setCurrentBurstToGRDToolStripMenuItem
-            // 
-            this.setCurrentBurstToGRDToolStripMenuItem.Name = "setCurrentBurstToGRDToolStripMenuItem";
-            this.setCurrentBurstToGRDToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.setCurrentBurstToGRDToolStripMenuItem.Text = "Auto Just-Guard";
-            this.setCurrentBurstToGRDToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToGRDToolStripMenuItem_Click);
-            // 
-            // setCurrentBurstToREVToolStripMenuItem
-            // 
-            this.setCurrentBurstToREVToolStripMenuItem.Name = "setCurrentBurstToREVToolStripMenuItem";
-            this.setCurrentBurstToREVToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.setCurrentBurstToREVToolStripMenuItem.Text = "Auto Revive";
-            this.setCurrentBurstToREVToolStripMenuItem.Click += new System.EventHandler(this.setCurrentBurstToREVToolStripMenuItem_Click);
-            // 
-            // createNewSoulAsLimitBurstToolStripMenuItem
-            // 
-            this.createNewSoulAsLimitBurstToolStripMenuItem.Name = "createNewSoulAsLimitBurstToolStripMenuItem";
-            this.createNewSoulAsLimitBurstToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
-            this.createNewSoulAsLimitBurstToolStripMenuItem.Text = "Create New Soul (As Limit Burst)";
-            this.createNewSoulAsLimitBurstToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulAsLimitBurstToolStripMenuItem_Click);
             // 
             // msgToolStripMenuItem
             // 
@@ -2996,7 +2853,7 @@
             this.nameToolStripMenuItem,
             this.descriptionToolStripMenuItem});
             this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.addNewToolStripMenuItem.Text = "Name";
             // 
             // nameToolStripMenuItem
@@ -3020,7 +2877,7 @@
             this.nameToolStripMenuItem1,
             this.descriptionToolStripMenuItem1});
             this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.removeToolStripMenuItem1.Text = "Description";
             // 
             // nameToolStripMenuItem1
@@ -3043,9 +2900,8 @@
             this.limitBurstToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addNewEntryToolStripMenuItem});
             this.limitBurstToolStripMenuItem.Name = "limitBurstToolStripMenuItem";
-            this.limitBurstToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.limitBurstToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.limitBurstToolStripMenuItem.Text = "Limit Burst";
-            this.limitBurstToolStripMenuItem.Click += new System.EventHandler(this.limitBurstToolStripMenuItem_Click);
             // 
             // addNewEntryToolStripMenuItem
             // 
@@ -3099,20 +2955,21 @@
             this.columnHeader7.Text = "Name";
             this.columnHeader7.Width = 215;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 450;
+            // 
             // label53
             // 
             this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(581, 592);
+            this.label53.Location = new System.Drawing.Point(549, 592);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(94, 15);
+            this.label53.Size = new System.Drawing.Size(125, 15);
             this.label53.TabIndex = 5;
-            this.label53.Text = "XV2 Ver. 1.13.00";
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutomaticDelay = 450;
+            this.label53.Text = "For XV2 Ver. 1.14.01 +";
+            this.label53.Visible = false;
             // 
             // Form1
             // 
@@ -3121,11 +2978,8 @@
             this.ClientSize = new System.Drawing.Size(684, 612);
             this.Controls.Add(this.srchBtn);
             this.Controls.Add(this.srchBox);
-            this.Controls.Add(this.chkMsgDesc);
             this.Controls.Add(this.label53);
-            this.Controls.Add(this.chkMsgBurst);
             this.Controls.Add(this.itemList);
-            this.Controls.Add(this.chkMsgName);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -3133,11 +2987,14 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "XV2 Super Soul Editor";
+            this.Text = "XV2 Super Soul Editor - 1.75";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -3202,8 +3059,6 @@
         private System.Windows.Forms.TextBox txtMsgDesc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMsgName;
-        private System.Windows.Forms.CheckBox chkMsgDesc;
-        private System.Windows.Forms.CheckBox chkMsgName;
         private System.Windows.Forms.TextBox txtEditValueb;
         private System.Windows.Forms.TextBox txtEditNameb;
         private System.Windows.Forms.ListView lstvEffect1;
@@ -3211,11 +3066,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.TextBox txtEditValue1;
         private System.Windows.Forms.TextBox txtEditName1;
-        private System.Windows.Forms.TextBox txtAVal1;
+        private System.Windows.Forms.TextBox txtValue11;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtADelay1;
+        private System.Windows.Forms.TextBox txtDuration1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtTimes1;
+        private System.Windows.Forms.TextBox txtLimit1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbActive1;
         private System.Windows.Forms.Label label11;
@@ -3241,53 +3096,53 @@
         private System.Windows.Forms.ComboBox cbStar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtEAmnt1;
+        private System.Windows.Forms.TextBox txtAmount11;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox cbTarget1;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtETime1;
+        private System.Windows.Forms.TextBox txtAmount21;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtAura1;
+        private System.Windows.Forms.TextBox txtVfxId11;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtUnknown1;
+        private System.Windows.Forms.TextBox txtVfxId12;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox cbUnknownCheck1;
+        private System.Windows.Forms.ComboBox cbVfxType21;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox cbTarget2;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox txtEUnknownB2;
-        private System.Windows.Forms.TextBox txtEUnknownA2;
+        private System.Windows.Forms.TextBox txtAmount42;
+        private System.Windows.Forms.TextBox txtAmount32;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.ComboBox cbAuraCheck2;
-        private System.Windows.Forms.TextBox txtAura2;
+        private System.Windows.Forms.ComboBox cbVfxType12;
+        private System.Windows.Forms.TextBox txtVfxId21;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.ComboBox cbUnknownCheck2;
-        private System.Windows.Forms.TextBox txtUnknown2;
+        private System.Windows.Forms.ComboBox cbVfxType22;
+        private System.Windows.Forms.TextBox txtVfxId22;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox txtETime2;
+        private System.Windows.Forms.TextBox txtAmount22;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox txtEAmnt2;
+        private System.Windows.Forms.TextBox txtAmount12;
         private System.Windows.Forms.TextBox txtChance2;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox txtAVal2;
+        private System.Windows.Forms.TextBox txtValue12;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox txtADelay2;
+        private System.Windows.Forms.TextBox txtDuration2;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox txtTimes2;
+        private System.Windows.Forms.TextBox txtLimit2;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.ComboBox cbActive2;
         private System.Windows.Forms.Label label46;
@@ -3316,7 +3171,6 @@
         private System.Windows.Forms.TextBox txtLBSoulID3;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label label53;
         private System.Windows.Forms.TextBox txtEditName2;
         private System.Windows.Forms.TextBox txtEditValue2;
         private System.Windows.Forms.ListView lstvEffect2;
@@ -3328,19 +3182,19 @@
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox txtEUnknownBb;
-        private System.Windows.Forms.TextBox txtEUnknownAb;
+        private System.Windows.Forms.TextBox txtAmount4B;
+        private System.Windows.Forms.TextBox txtAmount3B;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox txtETimeb;
+        private System.Windows.Forms.TextBox txtAmount2B;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.TextBox txtEAmntb;
+        private System.Windows.Forms.TextBox txtAmount1B;
         private System.Windows.Forms.TextBox txtChanceb;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox txtAValb;
+        private System.Windows.Forms.TextBox txtValue1B;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox txtADelayb;
+        private System.Windows.Forms.TextBox txtDurationB;
         private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox txtTimesb;
+        private System.Windows.Forms.TextBox txtLimitB;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.ComboBox cbActiveb;
         private System.Windows.Forms.Label label66;
@@ -3348,22 +3202,21 @@
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.ComboBox cbAuraCheckb;
-        private System.Windows.Forms.TextBox txtAurab;
+        private System.Windows.Forms.ComboBox cbVfxType1B;
+        private System.Windows.Forms.TextBox txtVfxId1B;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.ComboBox cbUnknownCheckb;
-        private System.Windows.Forms.TextBox txtUnknownb;
+        private System.Windows.Forms.ComboBox cbVfxType2B;
+        private System.Windows.Forms.TextBox txtVfxId2B;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox cbAuraCheck1;
+        private System.Windows.Forms.ComboBox cbVfxType11;
         private System.Windows.Forms.TextBox txtShopTest;
         private System.Windows.Forms.TextBox txtTPTest;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.TextBox txtMsgLBDesc;
-        private System.Windows.Forms.CheckBox chkMsgBurst;
         private System.Windows.Forms.ToolStripMenuItem createNewSoulToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -3383,87 +3236,79 @@
         private System.Windows.Forms.TextBox txtMsgLBDescBTL;
         private System.Windows.Forms.ToolStripMenuItem setAsDefaultProgramForSSFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setAsDefaultProgramForSSFPToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem limitBurstOptionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstIDsToNULLToolStripMenuItem;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtEUnknownB1;
-        private System.Windows.Forms.TextBox txtEUnknownA1;
+        private System.Windows.Forms.TextBox txtAmount41;
+        private System.Windows.Forms.TextBox txtAmount31;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.TextBox txtUnki881;
         private System.Windows.Forms.Label label81;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.TextBox txtUnkf681;
-        private System.Windows.Forms.TextBox txtUnkf641;
+        private System.Windows.Forms.TextBox txtAmount61;
+        private System.Windows.Forms.TextBox txtAmount51;
         private System.Windows.Forms.TextBox txtUnki441;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.TextBox txtUnkf361;
+        private System.Windows.Forms.TextBox txtValue61;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.TextBox txtUnkf321;
+        private System.Windows.Forms.TextBox txtValue51;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.TextBox txtUnkf281;
-        private System.Windows.Forms.TextBox txtUnkf241;
-        private System.Windows.Forms.TextBox txtUnkf201;
+        private System.Windows.Forms.TextBox txtValue41;
+        private System.Windows.Forms.TextBox txtValue31;
+        private System.Windows.Forms.TextBox txtValue21;
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox txtUnkf36b;
+        private System.Windows.Forms.TextBox txtValue6B;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.TextBox txtUnki88b;
         private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.TextBox txtUnkf32b;
+        private System.Windows.Forms.TextBox txtValue5B;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox txtUnkf68b;
-        private System.Windows.Forms.TextBox txtUnkf64b;
+        private System.Windows.Forms.TextBox txtAmount6B;
+        private System.Windows.Forms.TextBox txtAmount5B;
         private System.Windows.Forms.TextBox txtUnki44b;
-        private System.Windows.Forms.TextBox txtUnkf28b;
-        private System.Windows.Forms.TextBox txtUnkf24b;
-        private System.Windows.Forms.TextBox txtUnkf20b;
+        private System.Windows.Forms.TextBox txtValue4B;
+        private System.Windows.Forms.TextBox txtValue3B;
+        private System.Windows.Forms.TextBox txtValue2B;
         private System.Windows.Forms.Label label100;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.TextBox txtUnkf362;
+        private System.Windows.Forms.TextBox txtValue62;
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.TextBox txtUnki882;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.TextBox txtUnkf322;
+        private System.Windows.Forms.TextBox txtValue52;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.TextBox txtUnkf682;
-        private System.Windows.Forms.TextBox txtUnkf642;
+        private System.Windows.Forms.TextBox txtAmount62;
+        private System.Windows.Forms.TextBox txtAmount52;
         private System.Windows.Forms.TextBox txtUnki442;
-        private System.Windows.Forms.TextBox txtUnkf282;
-        private System.Windows.Forms.TextBox txtUnkf242;
-        private System.Windows.Forms.TextBox txtUnkf202;
+        private System.Windows.Forms.TextBox txtValue42;
+        private System.Windows.Forms.TextBox txtValue32;
+        private System.Windows.Forms.TextBox txtValue22;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.ToolStripMenuItem setLimitBurstToToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToATKToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToDEFToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToRECToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToGRDToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setCurrentBurstToREVToolStripMenuItem;
-        private System.Windows.Forms.Button store_defaultBtn;
         private System.Windows.Forms.ToolStripMenuItem addCurrentSuperSoulToShopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeCurrentSuperSoulFromShopToolStripMenuItem;
         private System.Windows.Forms.ComboBox debugLBSelect;
-        private System.Windows.Forms.Label label52;
         private System.Windows.Forms.ToolStripMenuItem limitBurstToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewEntryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyCurrentSuperSoulToClipboardToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createNewSoulFromClipboardToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ToolStripMenuItem createNewSoulAsLimitBurstToolStripMenuItem;
+        private System.Windows.Forms.Label label53;
     }
 }
