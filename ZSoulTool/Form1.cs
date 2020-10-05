@@ -440,6 +440,7 @@ namespace XV2SSEdit
 
         private void SaveXV2SSEdit()
         {
+          
             List<byte> Finalize = new List<byte>();
 
             //UNLEASHED: HEADER
@@ -481,7 +482,7 @@ namespace XV2SSEdit
             SaveXV2SSEdit();
 
             //UNLEASHED: added msgbox
-            hasSavedChanges = true;
+        
             MessageBox.Show("Save Successful and files writtin to 'data' folder\nTo see changes in-game, the XV2Patcher must be installed.", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -612,7 +613,7 @@ namespace XV2SSEdit
 
         private void itemList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            hasSavedChanges = false;
+      
             currentSuperSoulIndex = itemList.SelectedIndex;
             UpdateData();
         }
@@ -652,6 +653,7 @@ namespace XV2SSEdit
             Items[itemList.SelectedIndex].msgIndexName = FindmsgIndex(ref Names, BitConverter.ToUInt16(Items[itemList.SelectedIndex].Data, 4));
             txtMsgName.Text = Names.data[Items[itemList.SelectedIndex].msgIndexName].Lines[0];
             itemList.Items[itemList.SelectedIndex] = BitConverter.ToUInt16(Items[itemList.SelectedIndex].Data, 0).ToString() + " - " + Names.data[Items[itemList.SelectedIndex].msgIndexName].Lines[0];
+         
         }
 
         private void txtDescID_TextChanged(object sender, EventArgs e)
@@ -663,6 +665,7 @@ namespace XV2SSEdit
 
             Items[itemList.SelectedIndex].msgIndexDesc = FindmsgIndex(ref Descs, BitConverter.ToUInt16(Items[itemList.SelectedIndex].Data, 6));
             txtMsgDesc.Text = Descs.data[Items[itemList.SelectedIndex].msgIndexDesc].Lines[0];
+         
         }
 
         private void txtShopTest_TextChanged(object sender, EventArgs e)
@@ -719,6 +722,7 @@ namespace XV2SSEdit
             byte[] pass;
             pass = BitConverter.GetBytes(ID);
             Array.Copy(pass, 0, Items[itemList.SelectedIndex].Data, 32, 4);
+        
         }
 
         private void txtLBAura_TextChanged(object sender, EventArgs e)
@@ -2590,6 +2594,8 @@ namespace XV2SSEdit
         private void txtMsgLBDescBTL_TextChanged(object sender, EventArgs e)
         {
             BurstBTLHUD.data[Items[itemList.SelectedIndex].msgIndexBurstBTL].Lines[0] = txtMsgLBDescBTL.Text;
+            // UNLEASHED: Some SSs don't have the LBPauseDesc (we aren't sure if its evne used by the game..)
+            if (Items[itemList.SelectedIndex].msgIndexBurstPause > -1)
             BurstPause.data[Items[itemList.SelectedIndex].msgIndexBurstPause].Lines[0] = txtMsgLBDescBTL.Text;
         }
 
@@ -2904,6 +2910,8 @@ namespace XV2SSEdit
                 txtLBSoulID3.Text = "65535";
                 cbLBColor.SelectedIndex = 0;
             }
+
+        
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -2927,7 +2935,14 @@ namespace XV2SSEdit
             string DescText = Descs.data[Items[currentSuperSoulIndex].msgIndexDesc].Lines[0];
             string LBDescText = Burst.data[Items[currentSuperSoulIndex].msgIndexBurst].Lines[0];
             string LBBTLHUDDescText = BurstBTLHUD.data[Items[currentSuperSoulIndex].msgIndexBurstBTL].Lines[0];
-            string LBPauseDescText = BurstPause.data[Items[currentSuperSoulIndex].msgIndexBurstPause].Lines[0];
+
+            // UNLEASHED: Some SSs don't have the LBPauseDesc (we aren't sure if its even used by the game..)
+            string LBPauseDescText;
+
+            if (Items[currentSuperSoulIndex].msgIndexBurstPause > -1)
+                LBPauseDescText = BurstPause.data[Items[currentSuperSoulIndex].msgIndexBurstPause].Lines[0];
+            else
+                LBPauseDescText = "";
 
             int nameCount = nameText.Length * 2;
             int DescCount = DescText.Length * 2;

@@ -103,7 +103,14 @@ namespace XV2SSEdit
                 string DescText = Descs.data[form1.Items[SSIndex].msgIndexDesc].Lines[0];
                 string LBDescText = Burst.data[form1.Items[SSIndex].msgIndexBurst].Lines[0];
                 string LBBTLHUDDescText = BurstBTLHUD.data[form1.Items[SSIndex].msgIndexBurstBTL].Lines[0];
-                string LBPauseDescText = BurstPause.data[form1.Items[SSIndex].msgIndexBurstPause].Lines[0];
+
+                // UNLEASHED: Some SSs don't have the LBPauseDesc (we aren't sure if its evne used by the game..)
+                string LBPauseDescText;
+
+                if (form1.Items[SSIndex].msgIndexBurstPause > -1)
+                    LBPauseDescText = BurstPause.data[form1.Items[SSIndex].msgIndexBurstPause].Lines[0];
+                else
+                    LBPauseDescText = "";
 
 
                 int nameCount = nameText.Length * 2;
