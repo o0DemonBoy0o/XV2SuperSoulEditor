@@ -74,11 +74,16 @@ namespace XV2SSEdit
         //UNLEASHED: copy and paste
         private byte[] clipboardData = null;
 
+
+        //UNLEASHED: Version
+        string toolVersion = "1.76";
         #endregion
 
         public Form1()
         {
             InitializeComponent();
+
+            this.Text = $"XV2 Super Soul Editor - {toolVersion}";
 
             foreach (string str in ListNames)
             {
@@ -2537,7 +2542,7 @@ namespace XV2SSEdit
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("XV2 Super Soul Editor Version 1.75\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"XV2 Super Soul Editor Version {toolVersion}\n\nCredits:\nDemonBoy - Tool Creator\nLazybone & Unleashed - Help with fixes/additions\nMugenAttack - Original Source code", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //UNLEASHED: added this function to search for SS name

@@ -2769,70 +2769,70 @@
             // createNewSoulToolStripMenuItem
             // 
             this.createNewSoulToolStripMenuItem.Name = "createNewSoulToolStripMenuItem";
-            this.createNewSoulToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.createNewSoulToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.createNewSoulToolStripMenuItem.Text = "Create New Soul";
             this.createNewSoulToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulToolStripMenuItem_Click);
             // 
             // createNewSoulAsLimitBurstToolStripMenuItem
             // 
             this.createNewSoulAsLimitBurstToolStripMenuItem.Name = "createNewSoulAsLimitBurstToolStripMenuItem";
-            this.createNewSoulAsLimitBurstToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.createNewSoulAsLimitBurstToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.createNewSoulAsLimitBurstToolStripMenuItem.Text = "Create New Soul (For Limit Burst)";
             this.createNewSoulAsLimitBurstToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulAsLimitBurstToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.removeToolStripMenuItem.Text = "Remove Current Soul";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // replaceImportToolStripMenuItem
             // 
             this.replaceImportToolStripMenuItem.Name = "replaceImportToolStripMenuItem";
-            this.replaceImportToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.replaceImportToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.replaceImportToolStripMenuItem.Text = "Replace Current Soul (*.zss)";
             this.replaceImportToolStripMenuItem.Visible = false;
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.addToolStripMenuItem.Text = "Import Super Soul Package File (*.ssp)";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem1
             // 
             this.exportToolStripMenuItem1.Name = "exportToolStripMenuItem1";
-            this.exportToolStripMenuItem1.Size = new System.Drawing.Size(285, 22);
+            this.exportToolStripMenuItem1.Size = new System.Drawing.Size(284, 22);
             this.exportToolStripMenuItem1.Text = "Export to Super Soul Package File (*.ssp)";
             this.exportToolStripMenuItem1.Click += new System.EventHandler(this.exportToolStripMenuItem1_Click);
             // 
             // addCurrentSuperSoulToShopToolStripMenuItem
             // 
             this.addCurrentSuperSoulToShopToolStripMenuItem.Name = "addCurrentSuperSoulToShopToolStripMenuItem";
-            this.addCurrentSuperSoulToShopToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.addCurrentSuperSoulToShopToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.addCurrentSuperSoulToShopToolStripMenuItem.Text = "Add Current Super Soul to Shop";
             this.addCurrentSuperSoulToShopToolStripMenuItem.Click += new System.EventHandler(this.store_defaultBtn_Click);
             // 
             // removeCurrentSuperSoulFromShopToolStripMenuItem
             // 
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Name = "removeCurrentSuperSoulFromShopToolStripMenuItem";
-            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.removeCurrentSuperSoulFromShopToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Text = "Remove Current Super Soul From Shop";
             this.removeCurrentSuperSoulFromShopToolStripMenuItem.Click += new System.EventHandler(this.removeCurrentSuperSoulFromShopToolStripMenuItem_Click);
             // 
             // copyCurrentSuperSoulToClipboardToolStripMenuItem
             // 
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Name = "copyCurrentSuperSoulToClipboardToolStripMenuItem";
-            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Text = "Copy Current Soul to Clipboard";
             this.copyCurrentSuperSoulToClipboardToolStripMenuItem.Click += new System.EventHandler(this.copyCurrentSuperSoulToClipboardToolStripMenuItem_Click);
             // 
             // createNewSoulFromClipboardToolStripMenuItem
             // 
             this.createNewSoulFromClipboardToolStripMenuItem.Name = "createNewSoulFromClipboardToolStripMenuItem";
-            this.createNewSoulFromClipboardToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.createNewSoulFromClipboardToolStripMenuItem.Size = new System.Drawing.Size(284, 22);
             this.createNewSoulFromClipboardToolStripMenuItem.Text = "Paste New Soul From Clipboard";
             this.createNewSoulFromClipboardToolStripMenuItem.Click += new System.EventHandler(this.createNewSoulFromClipboardToolStripMenuItem_Click);
             // 
@@ -2987,7 +2987,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "XV2 Super Soul Editor - 1.75";
+            this.Text = "XV2 Super Soul Editor - 1.76";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
